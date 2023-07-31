@@ -1,0 +1,71 @@
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  height: 600px;
+  margin: 0 auto;
+}
+.day {
+  width: calc(100% / 7);
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.day:not(.current-month) {
+  background-color: #f1f1f1;
+}
+.today {
+  background-color: #e0f3ff;
+}
+.event {
+  background-color: #fce5cd;
+  padding: 2px;
+  font-size: 14px;
+  border-radius: 3px;
+  max-height: 100px; /* You can adjust this value to fit your needs */
+  overflow-y: auto; /* Use vertical scrollbar only if needed */
+  white-space: normal; /* Allow the text to wrap within the element */
+  word-break: break-all; /* Break words at any point to wrap text */
+  position: relative; /* Add relative positioning for ::after pseudo-element */
+}
+
+/* Apply ellipsis for the event content */
+.event::after {
+  content: "...";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 2px;
+  background-color: white;
+}
+.add-event-form {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 10;
+}
+.add-event-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+.add-event-form input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+.add-event-form button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+.prev-month {
+  color: #999;
+}
+
+.next-month {
+  color: #999;
+}
