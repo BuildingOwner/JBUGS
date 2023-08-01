@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var calendarEl = document.getElementById("calendar");
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: "dayGridMonth",
+          googleCalendarApiKey: "AIzaSyB_CixLjcJ5OrL85o4_11VYS5uoH7f7zEI",
+          events: {
+            googleCalendarId: "c_c172dec6fca4285552cba9baa4634ab29f2943622e387bf9ac7bc00f83956f11@group.calendar.google.com",
+            className: "gcal-event", // an option!
+          },
+          eventClick: function(info){
+            info.jsEvent.stopPropagation();
+            info.jsEvent.preventDefault();
+          }
+        });
+        calendar.render();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="calendar"></div>
+  </body>
+</html>

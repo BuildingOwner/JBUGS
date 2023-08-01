@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>주간 일정</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      th,
+      td {
+        text-align: center;
+        padding: 10px;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      .schedule-input {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .schedule-input input,
+      .schedule-input select {
+        padding: 5px;
+        margin-right: 10px;
+      }
+
+      button {
+        padding: 5px 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>주간 일정</h1>
+    <table>
+        <tr>
+            <th>시간</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+            <th>토</th>
+            <th>일</th>
+        </tr>
+        <!-- Generate time slots from 9:00 AM to 11:00 PM -->My Project 73308
+        <script>
+            for (let hour = 9; hour <= 23; hour++) {
+                for (let minute = 0; minute < 60; minute += 60) {
+                    let am_pm = hour >= 12 ? 'PM' : 'AM';
+                    let displayHour = hour > 12 ? hour - 12 : hour;
+                    let nextHour = (hour + 1) % 12 || 12;
+                    let displayMinute = String(minute).padStart(2, '0');
+                    document.write(`
+                        <tr>
+                            <td>${displayHour}:${displayMinute} ${am_pm} - ${nextHour}:${displayMinute} ${am_pm}</td>
+                            <td data-day="월"></td>
+                            <td data-day="화"></td>
+                            <td data-day="수"></td>
+                            <td data-day="목"></td>
+                            <td data-day="금"></td>
+                            <td data-day="토"></td>
+                            <td data-day="일"></td>
+                        </tr>
+                    `);
+                }
+            }
+        </script>
+    </table>
+    <div class="schedule-input">
+        <input type="text" id="eventName" placeholder="일정 이름">
+        <select id="day">
+            <option value="월">월</option>
+            <option value="화">화</option>
+            <option value="수">수</option>
+            <option value="목">목</option>
+            <option value="금">금</option>
+            <option value="토">토</option>
+            <option value="일">일</option>
+        </select>
+        <input type="time" id="startTime" min="09:00" max="23:00" step="3600">
+        <input type="time" id="endTime" min="10:00" max="23:00" step="3600">
+        <button onclick="addEvent()">일정 추가</button>
+    </div>
+
+    <script>
+      // Function to add an event to the schedule
+function addEvent() {
+    const eventName = document.getElementById('eventName').value;
+    const selectedDay = document.getElementById('day').value;
+    const startTime = document.getElementById('startTime').value;
+    const endTime = document.getElementById('endTime').value;
+
+    if (eventName.trim() === '' || startTime >= endTime) {
+        alert('일정 이름을 입력하고, 올바른 시작 및 종료 시간을 선택하세요.');
+        return;
+    }
+
+    const timeSlots = document.querySelectorAll(`td[data-day="${selectedDay}"]`);
+    const timeSlotText = `${startTime} - ${endTime} ${eventName}`;
+
+    for (const timeSlot of timeSlots) {
+        if (timeSlot.innerText === '') {
+            timeSlot.innerText = timeSlotText;
+            break;
+        }
+    }
+}
+
+    </script>
+  </body>
+</html>
