@@ -1,5 +1,6 @@
-package com.jbugs.project.domain;
+package com.jbugs.project.repository;
 
+import com.jbugs.project.domain.User;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
