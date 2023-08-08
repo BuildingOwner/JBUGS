@@ -1,14 +1,18 @@
 package com.jbugs.project.domain;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
+@Getter
+@Setter
 @NoArgsConstructor
 public class Student {
-    @Id
+    @Id @GeneratedValue
     private long studentId;
     private String name;
     private String track1;
@@ -28,43 +32,4 @@ public class Student {
         this.doubleMajor = doubleMajor;
     }
 
-    public long getStudentId() {
-        return studentId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getTrack1() {
-        return track1;
-    }
-
-    public String getTrack2() {
-        return track2;
-    }
-
-    public String getDoubleMajor() {
-        return doubleMajor;
-    }
-
-    public void setStudentId(long studentId) {
-        this.studentId = studentId;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setTrack1(String track1) {
-        this.track1 = track1;
-    }
-
-    public void setTrack2(String track2) {
-        this.track2 = track2;
-    }
-
-    public void setDoubleMajor(String double_major) {
-        this.doubleMajor = double_major;
-    }
 }

@@ -1,14 +1,19 @@
 package com.jbugs.project.domain;
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
+@Getter
+@Setter
 @NoArgsConstructor
 public class Class {
-    @Id
+    @Id @GeneratedValue
     private long classId;
     private String className;
     private int year;
@@ -19,27 +24,4 @@ public class Class {
         this.year = year;
     }
 
-    public long getClassId() {
-        return classId;
-    }
-
-    public void setClassId(long classId) {
-        this.classId = classId;
-    }
-
-    public String getClassName() {
-        return className;
-    }
-
-    public void setClassName(String className) {
-        this.className = className;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
 }
