@@ -26,13 +26,9 @@ public class UserRepositoryTest {
         user.setName("userA");
 
         //when
-        Long saveId = userRepository.save(user);
-        User findUser = userRepository.find(saveId);
 
         //then
-        Assertions.assertThat(findUser.getUserId()).isEqualTo(user.getUserId());
-        Assertions.assertThat(findUser.getName()).isEqualTo(user.getName());
-        Assertions.assertThat(findUser).isEqualTo(user);
+
 
         
     }

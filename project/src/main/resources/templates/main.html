@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>mainpage</title>
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/calender.css" />
+    <link rel="stylesheet" href="../static/css/reset.css" />
+    <link rel="stylesheet" href="../static/css/calender.css" />
     
     <style>
       .content {
@@ -14,10 +14,10 @@
     </style>
   </head>
   <body>
-    <!--header-->
+  <div th:replace="fragments/header :: header" />
     <div class="d-flex mt-5 w-100">
-      
-      <!-- sidebar -->
+
+      <div th:replace="fragments/sidebar :: sidebar" />
       
       <div class="content">
         <!-- <div class="calendar">
@@ -61,6 +61,6 @@
     </div>
 
     <!--footer-->
-    <script src="../js/main.js" type="module"></script>
+    <script src="../static/js/main.js" type="module"></script>
   </body>
 </html>

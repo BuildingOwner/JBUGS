@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,13 +14,14 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class User {
     @Id @GeneratedValue
-    private long userId;
+    @Column(name = "userId")
+    private long id;
     private String name;
     private String password;
     private String phoneNumber;
 
-    public User(long userId, String name, String password, String phoneNumber) {
-        this.userId = userId;
+    public User(long id, String name, String password, String phoneNumber) {
+        this.id = id;
         this.name = name;
         this.password = password;
         this.phoneNumber = phoneNumber;
