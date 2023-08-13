@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="ko" th:fragment="header">
+<html xmlns:th="http://www.thymeleaf.org" lang="ko" th:fragment="header" >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/css/header.css" />
+    <style>
+      #page-header .navbar{
+        background-color: rgba(11, 77, 162);
+      }
+
+      #page-header .navbar .container-fluid .navbar-brand {
+        width: 190px;
+        background-color: rgba(11, 77, 162);
+      }
+
+      #page-header .navbar .container-fluid .navbar-brand a.logo {
+        background: url(/img/logo.png);
+        width: 190px;
+      }
+    </style>
   </head>
-  <link rel="stylesheet" href="../../static/css/header.css" />
-  <style>
-    #page-header .navbar{
-      background-color: rgba(11, 77, 162);
-    }
-
-    #page-header .navbar .container-fluid .navbar-brand {
-      width: 190px;
-      background-color: rgba(11, 77, 162);
-    }
-
-    #page-header .navbar .container-fluid .navbar-brand a.logo {
-      background: url(../../static/img/logo.png);
-      width: 190px;
-    }
-  </style>
 
   <body>
     <div id="page">
@@ -40,7 +40,7 @@
                 <li class="user-info-menu">
                   <a class="user-info-popover"
                     ><img
-                      src="../../static/img/user.png"
+                      src="/img/user.png"
                       alt="유저 사진"
                       class="userpicture"
                   /></a>
