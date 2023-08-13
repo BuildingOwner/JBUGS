@@ -4,9 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -14,12 +12,18 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class Class {
     @Id @GeneratedValue
-    private long classId;
+    @Column(name ="classId")
+    private Long id;
+
     private String className;
     private int year;
 
-    public Class(long classId, String className, int year) {
-        this.classId = classId;
+    @ManyToOne
+    @JoinColumn(name="studentId")
+    private Student student;
+
+    public Class(Long id, String className, int year) {
+        this.id = id;
         this.className = className;
         this.year = year;
     }

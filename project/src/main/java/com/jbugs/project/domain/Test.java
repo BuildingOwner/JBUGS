@@ -5,22 +5,22 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 @Entity
 @NoArgsConstructor
 @Getter
 @Setter
 public class Test {
     @Id @GeneratedValue
-    private long studentId;
-    private long classId;
+    @Column(name="studentId")
+    private Long id;
+
+    private Long classId;
     private int year;
 
-    public Test(long studentId, long classId, int year) {
-        this.studentId = studentId;
+    public Test(Long id, Long classId, int year) {
+        this.id = id;
         this.classId = classId;
         this.year = year;
     }

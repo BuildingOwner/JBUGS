@@ -15,12 +15,12 @@ import javax.persistence.Id;
 public class User {
     @Id @GeneratedValue
     @Column(name = "userId")
-    private long id;
+    private Long id;
     private String name;
     private String password;
     private String phoneNumber;
 
-    public User(long id, String name, String password, String phoneNumber) {
+    public User(Long id, String name, String password, String phoneNumber) {
         this.id = id;
         this.name = name;
         this.password = password;

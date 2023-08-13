@@ -19,10 +19,10 @@ public class ProjectApplication implements CommandLineRunner {
     }
     @Override
     public void run(String... args) throws Exception {
-        repository.save(new Student(1971084, "진승원", "웹공학", "모바일소프트웨어", "없음"));
-        repository.save(new Student(1971080, "장주찬","모바일소프트웨어", "웹공학"));
+        repository.save(new Student(1971084L, "진승원", "웹공학", "모바일소프트웨어", "없음"));
+        repository.save(new Student(1971080L, "장주찬","모바일소프트웨어", "웹공학"));
         for (Student student : repository.findAll()) {
-            logger.info(student.getStudentId() + " " + student.getName());
+            logger.info(student.getId() + " " + student.getName());
         }
     }
 }

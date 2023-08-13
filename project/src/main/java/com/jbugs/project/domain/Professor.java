@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,12 +15,13 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class Professor {
     @Id @GeneratedValue
-    private long professorId;
+    @Column(name = "professorId")
+    private Long id;
     private String name;
     private String major;
 
-    public Professor(long professorId, String name, String major) {
-        this.professorId = professorId;
+    public Professor(Long id, String name, String major) {
+        this.id = id;
         this.name = name;
         this.major = major;
     }
