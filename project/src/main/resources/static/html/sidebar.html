@@ -4,9 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
     <style>
+      li > .link-body-emphasis {
+        color: #999 !important;
+      }
+
+      .link-body-emphasis:hover{
+        color: white !important;
+      }
+
+      .accordion-item {
+        border-radius: var(--bs-nav-pills-border-radius) !important;
+      }
+
       .sidebar {
         width: 15%;
       }
@@ -14,7 +31,7 @@
   </head>
   <body>
     <div class="sidebar">
-      <ul>
+      <!-- <ul>
         <li>
           <details open>
             <summary>My Page</summary>
@@ -52,7 +69,87 @@
             </ul>
           </details>
         </li>
-      </ul>
+      </ul> -->
+      <div
+        class="d-flex flex-column flex-shrink-0 p-3 bg-dark vh-100 text-white"
+        style="width: 280px; color: white"
+      >
+        <a
+          href="/"
+          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none text-white"
+        >
+          <span class="fs-4">Sidebar</span>
+        </a>
+        <hr />
+
+        <div class="nav nav-pills flex-column mb-auto">
+          <button class="accordion-button nav-link active" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+            Home
+          </button>
+            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                test
+              </div>
+            </div>
+        </div>
+
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page"> Home </a>
+            <button href="#" class="nav-link active accordion-item" aria-current="page"> 
+              Home 
+            </button>
+            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                test
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-body-emphasis"> Dashboard </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-body-emphasis"> Orders </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-body-emphasis"> Products </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-body-emphasis"> Customers </a>
+          </li>
+        </ul>
+        <hr />
+        <!-- <div class="dropdown">
+          <a
+            href="#"
+            class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="https://github.com/mdo.png"
+              alt=""
+              width="32"
+              height="32"
+              class="rounded-circle me-2"
+            />
+            <strong>mdo</strong>
+          </a>
+          <ul class="dropdown-menu text-small shadow">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div> -->
+      </div>
     </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
