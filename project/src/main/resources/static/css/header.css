@@ -196,6 +196,7 @@ ul {
 
 #page-header .usermenu ul.nav.nav-pills>li.active.user-logout a {
     margin-left: 13px;
+    margin-right: 13px;
     background-color: #166DDC;
     border-radius: 0;
     border: 0;
