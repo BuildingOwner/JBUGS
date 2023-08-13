@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+}
+
+#page {
+  min-width: 980px;
+}
+
+#page-header {
+  height: 68px;
+}
+
+#page-header .navbar {
+  background-color: rgba(11, 77, 162, 0.8);
+  border: 0;
+  margin: 0;
+}
+
+#page-header .navbar .container-fluid {
+  max-width: inherit;
+  padding: 0;
+}
+
+#page-header .navbar .container-fluid .navbar {
+  width: 60px;
+  overflow: hidden;
+  background-color: rgba(11, 77, 162, 0.8);
+  padding: 0;
+}
+
+a.logo {
+  background: url(/project/src/main/resources/static/img/home_logo.png)
+    no-repeat;
+  width: 60px;
+  height: 68px;
+  display: block;
+}
+
+#page-header .usermenu {
+  margin-top: 4px;
+  margin-right: 5px;
+  float: right;
+}
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+#page-main {
+  float: left;
+  width: 100%;
+}
+
+.course-header {
+  background-image: url(../img/courseHeader.png);
+  background-repeat: repeat-x;
+  border-bottom: 0px solid #0b4da2;
+  background-color: #252626;
+  position: relative;
+  margin-top: 0px;
+  padding-top: 30px;
+}
+
+.professor-info {
+  padding: 30px 40px;
+}
+
+.fluid {
+  max-width: inherit;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-sm-8 {
+  width: 66.66666667%;
+  padding: 25px 0;
+}
+
+.media-head {
+  margin: 13px 0 9px;
+  color: white;
+  font-size: 24px;
+  min-height: 26px;
+}
+
+#page-content {
+  position: relative;
+}
+
+#page-content-wrap {
+  float: left;
+  width: 100%;
+}
+
+.user-attendance {
+  margin-bottom: 20px;
+}
+
+.h2main {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+  font-weight: 700;
+  padding: 21px 28px 20px;
+  border-bottom: 1px solid #d9dbdb;
+  background-color: #e4f0eb;
+}
+
+.attendance-table {
+  width: 100%;
+}
+
+.attendance {
+  border-bottom: 1px #ebebeb solid;
+}
