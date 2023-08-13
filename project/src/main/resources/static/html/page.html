@@ -7,26 +7,12 @@
     <title>Document</title>
 </head>
 <style>
-    * {
-        box-sizing: border-box;
-    }
-
     body {
-        position: relative;
         margin: 0;
-        background-color: #f7f9fa;
-        font-size: 14px;
-        line-height: 1.42857143;
-        color: #333;
-    }
-
-    div {
-        display: block;
     }
 
     #page {
         min-width: 980px;
-        background-color: #2f3033;
     }
 
     #page-header {
@@ -35,65 +21,32 @@
 
     #page-header .navbar {
         background-color: rgba(11, 77, 162, .8);
-        max-height: 68px;
-        margin: 0;
         border: 0;
+        margin: 0;
     }
 
     #page-header .navbar .container-fluid {
         max-width: inherit;
         padding: 0;
-        display: flex;
-        justify-content: space-between;
     }
 
-    /* .container-fluid {
-        margin-right: auto;
-        margin-left: auto;
-
-    } */
-
-    .container-fluid {
-        margin: 0 auto;
-    }
-
-    #page-header .navbar .container-fluid .navbar-brand {
+    #page-header .navbar .container-fluid .navbar {
         width: 60px;
-        height: 68px;
         overflow: hidden;
         background-color: rgba(11, 77, 162, .8);
         padding: 0;
-        margin: 0;
     }
 
-    #page-header .navbar .container-fluid .navbar-brand a.logo {
-        background: url(img/home_logo.png) no-repeat;
+    a.logo {
+        background: url(/project/src/main/resources/static/img/home_logo.png) no-repeat;
         width: 60px;
         height: 68px;
         display: block;
     }
 
-    .container-fluid div {
-        display: flex;
-    }
-
-    .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
-    }
-
     #page-header .usermenu {
         margin-top: 4px;
         margin-right: 5px;
-    }
-
-    .usermenu {
         float: right;
     }
 
@@ -103,212 +56,26 @@
         list-style: none;
     }
 
-    ul {
-        padding: 0;
-        margin: 0 0 10px 25px;
-    }
-
-    .user_department {
-        margin-top: 22px;
-        color: white;
-        font-size: 12px;
-        opacity: .6;
-    }
-
-    .nav-pills>li+li {
-        margin-left: 2px;
-    }
-
-    .nav-pills>li {
-        float: left;
-    }
-
-    .nav>li {
-        position: relative;
-        display: block;
-    }
-
-    .nav>li>a {
-        position: relative;
-    }
-
-    .nav-pills>li>a {
-        border-radius: 4px;
-    }
-
-    .nav>li>img {
-        max-width: none;
-    }
-
-    #page-header .usermenu .nav-pills>li>a.user-info-popover {
-        padding: 11px 8px 5px 8px;
-        margin-right: 5px;
-
-    }
-
-    #page-header .usermenu .nav-pills>li>a {
-        padding: 18px 13px 10px;
-        display: block;
-    }
-
-
-
-    #page-header .usermenu .user-info-popover .userpicture {
-        border-radius: 17px;
-        width: 34px;
-        height: 34px;
-    }
-
-    #page-header .usermenu .icon {
-        background: url(img/icon.png) no-repeat;
-        width: 20px;
-        height: 20px;
-        opacity: .6;
-        filter: alpha(opacity=60);
-    }
-
-    #page-header .usermenu .icon-noti {
-        background-position: 0 -20px;
-    }
-
-    #page-header .usermenu .icon-msg {
-        background-position: 0 -40px;
-    }
-
-    #page-header .usermenu .icon-menu {
-        background-position: 0 -60px;
-    }
-
-    #page-header .coursename {
-        margin-left: 80px;
-    }
-
-    .coursename h1 {
-        font-size: 18px;
-        color: white;
-        margin: 0;
-        padding: 23px 0;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-
-    #page-header .coursename h1 a {
-        color: white;
-        text-decoration: none;
-    }
-
-    #page-header .usermenu .user-login {
-        margin-top: 14px;
-        margin-right: 15px;
-    }
-
-    #page-header .usermenu ul.nav.nav-pills>li.active.user-logout a {
-        margin-left: 13px;
-        background-color: #166DDC;
-        border-radius: 0;
-        border: 0;
-        padding: 8px 12px 7px;
-        font-size: 12px;
-        height: 32px;
-        color: white;
-        text-decoration: none;
-    }
-
-    .btn {
-        margin-bottom: 0;
-        font-weight: 400;
-        line-height: 1.42857143;
-        text-align: center;
-        white-space: nowrap;
-        vertical-align: middle;
-        touch-action: manipulation;
-        cursor: pointer;
-        user-select: none;
-        background-image: none;
-    }
-
-    /* #page-side {
-        width: 60px;
-        float: left;
-        position: relative;
-        color: white;
-    }
-
-    #page-side .left-menus {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    #page-side .left-menus>li {
-        border-bottom: 1px solid #252626;
-        position: relative;
-    }
-
-    #page-side .left-menus>li.left-menu-link.left-menu-link-mypage {
-        background-position: 4px 0;
-    }
-
-    #page-side .left-menus>li.left-menu-link.left-menu-link-mycourse {
-        background-position: 4px -60px;
-    }
-
-    #page-side .left-menus>li.left-menu-link.left-menu-link-online {
-        background-position: 4px -180px;
-    }
-
-    #page-side .left-menus>li.left-menu-link.left-menu-link-eclass {
-        background-position: 4px -120px;
-    }
-
-    #page-side .left-menus>li.left-menu-link.left-menu-link-message {
-        background-position: 4px -240px;
-    }
-
-    #page-side .left-menus>li.left-menu-link.left-menu-link-guide {
-        background-position: 4px -300px;
-    }
-
-    #page-side .left-menus>li.left-menu-link {
-        color: #999;
-        background: url(img/side.png) no-repeat 4px 0;
-        display: block;
-        text-decoration: none;
-        height: 60px;
-        outline: 0;
-    }
-
-    h5 {
-        display: none;
-        padding: 22px 30px 22px 55px;
-        margin: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        background: url(img/check.png) no-repeat right 16px center;
-    } */
     #page-main {
-        margin-left: 60px;
-        background-color: #f7f9fa;
-    }
-
-    #page-container {
         float: left;
         width: 100%;
-        background: url(img/main.png) repeat-y 218px #f7f9fa;
     }
 
     .course-header {
-        background-image: url(img/courseHeader.png);
+        background-image: url(../img/courseHeader.png);
         background-repeat: repeat-x;
+        border-bottom: 0px solid #0B4DA2;
+        background-color: #252626;
+        position: relative;
+        margin-top: -20px;
+        padding-top: 68px;
     }
 
     .professor-info {
         padding: 30px 40px;
     }
 
-    .professor-info .container-fluid {
+    .fluid {
         max-width: inherit;
         padding-right: 15px;
         padding-left: 15px;
@@ -321,142 +88,21 @@
         margin-left: -15px;
     }
 
-    .col-profinfo {
-        padding: 25px 0;
+    .col-sm-8 {
         width: 66.66666667%;
+        padding: 25px 0;
     }
 
-    .upcommings {
-        border-left: 1px solid #95958e;
-        min-height: 125px;
-        margin-top: 4px;
-        width: 33.33333333%;
+    .media-head {
+        margin: 13px 0 9px;
+        color: white;
+        font-size: 24px;
+        min-height: 26px;
     }
 
-    #submenu {
+    #page-submenu {
         float: left;
         width: 218px;
-    }
-
-    #submenu .course-menus {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .block {
-        margin: 0;
-        border-radius: 0;
-        border: 0;
-        border-bottom: 1px solid #d9dbdb;
-        box-shadow: none;
-    }
-
-    .block .header {
-        color: #333;
-        padding: 22px 18px;
-        border: 0;
-        border-radius: 0;
-        border-bottom: 1px solid #ebebeb;
-        background-color: white;
-    }
-
-    .block .header h2 {
-        font-size: 14px;
-        color: #0B4DA2;
-        font-weight: 700;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .block .header h2>a {
-        color: inherit;
-    }
-
-    .content {
-        padding: 0 0 16px 0;
-        word-wrap: break-word;
-    }
-
-    .block .content ul {
-        margin: 0;
-        list-style: none;
-    }
-
-    .topmenu>li.expand {
-        background-color: #f1f3f2;
-        border-bottom: 1px solid #fafafa;
-    }
-
-    .topmenu>li.expand>a {
-        font-weight: 700;
-        color: #333;
-    }
-
-    #page-content {
-        margin-left: 218px;
-        position: relative;
-    }
-
-    #page-content-wrap {
-        float: left;
-        width: 100%;
-    }
-
-    #region-main {
-        padding: 40px;
-        position: relative;
-        min-height: 600px;
-    }
-
-    .course-content {
-        position: relative;
-        margin-top: 0;
-    }
-
-    .course-box {
-        border: 1px solid #d9dbdb;
-        background-color: white;
-    }
-
-    .course-box0 {
-        margin-bottom: 20px;
-    }
-
-    .course-box0 h2.main {
-        font-size: 20px;
-        color: #333;
-        padding: 29px 0 28px;
-        border-bottom: 1px solid #ebebeb;
-        margin: 0 30px;
-        background-color: transparent;
-    }
-
-    .user_attendance {
-        margin-bottom: 20px;
-    }
-
-    .user-attendance h2.main {
-        font-size: 16px;
-        margin: 0;
-        color: #333;
-        font-weight: 700;
-        padding: 21px 28px 20px;
-        border-bottom: 1px solid #d9dbdb;
-        background-color: #e4f0eb;
-    }
-
-    .user-attendance .user_attendance_table {
-        width: 100%;
-    }
-
-    .attendance {
-        border-bottom: 1px #ebebeb solid;
-    }
-
-    .att_count {
-        font-size: 12px;
-        margin-top: 10px;
     }
 </style>
 
@@ -465,124 +111,33 @@
         <div id="page-header">
             <nav class="navbar">
                 <div class="container-fluid">
-                    <div>
-                        <div class="navbar-brand">
-                            <a href="https://learn.hansung.ac.kr" class="logo">
-                                <span class="sr-only">CyberCampus</span>
-                            </a>
-                        </div>
-                        <div class="coursename">
-                            <h1><a href="https://learn.hansung.ac.kr/course/view.php?id=32592">강의명</a></h1>
-                        </div>
+                    <div class="navbar-brand">
+                        <a href="https://learn.hansung.ac.kr" class="logo"></a>
                     </div>
                     <div class="usermenu">
-                        <ul class="nav nav-pills" role="tablist">
-                            <li class="user_department">이영재</li>
-                            <li class="user-info-menu"><a class="user-info-popover"><img src="img/user.png" alt="유저 사진"
-                                        class="userpicture"></a>
-                            </li>
-                            <li class="user-course"><a class="user-courses-popover icon-a">
-                                    <div class="icon icon-my"></div>
-                                </a></li>
-                            <li class="user-notification"><a class="icon-a user-noti-popover">
-                                    <div class="icon icon-noti"></div>
-                                </a></li>
-                            <li class="user-message"><a class="icon-a user-message-popover">
-                                    <div class="icon icon-msg"></div>
-                                </a></li>
-                            <li class="user-product"><a class="user-menu-product icon-a">
-                                    <div class="icon icon-menu"></div>
-                                </a></li>
-                            <li class="active user-login user-logout"><a
-                                    href="https://learn.hansung.ac.kr/login/logout.php?sesskey=9SFyGxrYJd"
-                                    class="btn btn-person">로그아웃</a></li>
-                        </ul>
+                        <ul class="nav"></ul>
                     </div>
+                    <div class="coursemenu"></div>
                 </div>
             </nav>
         </div>
-        <!-- <div id="page-side">
-            <ul class="left-menus">
-                <li><a href="https://learn.hansung.ac.kr" class="left-menu-link left-menu-link-mypage">
-                        <h5>My Page</h5>
-                    </a></li>
-                <li><a href="https://learn.hansung.ac.kr" class="left-menu-link left-menu-link-mycourse">
-                        <h5>나의 강좌</h5>
-                    </a></li>
-                <li><a href="https://learn.hansung.ac.kr" class="left-menu-link left-menu-link-online">
-                        <h5>한성 MOOC</h5>
-                    </a></li>
-                <li><a href="https://learn.hansung.ac.kr" class="left-menu-link left-menu-link-eclass">
-                        <h5>커뮤니티</h5>
-                    </a></li>
-                <li><a href="https://learn.hansung.ac.kr" class="left-menu-link left-menu-link-message">
-                        <h5>메시지</h5>
-                    </a></li>
-                <li><a href="https://learn.hansung.ac.kr" class="left-menu-link left-menu-link-guide">
-                        <h5>이용안내</h5>
-                    </a></li>
-            </ul>
-        </div> -->
         <div id="page-main">
-            <div id="page-container">
-                <div class="course-header">
-                    <div class="professor-info">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-profinfo"></div>
-                                <div class="upcommings"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="submenu">
-                    <ul class="course-menus">
-                        <li>
-                            <div class="block">
-                                <div class="header">
-                                    <h2><a href="https://learn.hansung.ac.kr/course/view.php?id=32592">강의실 홈</a></h2>
-                                </div>
-                                <div class="content">
-                                    <ul class="topmenu">
-                                        <li class="expand">
-                                            <a href="#" title="강의정보">강의정보</a>
-                                        </li>
-                                    </ul>
+            <div class="course-header">
+                <div class="professor-info">
+                    <div class="fluid">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="media">
+                                    <h3 class="media-head">교수명</h3>
                                 </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="block">
-                                <div class="header">
-                                    <h2>학습활동</h2>
-                                </div>
-                                <div class="content"></div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div id="page-content">
-                    <div id="page-content-wrap">
-                        <div id="region-main">
-                            <div class="course-content">
-                                <div class="course-box course-box0">
-                                    <h2 class="main">강좌 개요</h2>
-                                    <ul class="days"></ul>
-                                </div>
-                                <div class="user-attendance course-box">
-                                    <h2 class="main">진도 현황</h2>
-                                    <div class="user_attendance_table">
-                                        <ul class="attendance"></ul>
-                                        <div class="att_count"></div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="col-sm-4"></div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div id="page-submenu"></div>
         </div>
-        <div id="page-footer"></div>
     </div>
 </body>
 
