@@ -80,8 +80,7 @@ div {
 }
 
 #page-header .usermenu {
-  margin-top: 4px;
-  margin-right: 5px;
+  margin: 0;
 }
 
 .usermenu {
