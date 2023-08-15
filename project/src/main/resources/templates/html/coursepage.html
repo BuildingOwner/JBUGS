@@ -11,7 +11,10 @@
 </head>
 
 <body>
-    <div id="page">
+    <div th:replace="fragments/header :: header" />
+    <div class="d-flex">
+        <div th:replace="fragments/sidebar :: sidebar" />
+        <div id="page">
         <div data-include-path="header.html"></div>
         <div id="page-main">
             <div class="course-header">
@@ -292,6 +295,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 
