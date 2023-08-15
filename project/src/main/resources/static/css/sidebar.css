@@ -1,0 +1,35 @@
+li > .link-body-emphasis {
+  color: #999 !important;
+}
+
+.link-body-emphasis:hover {
+  color: white !important;
+}
+
+.accordion-item {
+  border-radius: var(--bs-nav-pills-border-radius) !important;
+}
+
+.sidebar {
+  width: 15%;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  margin-top: 6px;
+}
+
+a {
+  text-decoration: none !important;
+  color: white !important;
+}
+button {
+  width: 100% !important;
+  padding: 10px !important;
+}
+span {
+  text-align: center;
+}
