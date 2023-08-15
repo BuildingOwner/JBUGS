@@ -11,14 +11,14 @@ li > .link-body-emphasis {
 }
 
 .sidebar {
-  width: 15%;
+  width: 280px;
 }
 
 ul {
   padding-left: 0;
 }
 
-li {
+.accordion-body li {
   margin-top: 6px;
 }
 
