@@ -122,3 +122,17 @@ a.logo {
 .attendance {
   border-bottom: 1px #ebebeb solid;
 }
+
+.header.drop {
+  position: fixed;
+  animation: dropHeader 0.3s;
+}
+
+@keyframes dropHeader {
+  0% {
+    top: -5rem;
+  }
+  100% {
+    top: 0;
+  }
+}
