@@ -4,11 +4,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -16,25 +14,18 @@ import java.sql.Date;
 @NoArgsConstructor
 public class ClassNotice {
     @Id @GeneratedValue
-    @Column(name = "noticeId")
+    @Column(name = "notice_id")
     private Long id;
     private String name;
     private String title;
     private String content;
     private int viewCount;
-    private Date updateDate;
-    private Date regDate;
-    private Date deleteDate;
+    private LocalDate updateDate;
+    private String writer;
+    private LocalDate deleteDate;
 
-    public ClassNotice(Long id, String name, String title, String content, int viewCount, Date updateDate, Date regDate, Date deleteDate) {
-        this.id = id;
-        this.name = name;
-        this.title = title;
-        this.content = content;
-        this.viewCount = viewCount;
-        this.updateDate = updateDate;
-        this.regDate = regDate;
-        this.deleteDate = deleteDate;
-    }
+    @ManyToOne
+    @JoinColumn(name="class_id")
+    private Class aClass;
 
 }

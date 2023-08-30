@@ -4,26 +4,28 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter @Setter
 @NoArgsConstructor
 public class User {
     @Id @GeneratedValue
-    @Column(name = "userId")
+    @Column(name = "user_id")
     private Long id;
     private String name;
     private String password;
     private String phoneNumber;
+    private String mail;
 
-    public User(Long id, String name, String password, String phoneNumber) {
-        this.id = id;
-        this.name = name;
-        this.password = password;
-        this.phoneNumber = phoneNumber;
-    }
+    @Enumerated(EnumType.STRING)
+    private UserAdmin status; //STUDENT, PROFESSOR
+
+    @OneToOne(mappedBy = "user")
+    private Student student;
+
+    @OneToOne(mappedBy = "user")
+    private Professor professor;
+
+
 }

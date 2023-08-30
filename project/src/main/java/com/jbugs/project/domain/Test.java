@@ -3,7 +3,6 @@ package com.jbugs.project.domain;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.*;
 
@@ -13,11 +12,18 @@ import javax.persistence.*;
 @Setter
 public class Test {
     @Id @GeneratedValue
-    @Column(name="studentId")
+    @Column(name="test_id")
     private Long id;
 
     private Long classId;
     private int year;
+
+    @ManyToOne
+    @JoinColumn(name = "class_id")
+    private Class aClass;
+
+    @OneToOne(mappedBy = "test")
+    private TestScore testScore;
 
     public Test(Long id, Long classId, int year) {
         this.id = id;
