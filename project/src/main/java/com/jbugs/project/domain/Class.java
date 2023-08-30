@@ -28,4 +28,8 @@ public class Class {
     @OneToMany(mappedBy = "aClass")
     private List<Test> tests = new ArrayList<>();
 
+    @ManyToOne
+    @JoinColumn(name = "professor_id")
+    private Professor professor;
+
 }

@@ -15,7 +15,6 @@ public class Test {
     @Column(name="test_id")
     private Long id;
 
-    private Long classId;
     private int year;
 
     @ManyToOne
@@ -25,10 +24,5 @@ public class Test {
     @OneToOne(mappedBy = "test")
     private TestScore testScore;
 
-    public Test(Long id, Long classId, int year) {
-        this.id = id;
-        this.classId = classId;
-        this.year = year;
-    }
 
 }

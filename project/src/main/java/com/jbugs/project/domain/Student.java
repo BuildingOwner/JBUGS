@@ -15,7 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 public class Student {
     @Id @GeneratedValue
-    @Column(name = "studen_id")
+    @Column(name = "student_id")
     private Long id;
     private String name;
     private String track1;
