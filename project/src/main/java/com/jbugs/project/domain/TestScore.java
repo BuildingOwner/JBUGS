@@ -6,6 +6,8 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+import static javax.persistence.FetchType.LAZY;
+
 @Entity
 @NoArgsConstructor
 @Getter
@@ -16,7 +18,7 @@ public class TestScore {
     @Column(name = "test_score_id")
     private Long id;
 
-    @OneToOne
+    @OneToOne(fetch = LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "test_id")
     private Test test;
 

@@ -6,6 +6,8 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+import static javax.persistence.FetchType.LAZY;
+
 @Entity
 @Getter @Setter
 @NoArgsConstructor
@@ -21,10 +23,10 @@ public class User {
     @Enumerated(EnumType.STRING)
     private UserAdmin status; //STUDENT, PROFESSOR
 
-    @OneToOne(mappedBy = "user")
+    @OneToOne(mappedBy = "user", fetch = LAZY)
     private Student student;
 
-    @OneToOne(mappedBy = "user")
+    @OneToOne(mappedBy = "user", fetch = LAZY)
     private Professor professor;
 
 

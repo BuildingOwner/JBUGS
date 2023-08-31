@@ -6,6 +6,8 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+import static javax.persistence.FetchType.*;
+
 @Entity
 @NoArgsConstructor
 @Getter
@@ -17,11 +19,11 @@ public class Test {
 
     private int year;
 
-    @ManyToOne
+    @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "class_id")
     private Class aClass;
 
-    @OneToOne(mappedBy = "test")
+    @OneToOne(mappedBy = "test", fetch = LAZY)
     private TestScore testScore;
 
 

@@ -8,6 +8,8 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static javax.persistence.FetchType.*;
+
 @Entity
 @Getter
 @Setter
@@ -22,13 +24,13 @@ public class Class {
     private String file_name;
     private int view_count;
 
-    @OneToMany(mappedBy = "aClass")
+    @OneToMany(mappedBy = "aClass", cascade = CascadeType.ALL)
     private List<Takes> takes = new ArrayList<>();
 
-    @OneToMany(mappedBy = "aClass")
+    @OneToMany(mappedBy = "aClass", cascade = CascadeType.ALL)
     private List<Test> tests = new ArrayList<>();
 
-    @ManyToOne
+    @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "professor_id")
     private Professor professor;
 

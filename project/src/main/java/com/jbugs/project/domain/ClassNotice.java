@@ -8,6 +8,8 @@ import javax.persistence.*;
 import java.sql.Date;
 import java.time.LocalDate;
 
+import static javax.persistence.FetchType.LAZY;
+
 @Entity
 @Getter
 @Setter
@@ -24,7 +26,7 @@ public class ClassNotice {
     private String writer;
     private LocalDate deleteDate;
 
-    @ManyToOne
+    @ManyToOne(fetch = LAZY)
     @JoinColumn(name="class_id")
     private Class aClass;
 
