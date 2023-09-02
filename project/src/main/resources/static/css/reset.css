@@ -77,6 +77,9 @@ h4{
 h5{
 	font-size: 1.2em;
 }
-/* h1,h2,h3,h4,h5{
-	font-weight: bold;
-} */
+.invisible{
+	display: none;
+}
+.img-center{
+	text-align: center;
+}
