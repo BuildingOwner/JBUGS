@@ -4,24 +4,28 @@
 
 .container{
   padding: 20px;
-  height: 97%;
+  height: 1070px;
   display: flex;
   justify-content: space-around;
-  background-color: white;
 }
 
 .nav{
   width: 190px;
   min-width: 190px;
+  height: 100%;
   padding: 20px;
   text-align: center;
   flex-grow: 0;
+  background-color: var(--blue2);
+  border-radius: 10px;
 }
 
 .logo{
   width: 150px;
   padding: 10px 20px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  background-color: var(--white);
+  border-radius: 10px;
 }
 
 .nav ul {
@@ -51,11 +55,16 @@
   flex-grow: 1;
   padding: 0 20px;
   min-width: 615px;
+  background-color: var(--white);
 }
 
 .recommendation{
   margin-bottom: 20px;
   min-height: 300px;
+}
+
+.reco-top{
+  margin-bottom: 10px;
 }
 
 .reco-top, .info-bar-top{
@@ -157,14 +166,14 @@
 }
 
 .title{
-  margin: 60px 0 70px 0;
+  margin: 35px 0 70px 0;
   font-weight: bold;
 }
 
 .info-bar{
   width: 25%;
   padding: 20px;
-  margin-top: 37px;
+  margin-top: 25px;
   min-width: 310px;
   max-width: 400px;
 }
@@ -196,6 +205,7 @@
 .homework{
   height: auto;
   min-height: 200px;
+  padding-bottom: 20px;
 }
 
 .homework-content{
