@@ -1,3 +1,4 @@
+//아코디언 클릭 이벤트 정의
 document
   .querySelectorAll(".accordion .accordion_item > button")
   .forEach((btn) => {

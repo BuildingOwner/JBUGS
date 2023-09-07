@@ -112,17 +112,63 @@
             </div>
         </div>
 
-    </div>
-    <script defer>
-        //아코디언 클릭 이벤트 정의
-        document.querySelectorAll('.accordion .accordion_item > button').forEach((btn) => {
-            btn.addEventListener('click', (e) => {
-                let accordion_item = e.currentTarget.parentNode;
-                accordion_item.classList.toggle('open');
-            });
-        });
+        <div class="info-bar">
+            <div class="info-bar-top">
+                <h3>학생 정보</h3>
+                <button><i class="bi bi-pen"></i></button>
+            </div>
+            <div class="userInfo">
+                <img src="../static/img/sangsangbugi.png" alt="profile" class="profile" />
+                <h4 class="userName">상상부기</h4>
+                <h5 class="track">모바일소프트웨어트랙</h5>
+            </div>
 
-    </script>
+            <div id="calendar"></div>
+
+            <div class="homework">
+                <h3>과제</h3>
+                <div class="homework-content">
+                    <div class="isSummit">
+                        <i class="bi bi-check-lg invisible"></i>
+                        <i class="bi bi-x-circle"></i>
+                    </div>
+                    <div class="homework-info">
+                        <div class="homework-class">과목명</div>
+                        <div class="homework-title">과제1</div>
+                        <div class="duration">00일 00시 00분 00초 남음..</div>
+                    </div>
+                    <div class="homework-icon"><i class="bi bi-chevron-right"></i></div>
+                </div>
+                <div class="homework-content">
+                    <div class="isSummit">
+                        <i class="bi bi-check-lg invisible"></i>
+                        <i class="bi bi-x-circle"></i>
+                    </div>
+                    <div class="homework-info">
+                        <div class="homework-class">과목명</div>
+                        <div class="homework-title">과제2</div>
+                        <div class="duration">00일 00시 00분 00초 남음..</div>
+                    </div>
+                    <div class="homework-icon"><i class="bi bi-chevron-right"></i></div>
+                </div>
+                <div class="homework-content">
+                    <div class="isSummit">
+                        <i class="bi bi-check-lg invisible"></i>
+                        <i class="bi bi-x-circle"></i>
+                    </div>
+                    <div class="homework-info">
+                        <div class="homework-class">과목명</div>
+                        <div class="homework-title">과제3</div>
+                        <div class="duration">00일 00시 00분 00초 남음..</div>
+                    </div>
+                    <div class="homework-icon"><i class="bi bi-chevron-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/accordion.js"></script>
+    <script src="../static/js/calendar.js"></script>
 </body>
 
 </html>
