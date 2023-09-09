@@ -5,7 +5,7 @@
 }
 
 .login-background {
-  background: url(../img/back.jpg) no-repeat;
+  background: url(../img/한성대.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -27,7 +27,7 @@ body .page-content {
 }
 
 .page-header .logo {
-  background: url(../img/국영문시그니쳐.png) no-repeat;
+  background: url(../img/logo.png) no-repeat;
   display: block;
   height: 68px;
   width: 190px;
@@ -56,6 +56,7 @@ body .page-content {
   width: 280px;
   float: left;
   height: 200px;
+  border-radius: 20px;
 }
 
 .col-login h2 {
@@ -105,7 +106,7 @@ body .page-content {
   color: white;
 }
 
-input[type="submit"] {
+input[type="button"] {
   cursor: pointer;
 }
 
@@ -142,12 +143,14 @@ input[type="submit"] {
   float: left;
   background: rgba(76, 76, 76, 0.9);
   height: 200px;
+  border-radius: 20px;
+
 }
 
 .col-family ul {
   margin: 0;
   list-style: none;
-  background: rgba(76, 76, 76, 0.9);
+  /* background: rgba(76, 76, 76, 0.9); */
   padding: 25px 15px;
   height: 200px;
 }

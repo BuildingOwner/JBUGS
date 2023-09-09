@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../static/css/new-course-page.css">
-    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../../static/css/new-course-page.css">
+    <link rel="stylesheet" href="../../static/css/reset.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -20,7 +20,7 @@
 <body>
     <div class="container">
         <div class="nav">
-            <img src="../static/img/국영문시그니쳐.png" alt="logo" class="logo" />
+            <img src="../../static/img/국영문시그니쳐.png" alt="logo" class="logo" />
             <ul>
                 <li>
                     <button onclick="location.href='new-main-demo.html'">
@@ -55,8 +55,17 @@
             </ul>
         </div>
         <div class="classroom">
-            <h2 class="title">강의명 (ex.설계패턴)</h2>
-
+            <div class="title_prof">
+                <h2 class="title">강의명 (ex.설계패턴)</h2>
+                <div class="dropdown">
+                    <button class="prof">교수명</button>
+                    <div class="dropdown-options">
+                        <a href="#">email@email.com</a>
+                        <a href="#">강의실 : 공학관 202호</a>
+                        <a href="#">연구실 : 연구관 xxx호</a>
+                    </div>
+                </div>
+            </div>
             <button class="accordion" id="1week">주차 1</button>
             <div class="panel">
                 <p class="class-content">내용 1</p>
@@ -311,8 +320,8 @@
         </div>
     </div>
 
-    <script src="../static/js/accordion.js"></script>
-    <script src="../static/js/calendar.js"></script>
+    <script src="../../static/js/accordion.js"></script>
+    <script src="../../static/js/calendar.js"></script>
     <script src="../../static/js/stick.js" type="module"></script>
 
 </body>
