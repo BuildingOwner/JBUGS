@@ -13,8 +13,6 @@
   padding: 0 20px;
 }
 
-
-
 .nav {
   width: 190px;
   min-width: 190px;
@@ -134,7 +132,7 @@
 }
 
 .accordion:after {
-  content: '\002B';
+  content: "\002B";
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -154,7 +152,16 @@
 }
 
 /* 아코디언 css */
-
+.progressbar {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--blue2);
+}
 
 .info-bar {
   width: 25%;
@@ -163,7 +170,6 @@
   min-width: 310px;
   max-width: 400px;
 }
-
 
 .userInfo {
   text-align: center;
@@ -258,14 +264,46 @@
   height: 200px;
   text-align: center;
   margin-bottom: 10px;
-  background-color: rgba(120, 120, 120, 1)
+  background-color: rgba(120, 120, 120, 1);
 }
 
 .course-table tr td {
   border: 1px solid black;
 }
 
-tr>td>a {
+tr > td > a {
   text-decoration: none;
   color: white;
+}
+
+.bar-holder {
+  width: 30%;
+  background-color: rgb(231, 231, 231);
+  border-radius: 20px;
+  /* -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  margin: 0 auto; */
+}
+
+/* INDIVIDUAL BAR'S STYLING, SAME GOES WITH OTHER BARS */
+
+.bar-2 {
+  width: 20%;
+  background-color: rgb(22, 21, 21);
+  color: #fff;
+  border-radius: 20px;
+  /* -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px; */
+  text-align: center;
+  /* margin-top: 15px; */
+  font-weight: 400;
+}
+
+.abcd {
+  display: flex;
+  justify-content: space-between;
 }
