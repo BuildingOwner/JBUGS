@@ -141,6 +141,8 @@ table {
 	--blue1: #83b0e6;
 	--gray: #D7DDE2;
 	--white: #F6F8F8;
+	--warning: #ee2222;
+	--safe: #1ed33c;
 }
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
