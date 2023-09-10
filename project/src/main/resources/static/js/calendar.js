@@ -84,19 +84,19 @@
         //   title: 'Happy Hour',
         //   start: '2021-07-12T17:30:00'
         // },
-        // {
-        //   title: 'Dinner',
-        //   start: '2021-07-12T20:00:00'
-        // },
-        // {
-        //   title: 'Birthday Party',
-        //   start: '2021-07-13T07:00:00'
-        // },
-        // {
-        //   title: 'Click for Google',
-        //   url: 'http://google.com/', // 클릭시 해당 url로 이동
-        //   start: '2021-07-28'
-        // }
+        {
+          title: 'Dinner',
+          start: '2023-07-12T20:00:00'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2023-07-13T07:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/', // 클릭시 해당 url로 이동
+          start: '2023-07-28'
+        }
       ]
     });
     // 캘린더 랜더링
