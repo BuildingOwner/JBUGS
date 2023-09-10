@@ -1,18 +1,84 @@
-
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -20,39 +86,59 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
-html{
+
+html {
 	height: 99%;
 }
+
 body {
 	line-height: 1;
 	height: 100%;
 	width: 100%;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
 :root {
-	--blue3 : #295493;
-	--blue2 : #3776c6;
-	--blue1 : #83b0e6;
+	--blue3: #295493;
+	--blue2: #3776c6;
+	--blue1: #83b0e6;
 	--gray: #D7DDE2;
 	--white: #F6F8F8;
 	--warning: #ee2222;
@@ -60,27 +146,35 @@ table {
 }
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
 @font-face {
-    font-family: 'Nanum Gothic';
-    src: url('../nanum-gothic/NanumGothic.ttf') format('truetype');
+	font-family: 'Nanum Gothic';
+	src: url('../nanum-gothic/NanumGothic.ttf') format('truetype');
 }
+
 * {
 	font-family: "Nanum Gothic" !important;
 }
-h2{
+
+h2 {
 	font-size: 2.6em;
 }
-h3{
+
+h3 {
 	font-size: 1.6em;
 }
-h4{
+
+h4 {
 	font-size: 1.4em;
 }
-h5{
+
+h5 {
 	font-size: 1.2em;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
 	background-color: var(--white);
 	/* border: 3px solid var(--blue1); */
 	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -93,13 +187,14 @@ h1,h2,h3{
 	border-radius: 10px;
 }
 
-.invisible{
+.invisible {
 	display: none;
 }
-.img-center{
+
+.img-center {
 	text-align: center;
 }
 
-button{
+button {
 	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }

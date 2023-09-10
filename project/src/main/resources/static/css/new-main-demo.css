@@ -2,7 +2,7 @@
   border: 1px solid black;
 } */
 
-.container{
+.container {
   padding: 20px;
   height: 1070px;
   display: flex;
@@ -16,21 +16,23 @@
   background-color: var(--white);
 }
 
-.recommendation{
+.recommendation {
   margin-bottom: 20px;
   min-height: 300px;
 }
 
-.reco-top{
+.reco-top {
   margin-bottom: 10px;
 }
 
-.reco-top, .info-bar-top{
+.reco-top,
+.info-bar-top {
   display: flex;
   justify-content: space-between;
 }
 
-.reco-top button, .info-bar-top button{
+.reco-top button,
+.info-bar-top button {
   width: 35px;
   height: 35px;
   border-radius: 10px;
@@ -40,16 +42,17 @@
   background-color: var(--gray);
 }
 
-.reco-top button:hover, .info-bar-top button:hover{
+.reco-top button:hover,
+.info-bar-top button:hover {
   background-color: var(--blue1);
   cursor: pointer;
 }
 
-.reco-list{
+.reco-list {
   display: flex;
 }
 
-.reco-contents{
+.reco-contents {
   width: 165px;
   height: 250px;
   margin: 10px;
@@ -59,15 +62,16 @@
   justify-content: space-between;
   border-radius: 10px;
   background-color: var(--gray);
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px;
 }
 
-.reco-contents:hover{
+.reco-contents:hover {
   background-color: var(--blue1);
   cursor: pointer;
 }
 
-.reco-contents img{
+.reco-contents img {
   width: 100%;
   height: 150px;
   background-color: var(--white);
@@ -75,60 +79,63 @@
   object-fit: contain;
 }
 
-.classroom{
+.classroom {
   height: auto;
   min-height: 400px;
 }
 
-.classroom table{
+.classroom table {
   margin-top: 20px;
   width: 100%;
   text-align: left;
 }
 
-.classroom th, .classroom td{
+.classroom th,
+.classroom td {
   padding: 5px;
 }
 
-.classroom td:nth-child(1), .classroom td:nth-child(3), .classroom td:nth-child(4){
+.classroom td:nth-child(1),
+.classroom td:nth-child(3),
+.classroom td:nth-child(4) {
   width: 100px;
 }
 
-.classroom td{
-  vertical-align : middle;
+.classroom td {
+  vertical-align: middle;
   border-bottom: 2px solid var(--gray);
 }
 
-.classroom tr td:nth-child(1){
+.classroom tr td:nth-child(1) {
   border-radius: 10px 0 0 10px;
 }
 
-.classroom tr td:last-child{
+.classroom tr td:last-child {
   border-radius: 0 10px 10px 0;
 }
 
-.classroom tr:hover{
+.classroom tr:hover {
   background-color: var(--blue1);
   cursor: pointer;
 }
 
-.classroom tr:nth-child(1):hover{
+.classroom tr:nth-child(1):hover {
   background-color: white;
   cursor: default;
 }
 
-.classroom img{
+.classroom img {
   width: 50px;
   background-color: var(--gray);
   border-radius: 8px;
 }
 
-.title{
+.title {
   margin: 35px 0 70px 0;
   font-weight: bold;
 }
 
-.info-bar{
+.info-bar {
   width: 25%;
   padding: 20px;
   margin-top: 25px;
@@ -136,17 +143,17 @@
   max-width: 400px;
 }
 
-.userInfo{
+.userInfo {
   text-align: center;
   padding: 30px;
   margin-bottom: 20px;
   flex-grow: 0;
 }
-.userInfo h4{
+.userInfo h4 {
   margin-bottom: 20px;
 }
 
-.profile{
+.profile {
   width: 200px;
   height: 200px;
   margin-bottom: 20px;
@@ -154,19 +161,19 @@
   border-radius: 10000px;
 }
 
-#calendar{
+#calendar {
   height: 30%;
   margin-bottom: 20px;
   min-height: 370px;
 }
 
-.homework{
+.homework {
   height: auto;
   min-height: 200px;
   padding-bottom: 20px;
 }
 
-.homework-content{
+.homework-content {
   margin-top: 10px;
   padding: 10px;
   width: 100%;
@@ -174,22 +181,23 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-.homework-content:hover{
+.homework-content:hover {
   cursor: pointer;
   background-color: var(--blue1);
 }
 
-.isSummit{
+.isSummit {
   font-size: 2.2em;
 }
 
-.homework-icon{
+.homework-icon {
   font-size: 1.4em;
 }
 
-.homework-info div{
+.homework-info div {
   padding: 5px;
 }
