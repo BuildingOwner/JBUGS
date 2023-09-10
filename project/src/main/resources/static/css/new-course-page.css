@@ -67,7 +67,7 @@
   display: block;
 }
 
-.dropdown-options a {
+.dropdown-options span {
   display: block;
   color: #000000;
   padding: 5px;
@@ -75,7 +75,7 @@
   padding: 20px 40px;
 }
 
-.dropdown-options a:hover {
+.dropdown-options span:hover {
   color: #0a0a23;
   background-color: #ddd;
   border-radius: 5px;
@@ -258,13 +258,13 @@
   top: 10px;
 }
 
-.course-table {
+#course-table {
   border: 1px solid black;
   width: 200px;
   height: 200px;
   text-align: center;
   margin-bottom: 10px;
-  background-color: rgba(120, 120, 120, 1);
+  background-color: rgba(120, 120, 120, 1) !important;
 }
 
 .course-table tr td {

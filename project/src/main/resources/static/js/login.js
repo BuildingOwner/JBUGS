@@ -13,11 +13,7 @@ function loginHandler() {
       errStack++;
     }
   } else {
-    alert("존재하지 않는 계정");
-  }
-
-  if (errStack >= 5) {
-    alert("비밀번호를 5회 이상 틀리셨습니다. 비밀번호 찾기를 권장드립니다.");
+    alert("ID 또는 비밀번호 확인");
   }
 }
 
