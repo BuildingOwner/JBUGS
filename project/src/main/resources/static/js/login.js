@@ -6,7 +6,7 @@ let errStack = 0;
 function loginHandler() {
   if (id.value == "1971083") {
     if (password.value == "1111") {
-      alert("로그인 성공");
+      // alert("로그인 성공");
       window.location.href = "new-main-demo.html";
     } else {
       alert("ID 또는 비밀번호 확인");

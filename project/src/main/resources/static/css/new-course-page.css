@@ -5,14 +5,16 @@
   justify-content: space-around;
 }
 
+.classroom {
+  padding: 0 20px;
+  flex-grow: 1;
+  min-width: 615px;
+}
+
 .class-content {
   margin: 16px;
 }
 
-.classroom {
-  padding: 0 20px;
-  flex-grow: 1;
-}
 
 .nav {
   width: 190px;
@@ -118,7 +120,7 @@
   background-color: #ffffff;
   cursor: pointer;
   padding: 16px;
-  width: 850px;
+  width: 100%;
   outline: none;
   border: none;
   text-align: left;
@@ -272,9 +274,15 @@
   border: 1px solid black;
 }
 
-tr > td > a {
+tr>td>a {
   text-decoration: none;
   color: white;
+}
+
+.content-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .bar-holder {
@@ -290,7 +298,7 @@ tr > td > a {
 
 /* INDIVIDUAL BAR'S STYLING, SAME GOES WITH OTHER BARS */
 
-.bar-2 {
+.bar {
   width: 40%;
   background-color: rgb(22, 21, 21);
   color: #fff;
@@ -302,10 +310,4 @@ tr > td > a {
   text-align: center;
   /* margin-top: 15px; */
   font-weight: 400;
-}
-
-.content-progress {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }

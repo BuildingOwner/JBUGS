@@ -1,0 +1,15 @@
+.container {
+    padding: 20px;
+    display: flex;
+}
+
+.section {
+    flex-grow: 1;
+    padding: 0 20px;
+    padding-top: 35px;
+    min-width: 615px;
+}
+
+.section h2 {
+    margin-bottom: 70px;
+}
