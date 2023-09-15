@@ -1,0 +1,69 @@
+.container {
+  padding: 20px;
+  display: flex;
+}
+
+.section {
+  flex-grow: 1;
+  padding: 0 20px;
+  padding-top: 35px;
+  min-width: 615px;
+}
+
+.section h2 {
+  margin-bottom: 70px;
+}
+
+.select {
+  background-color: var(--gray);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+
+#classes {
+  font-size: 1em;
+  border-radius: 8px;
+  border: none;
+}
+
+.accordion {
+  background-color: var(--gray);
+  cursor: pointer;
+  padding: 16px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: none;
+}
+
+.active,
+.accordion:hover {
+  background-color: var(--blue1);
+}
+
+.accordion:after {
+  content: "\002B";
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 16px;
+  background-color: #ffffff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.class-content {
+  padding: 20px;
+}

@@ -1,0 +1,202 @@
+/* div{
+  border: 1px solid black;
+} */
+
+.container {
+  padding: 20px;
+  width: fit-content;
+  display: flex;
+  justify-content: space-around;
+}
+
+.section {
+  flex-grow: 1;
+  padding: 0 20px;
+  min-width: 615px;
+}
+
+.recommendation {
+  margin-bottom: 20px;
+  min-height: 300px;
+}
+
+.reco-top {
+  margin-bottom: 10px;
+}
+
+.reco-top,
+.info-bar-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reco-top button,
+.info-bar-top button {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.2em;
+  text-align: center;
+  background-color: var(--gray);
+}
+
+.reco-top button:hover,
+.info-bar-top button:hover {
+  background-color: var(--blue1);
+  cursor: pointer;
+}
+
+.reco-list {
+  display: flex;
+}
+
+.reco-contents {
+  width: 165px;
+  height: 250px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: var(--gray);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px;
+}
+
+.reco-contents:hover {
+  background-color: var(--blue1);
+  cursor: pointer;
+}
+
+.reco-contents img {
+  width: 100%;
+  height: 150px;
+  background-color: var(--white);
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.classroom {
+  height: auto;
+  min-height: 400px;
+}
+
+.classroom table {
+  margin-top: 20px;
+  width: 100%;
+  text-align: left;
+}
+
+.classroom th,
+.classroom td {
+  padding: 5px;
+}
+
+.classroom td:nth-child(1),
+.classroom td:nth-child(3),
+.classroom td:nth-child(4) {
+  width: 100px;
+}
+
+.classroom td {
+  vertical-align: middle;
+  border-bottom: 2px solid var(--gray);
+}
+
+.classroom tr td:nth-child(1) {
+  border-radius: 10px 0 0 10px;
+}
+
+.classroom tr td:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.classroom tr:hover {
+  background-color: var(--blue1);
+  cursor: pointer;
+}
+
+.classroom tr:nth-child(1):hover {
+  background-color: white;
+  cursor: default;
+}
+
+.classroom img {
+  width: 50px;
+  background-color: var(--gray);
+  border-radius: 8px;
+}
+
+.title {
+  margin: 35px 0 70px 0;
+  font-weight: bold;
+}
+
+.info-bar {
+  /* width: 25%; */
+  padding: 20px;
+  margin-top: 25px;
+  min-width: 310px;
+  max-width: 400px;
+}
+
+.userInfo {
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 20px;
+  flex-grow: 0;
+}
+.userInfo h4 {
+  margin-bottom: 20px;
+}
+
+.profile {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+  background-color: var(--gray);
+  border-radius: 10000px;
+}
+
+#calendar {
+  height: 30%;
+  margin-bottom: 20px;
+  min-height: 370px;
+}
+
+.homework {
+  height: auto;
+  min-height: 200px;
+  padding-bottom: 20px;
+}
+
+.homework-content {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.homework-content:hover {
+  cursor: pointer;
+  background-color: var(--blue1);
+}
+
+.isSummit {
+  font-size: 2.2em;
+}
+
+.homework-icon {
+  font-size: 1.4em;
+}
+
+.homework-info div {
+  padding: 5px;
+}
