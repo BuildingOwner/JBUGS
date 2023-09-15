@@ -18,10 +18,15 @@
     <div class="page-content">
         <div class="col-login">
             <h2 class="login_top">LOGIN</h2>
-            <form class="form_login">
+            <form class="form_login" th:object="${loginForm}" method="post">
+                <div th:if="${#fields.hasGlobalErrors()}">
+                    <p class="field-error" th:each="err : ${#fields.globalErrors()}" th:text="${err}">전체 오류 메시지</p>
+                </div>
                 <div class="text_form">
-                    <input type="text" placeholder="사용자 아이디" id="userId">
-                    <input type="password" placeholder="비밀번호" id="userPw">
+                    <input type="text" id="loginId" th:field="*{loginId}" th:errorclass="field-error" placeholder="사용자 아이디">
+                    <div class="field-error" th:errors="*{loginId}"/>
+                    <input type="password" id="password" th:field="*{password}" th:errorclass="field-error" placeholder="비밀번호">
+                    <div class="field-error" th:errors="*{password}"/>
                 </div>
                 <div class="submit_form">
                     <input type="button" class="submit_button" id="user_login" value="로그인" onclick="goUrl()">

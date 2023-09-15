@@ -1,30 +1,31 @@
 package com.jbugs.project.domain;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
-import static javax.persistence.FetchType.*;
+import static javax.persistence.FetchType.LAZY;
 
 @Entity
-@NoArgsConstructor
 @Getter
 @Setter
-public class Test {
-    @Id @GeneratedValue
-    @Column(name="test_id")
+public class Takes {
+
+    @Id
+    @GeneratedValue
+    @Column(name = "takes_id")
     private Long id;
 
+    private String progress;
     private int year;
+
+    @OneToOne(fetch = LAZY)
+    private Student student;
 
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "class_id")
     private Class aClass;
-
-    @OneToOne(mappedBy = "test", fetch = LAZY)
-    private TestScore testScore;
 
 
 }

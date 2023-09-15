@@ -19,18 +19,21 @@ public class UserRepositoryTest {
 
     @Test
     @Transactional
-    @Rollback(false)
+    @Rollback(value = true)
     public void testUser() throws Exception {
         //given
         User user = new User();
-        user.setName("userA");
-
-        //when
-
-        //then
+        user.setName("최재완");
 
 
-        
+//        //when
+//        Long saveId = userRepository.save(user);
+//        User findUser = userRepository.findById(saveId);
+
+//        //then
+//        Assertions.assertThat(findUser.getId()).isEqualTo(user.getId());
+//        Assertions.assertThat(findUser.getName()).isEqualTo(user.getName());
+
     }
 
 }
