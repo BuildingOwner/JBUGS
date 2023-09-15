@@ -11,6 +11,36 @@ const MyClass = [
     dividion: "A",
     prof: "상상부기2",
   },
+  {
+    imgsrc: "../../static/img/sangsangbugi.png",
+    className: "자료구조",
+    dividion: "A",
+    prof: "상상부기2",
+  },
+  {
+    imgsrc: "../../static/img/sangsangbugi.png",
+    className: "알고리즘",
+    dividion: "1",
+    prof: "상상부기",
+  },
+  {
+    imgsrc: "../../static/img/sangsangbugi.png",
+    className: "자료구조",
+    dividion: "A",
+    prof: "상상부기2",
+  },
+  {
+    imgsrc: "../../static/img/sangsangbugi.png",
+    className: "자료구조",
+    dividion: "A",
+    prof: "상상부기2",
+  },
+  {
+    imgsrc: "../../static/img/sangsangbugi.png",
+    className: "자료구조",
+    dividion: "A",
+    prof: "상상부기2",
+  },
 ];
 
 const addClass = () => {
@@ -24,6 +54,14 @@ const addClass = () => {
     <td>${MyClass[i].className}</td><td>${MyClass[i].dividion}</td>
     <td>${MyClass[i].prof}</td>`;
 
+    newClass.addEventListener("click", () => {
+      window.location.href = "new-course-page.html";
+    });
+
     tableTag.appendChild(newClass);
+  }
+
+  if(tableTag.childElementCount == 8){
+    classroom.style.marginBottom = "32px"
   }
 };
