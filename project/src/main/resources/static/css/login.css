@@ -186,3 +186,7 @@ input[type="submit"] {
   text-overflow: ellipsis;
   text-decoration: none;
 }
+.field-error {
+  border-color: #dc3545;
+  color: #dc3545;
+}
