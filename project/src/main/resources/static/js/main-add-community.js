@@ -1,19 +1,19 @@
 const RecoContents = [
   {
     title: "자소서 특강",
-    imgsrc: "../../static/img/sangsangbugi.png",
+    imgsrc: "/img/sangsangbugi.png",
     discription: "자기소개서 특강합니다!",
     people: "11",
   },
   {
     title: "직업윤리교육",
-    imgsrc: "../../static/img/sangsangbugi.png",
+    imgsrc: "/img/sangsangbugi.png",
     discription: "직업 의식 고취를 위한 특강",
     people: "35",
   },
   {
     title: "천원의 아침밥 시행안내",
-    imgsrc: "../../static/img/sangsangbugi.png",
+    imgsrc: "/img/sangsangbugi.png",
     discription: "천원의 아침밥 시행안내",
     people: "693",
   },
