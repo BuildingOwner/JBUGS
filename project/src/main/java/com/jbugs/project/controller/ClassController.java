@@ -11,10 +11,10 @@ public class ClassController {
 
     //private final ClassService classService;
 
-    @GetMapping("html/coursepage")
+    @GetMapping("/coursepage")
     public String createForm(Model model){
 
-        return "html/coursepage";
+        return "html/new-course-page";
     }
 
 }
