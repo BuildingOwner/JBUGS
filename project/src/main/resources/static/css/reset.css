@@ -184,10 +184,8 @@ h3 {
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
   /* color: var(--white); */
   padding: 10px;
-  /* width: fit-content; */
+  width: fit-content;
   border-radius: 10px;
-  background-color: var(--blue2);
-  color: white;
 }
 
 .invisible {
@@ -203,3 +201,17 @@ button {
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
+.title {
+  background-color: var(--blue3);
+  width: auto;
+  color: white;
+}
+
+.title {
+  margin-bottom: 100px;
+  padding-left: 40px;
+  font-weight: bold;
+  height: 85px;
+  display: flex;
+  align-items: center;
+}

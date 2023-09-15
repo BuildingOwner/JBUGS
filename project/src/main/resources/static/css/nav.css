@@ -7,6 +7,7 @@
   flex-grow: 0;
   background-color: var(--blue2);
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .logo {
@@ -19,7 +20,7 @@
 }
 
 .nav ul {
-  margin-top: 50px;
+  margin-top: 105px;
 }
 
 .nav button {
