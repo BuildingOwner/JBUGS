@@ -6,7 +6,6 @@
 .section {
   flex-grow: 1;
   padding: 0 20px;
-  padding-top: 35px;
   min-width: 615px;
 }
 
@@ -15,16 +14,26 @@
 }
 
 .select {
-  background-color: var(--gray);
+  background-color: var(--blue1);
   padding: 20px;
   border-radius: 10px;
   font-size: 1.2em;
+  width: fit-content;
+  margin-bottom: 50px;
+}
+
+.select label {
+  font-weight: bold;
 }
 
 #classes {
   font-size: 1em;
   border-radius: 8px;
   border: none;
+}
+
+#classes:hover {
+  cursor: pointer;
 }
 
 .accordion {
