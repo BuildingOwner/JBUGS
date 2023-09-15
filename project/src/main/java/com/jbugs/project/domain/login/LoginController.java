@@ -20,12 +20,12 @@ public class LoginController {
 
     private final LoginService loginService;
 
-    @GetMapping("html/login")
+    @GetMapping("/login")
     public String loginForm(@ModelAttribute("loginForm") LoginForm form){
         return "html/login";
     }
 
-    @PostMapping("html/login")
+    @PostMapping("/login")
     public String login(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult, HttpServletResponse response){
         if(bindingResult.hasErrors()){
             return "html/login";

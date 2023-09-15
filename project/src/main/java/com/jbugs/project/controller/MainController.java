@@ -11,6 +11,6 @@ public class MainController {
     @RequestMapping("/")
     public String main(){
         log.info("main controller");
-        return "main";
+        return "html/new-main-demo";
     }
 }
