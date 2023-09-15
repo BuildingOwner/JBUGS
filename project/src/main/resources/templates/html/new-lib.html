@@ -1,66 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+    <link rel="stylesheet" href="../../static/css/reset.css" />
+    <link rel="stylesheet" href="../../static/css/nav.css" />
+    <link rel="stylesheet" href="../../static/css/library.css" />
+  </head>
 
-  <link rel="stylesheet" href="../../static/css/reset.css" />
-  <link rel="stylesheet" href="../../static/css/nav.css" />
-  <link rel="stylesheet" href="../../static/css/library.css" />
-</head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <img
+          src="../../static/img/국영문시그니쳐.png"
+          alt="logo"
+          class="logo"
+          onclick="location.href='new-main-demo.html'"
+        />
+        <ul>
+          <li>
+            <button onclick="location.href='new-main-demo.html'">
+              <i class="bi bi-house"></i>HOME
+            </button>
+          </li>
+          <li>
+            <button onclick="location.href='#'">
+              <i class="bi bi-folder"></i>자료실
+            </button>
+          </li>
+          <li>
+            <button onclick="location.href='#'">
+              <i class="bi bi-people"></i>커뮤니티
+            </button>
+          </li>
+          <li>
+            <button onclick="location.href='#'">
+              <i class="bi bi-chat"></i>메시지
+            </button>
+          </li>
+          <li>
+            <button onclick="location.href='#'">
+              <i class="bi bi-pc-display-horizontal"></i>한성 MOOC
+            </button>
+          </li>
+          <li>
+            <button onclick="location.href='#'">
+              <i class="bi bi-gear"></i>setting
+            </button>
+          </li>
+        </ul>
+      </div>
 
-<body>
-  <div class="container">
-    <div class="nav">
-      <img src="../../static/img/국영문시그니쳐.png" alt="logo" class="logo" onclick="location.href='new-main-demo.html'" />
-      <ul>
-        <li>
-          <button onclick="location.href='new-main-demo.html'">
-            <i class="bi bi-house"></i>HOME
-          </button>
-        </li>
-        <li>
-          <button onclick="location.href='#'">
-            <i class="bi bi-folder"></i>자료실
-          </button>
-        </li>
-        <li>
-          <button onclick="location.href='#'">
-            <i class="bi bi-people"></i>커뮤니티
-          </button>
-        </li>
-        <li>
-          <button onclick="location.href='#'">
-            <i class="bi bi-chat"></i>메시지
-          </button>
-        </li>
-        <li>
-          <button onclick="location.href='#'">
-            <i class="bi bi-pc-display-horizontal"></i>한성 MOOC
-          </button>
-        </li>
-        <li>
-          <button onclick="location.href='#'">
-            <i class="bi bi-gear"></i>setting
-          </button>
-        </li>
-      </ul>
+      <div class="section">
+        <h2>자료실</h2>
+        <div class="select">
+          <label for="classes">과목명</label>
+          <select name="classroom" id="classes">
+            <option value="1">과목을 선택해 주세요</option>
+            <option value="2">과목 1</option>
+            <option value="3">과목 2</option>
+            <option value="4">과목 3</option>
+            <option value="5">과목 4</option>
+          </select>
+        </div>
+
+        <div class="lib1">
+          <button class="accordion" id="2week">1주차</button>
+          <div class="panel">
+            <p class="class-content">내용 1</p>
+          </div>
+        </div>
+
+        <div class="lib2">
+          <button class="accordion" id="2week">2주차</button>
+          <div class="panel">
+            <p class="class-content">내용 1</p>
+          </div>
+        </div>
+
+        <div class="lib2">
+          <button class="accordion" id="2week">3주차</button>
+          <div class="panel">
+            <p class="class-content">내용 1</p>
+          </div>
+        </div>
+
+        <div class="lib2">
+          <button class="accordion" id="2week">4주차</button>
+          <div class="panel">
+            <p class="class-content">내용 1</p>
+          </div>
+        </div>
+
+        <div class="lib2">
+          <button class="accordion" id="2week">5주차</button>
+          <div class="panel">
+            <p class="class-content">내용 1</p>
+          </div>
+        </div>
+
+        <div class="lib2">
+          <button class="accordion" id="2week">6주차</button>
+          <div class="panel">
+            <p class="class-content">내용 1</p>
+          </div>
+        </div>
+
+        <div class="lib2">
+          <button class="accordion" id="2week">7주차</button>
+          <div class="panel">
+            <p class="class-content">내용 1</p>
+          </div>
+        </div>
+
+        <div class="lib2">
+          <button class="accordion" id="2week">8주차</button>
+          <div class="panel">
+            <p class="class-content">내용 1</p>
+          </div>
+        </div>
+
+        <div class="lib2">
+          <button class="accordion" id="2week">9주차</button>
+          <div class="panel">
+            <p class="class-content">내용 1</p>
+          </div>
+        </div>
+
+        <div class="lib2">
+          <button class="accordion" id="2week">10주차</button>
+          <div class="panel">
+            <p class="class-content">내용 1</p>
+          </div>
+        </div>
+
+        <div class="lib2">
+          <button class="accordion" id="2week">11주차</button>
+          <div class="panel">
+            <p class="class-content">내용 1</p>
+          </div>
+        </div>
+
+        <div class="lib2">
+          <button class="accordion" id="2week">12주차</button>
+          <div class="panel">
+            <p class="class-content">내용 1</p>
+          </div>
+        </div>
+
+        <div class="lib2">
+          <button class="accordion" id="2week">13주차</button>
+          <div class="panel">
+            <p class="class-content">내용 1</p>
+          </div>
+        </div>
+
+        <div class="lib2">
+          <button class="accordion" id="2week">14주차</button>
+          <div class="panel">
+            <p class="class-content">내용 1</p>
+          </div>
+        </div>
+
+        <div class="lib2">
+          <button class="accordion" id="2week">15주차</button>
+          <div class="panel">
+            <p class="class-content">내용 1</p>
+          </div>
+        </div>
+
+        <div class="lib2">
+          <button class="accordion" id="2week">16주차</button>
+          <div class="panel">
+            <p class="class-content">내용 1</p>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <div class="section">
-      <h2>자료실</h2>
-      <label for="classes">과목명</label>
-      <select name="classroom" id="classes">
-        <option value="1">과목을 선택해 주세요</option>
-        <option value="2">과목 1</option>
-        <option value="3">과목 2</option>
-        <option value="4">과목 3</option>
-        <option value="5">과목 4</option>
-      </select>
-    </div>
-  </div>
-</body>
-
+    <script src="../../static/js/accordion.js"></script>
+  </body>
 </html>

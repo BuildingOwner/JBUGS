@@ -1,6 +1,6 @@
 .container {
   padding: 20px;
-  height: 1070px;
+  width: fit-content;
   display: flex;
   justify-content: space-around;
 }
@@ -19,7 +19,6 @@
 .nav {
   width: 190px;
   min-width: 190px;
-  height: 100%;
   padding: 20px;
   text-align: center;
   flex-grow: 0;
