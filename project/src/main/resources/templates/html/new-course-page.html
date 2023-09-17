@@ -17,9 +17,10 @@
     <!-- fullcalendar 언어 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/locales-all.min.js"></script>
 
+    <script src="/js/course-add.js"></script>
 </head>
 
-<body>
+<body onload="addContent();">
     <div class="container">
         <div class="nav">
             <img src="/img/국영문시그니쳐.png" alt="logo" class="logo" onclick="location.href = '/'"/>
@@ -68,196 +69,73 @@
                     </div>
                 </div>
             </div>
+
+
             <button class="accordion" id="1week">주차 1</button>
-            <div class="panel">
-                <div class="content-progress">
-                    <p class="class-content">내용 1
-                    <div class="bar-holder">
-                        <div class="bar">40%</div>
-                    </div>
-                    </p>
-                </div>
-                <div class="content-progress">
-                    <p class="class-content">내용 2
-                    <div class="bar-holder">
-                        <div class="bar">40%</div>
-                    </div>
-                    </p>
-                </div>
-                <div class="content-progress">
-                    <p class="class-content">내용 3
-                    <div class="bar-holder">
-                        <div class="bar">40%</div>
-                    </div>
-                    </p>
-                </div>
+            <div class="panel panel_1">
 
             </div>
+
 
             <button class="accordion" id="2week">주차 2</button>
             <div class="panel">
-                <p class="class-content">내용 1</p>
-                <p class="class-content">내용 2</p>
-                <p class="class-content">내용 3</p>
-                <p class="class-content">내용 4</p>
-                <p class="class-content">내용 5</p>
-                <p class="class-content">내용 6</p>
-                <p class="class-content">내용 7</p>
-                <p class="class-content">내용 8</p>
+
             </div>
             <button class="accordion" id="3week">주차 3</button>
             <div class="panel">
-                <p class="class-content">내용 1</p>
-                <p class="class-content">내용 2</p>
-                <p class="class-content">내용 3</p>
-                <p class="class-content">내용 4</p>
-                <p class="class-content">내용 5</p>
-                <p class="class-content">내용 6</p>
-                <p class="class-content">내용 7</p>
-                <p class="class-content">내용 8</p>
+
             </div>
             <button class="accordion" id="4week">주차 4</button>
             <div class="panel">
-                <p class="class-content">내용 1</p>
-                <p class="class-content">내용 2</p>
-                <p class="class-content">내용 3</p>
-                <p class="class-content">내용 4</p>
-                <p class="class-content">내용 5</p>
-                <p class="class-content">내용 6</p>
-                <p class="class-content">내용 7</p>
-                <p class="class-content">내용 8</p>
+
             </div>
             <button class="accordion" id="5week">주차 5</button>
             <div class="panel">
-                <p class="class-content">내용 1</p>
-                <p class="class-content">내용 2</p>
-                <p class="class-content">내용 3</p>
-                <p class="class-content">내용 4</p>
-                <p class="class-content">내용 5</p>
-                <p class="class-content">내용 6</p>
-                <p class="class-content">내용 7</p>
-                <p class="class-content">내용 8</p>
+
             </div>
             <button class="accordion" id="6week">주차 6</button>
             <div class="panel">
-                <p class="class-content">내용 1</p>
-                <p class="class-content">내용 2</p>
-                <p class="class-content">내용 3</p>
-                <p class="class-content">내용 4</p>
-                <p class="class-content">내용 5</p>
-                <p class="class-content">내용 6</p>
-                <p class="class-content">내용 7</p>
-                <p class="class-content">내용 8</p>
+
             </div>
             <button class="accordion" id="7week">주차 7</button>
             <div class="panel">
-                <p class="class-content">내용 1</p>
-                <p class="class-content">내용 2</p>
-                <p class="class-content">내용 3</p>
-                <p class="class-content">내용 4</p>
-                <p class="class-content">내용 5</p>
-                <p class="class-content">내용 6</p>
-                <p class="class-content">내용 7</p>
-                <p class="class-content">내용 8</p>
+
             </div>
             <button class="accordion" id="8week">주차 8</button>
             <div class="panel">
-                <p class="class-content">내용 1</p>
-                <p class="class-content">내용 2</p>
-                <p class="class-content">내용 3</p>
-                <p class="class-content">내용 4</p>
-                <p class="class-content">내용 5</p>
-                <p class="class-content">내용 6</p>
-                <p class="class-content">내용 7</p>
-                <p class="class-content">내용 8</p>
+
             </div>
             <button class="accordion" id="9week">주차 9</button>
             <div class="panel">
-                <p class="class-content">내용 1</p>
-                <p class="class-content">내용 2</p>
-                <p class="class-content">내용 3</p>
-                <p class="class-content">내용 4</p>
-                <p class="class-content">내용 5</p>
-                <p class="class-content">내용 6</p>
-                <p class="class-content">내용 7</p>
-                <p class="class-content">내용 8</p>
+
             </div>
             <button class="accordion" id="10week">주차 10</button>
             <div class="panel">
-                <p class="class-content">내용 1</p>
-                <p class="class-content">내용 2</p>
-                <p class="class-content">내용 3</p>
-                <p class="class-content">내용 4</p>
-                <p class="class-content">내용 5</p>
-                <p class="class-content">내용 6</p>
-                <p class="class-content">내용 7</p>
-                <p class="class-content">내용 8</p>
+
             </div>
             <button class="accordion" id="11week">주차 11</button>
             <div class="panel">
-                <p class="class-content">내용 1</p>
-                <p class="class-content">내용 2</p>
-                <p class="class-content">내용 3</p>
-                <p class="class-content">내용 4</p>
-                <p class="class-content">내용 5</p>
-                <p class="class-content">내용 6</p>
-                <p class="class-content">내용 7</p>
-                <p class="class-content">내용 8</p>
+
             </div>
             <button class="accordion" id="12week">주차 12</button>
             <div class="panel">
-                <p class="class-content">내용 1</p>
-                <p class="class-content">내용 2</p>
-                <p class="class-content">내용 3</p>
-                <p class="class-content">내용 4</p>
-                <p class="class-content">내용 5</p>
-                <p class="class-content">내용 6</p>
-                <p class="class-content">내용 7</p>
-                <p class="class-content">내용 8</p>
+
             </div>
             <button class="accordion" id="13week">주차 13</button>
             <div class="panel">
-                <p class="class-content">내용 1</p>
-                <p class="class-content">내용 2</p>
-                <p class="class-content">내용 3</p>
-                <p class="class-content">내용 4</p>
-                <p class="class-content">내용 5</p>
-                <p class="class-content">내용 6</p>
-                <p class="class-content">내용 7</p>
-                <p class="class-content">내용 8</p>
+
             </div>
             <button class="accordion" id="14week">주차 14</button>
             <div class="panel">
-                <p class="class-content">내용 1</p>
-                <p class="class-content">내용 2</p>
-                <p class="class-content">내용 3</p>
-                <p class="class-content">내용 4</p>
-                <p class="class-content">내용 5</p>
-                <p class="class-content">내용 6</p>
-                <p class="class-content">내용 7</p>
-                <p class="class-content">내용 8</p>
+
             </div>
             <button class="accordion" id="15week">주차 15</button>
             <div class="panel">
-                <p class="class-content">내용 1</p>
-                <p class="class-content">내용 2</p>
-                <p class="class-content">내용 3</p>
-                <p class="class-content">내용 4</p>
-                <p class="class-content">내용 5</p>
-                <p class="class-content">내용 6</p>
-                <p class="class-content">내용 7</p>
-                <p class="class-content">내용 8</p>
+
             </div>
             <button class="accordion" id="16week">주차 16</button>
             <div class="panel">
-                <p class="class-content">내용 1</p>
-                <p class="class-content">내용 2</p>
-                <p class="class-content">내용 3</p>
-                <p class="class-content">내용 4</p>
-                <p class="class-content">내용 5</p>
-                <p class="class-content">내용 6</p>
-                <p class="class-content">내용 7</p>
-                <p class="class-content">내용 8</p>
+
             </div>
         </div>
 
