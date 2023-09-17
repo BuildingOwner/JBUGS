@@ -20,9 +20,18 @@ public class Class {
     private Long id;
 
     private String className;
+    private String partClass; //분반
     private int year;
     private String file_name;
     private int view_count;
+
+    public Class(String className, String partClass, String prof) {
+        this.className = className;
+        this.partClass = partClass;
+        this.prof = prof;
+    }
+
+    private String prof;
 
     @OneToMany(mappedBy = "aClass", cascade = CascadeType.ALL)
     private List<Takes> takes = new ArrayList<>();

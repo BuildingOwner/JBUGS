@@ -27,5 +27,10 @@ public class Takes {
     @JoinColumn(name = "class_id")
     private Class aClass;
 
+    /*
+    * 여기에 진도 증가 검사
+    *
+    * */
+
 
 }
