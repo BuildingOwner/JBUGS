@@ -61,7 +61,7 @@ const addClass = () => {
     tableTag.appendChild(newClass);
   }
 
-  if(tableTag.childElementCount == 8){
-    classroom.style.marginBottom = "32px"
+  if(tableTag.childElementCount === 8){
+    classroom.style.marginBottom = "57px"
   }
 };

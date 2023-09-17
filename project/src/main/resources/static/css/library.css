@@ -3,6 +3,10 @@
   display: flex;
 }
 
+.nav {
+  margin-bottom: 0;
+}
+
 .section {
   flex-grow: 1;
   padding: 0 20px;
@@ -22,10 +26,6 @@
   margin-bottom: 50px;
 }
 
-.select label {
-  font-weight: bold;
-}
-
 #classes {
   font-size: 1em;
   border-radius: 8px;
@@ -37,7 +37,7 @@
 }
 
 .accordion {
-  background-color: var(--gray);
+  background-color: var(--white);
   cursor: pointer;
   padding: 16px;
   width: 100%;
@@ -68,7 +68,7 @@
 
 .panel {
   padding: 0 16px;
-  background-color: #ffffff;
+  background-color: var(--gray);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;

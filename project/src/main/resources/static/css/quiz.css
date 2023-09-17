@@ -1,15 +1,38 @@
-*{
-  font-family: "Nanum Gothic" !important;
-}
-
-body{
-  background-color: #ddd;
-}
-
 .container{
   padding: 20px;
   display: flex;
   justify-content: space-around;
+}
+
+.sticky-bar {
+  position: sticky;
+  top: 100px;
+  margin-top: 20px;
+  background-color: var(--white);
+  font-size: 1.2em;
+  border-radius: 10px;
+}
+
+.quiz-control {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.quiz-control div{
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-control div:hover{
+  background-color: var(--blue1);
+}
+
+.quiz-control div a {
+  text-decoration: none;
+  color: black;
 }
 
 .quiz-container{
@@ -25,12 +48,12 @@ body{
   font-size: 1.2em;
 }
 
-.quiestion{
+.question{
   background-color: white;
   box-shadow: none;
 }
 
-.quiestion{
+.question{
   margin-bottom: 20px;
 }
 

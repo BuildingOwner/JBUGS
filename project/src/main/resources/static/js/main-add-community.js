@@ -30,7 +30,7 @@ const addCommunity = () => {
       <div class="img-center">
         <img src="${RecoContents[i].imgsrc}" alt="reco1Img" />
       </div>
-      <h4 class="reco1-title">${RecoContents[i].title}</h4>
+      <h5 class="reco1-title">${RecoContents[i].title}</h5>
       <span class="reco1-discription">${RecoContents[i].discription}</span>
       <span class="reco1-people">${RecoContents[i].people}명 참여중</span>`;
 

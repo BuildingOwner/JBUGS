@@ -1,10 +1,7 @@
-/* div{
-  border: 1px solid black;
-} */
-
 .container {
   padding: 20px;
   display: flex;
+  padding-bottom: 0;
 }
 
 .section {
@@ -16,7 +13,7 @@
 
 .recommendation {
   min-height: 300px;
-  background-color: var(--gray);
+  background-color: var(--white);
   padding: 20px;
   border-radius: 10px;
 }
@@ -59,7 +56,7 @@
   width: 165px;
   height: 250px;
   margin: 10px;
-  padding: 10px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -85,10 +82,10 @@
 .classroom {
   height: auto;
   min-height: 400px;
-  background-color: var(--gray);
+  background-color: var(--white);
   padding: 20px;
   border-radius: 10px;
-  margin-bottom: 100px;
+  margin-bottom: 122px;
 }
 
 .classroom table {
@@ -110,7 +107,6 @@
 
 .classroom td, .classroom th {
   vertical-align: middle;
-  border-bottom: 1px solid white;
 }
 
 .classroom tr td:nth-child(1) {
@@ -127,13 +123,13 @@
 }
 
 .classroom tr:nth-child(1):hover {
-  background-color: var(--gray);
+  background-color: var(--white);
   cursor: default;
 }
 
 .classroom img {
   width: 50px;
-  background-color: white;
+  background-color: var(--gray);
   border-radius: 8px;
 }
 
@@ -148,9 +144,9 @@
 .userInfo {
   margin-top: -20px;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
   margin-bottom: 20px;
-  background-color: var(--gray);
+  background-color: var(--white);
   border-radius: 10px;
 }
 .userInfo h4 {
@@ -161,7 +157,7 @@
   width: 200px;
   height: 200px;
   margin: 20px 0;
-  background-color: white;
+  background-color: var(--gray);
   border-radius: 10000px;
 }
 
@@ -175,7 +171,7 @@
   height: auto;
   min-height: 200px;
   padding: 20px;
-  background-color: var(--gray);
+  background-color: var(--white);
   border-radius: 10px;
 }
 
@@ -210,7 +206,7 @@
 }
 
 #calendar {
-  background-color: var(--gray);
+  background-color: var(--white);
   padding: 20px;
   border-radius: 10px;
 }

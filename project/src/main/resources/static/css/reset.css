@@ -1,3 +1,7 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+@import url("https://hangeul.pstatic.net/hangeul_static/css/NanumMyeongjoYetHangul.css");
+@import url("https://hangeul.pstatic.net/hangeul_static/css/NanumGaRamYeonGgoc.css");
+
 html,
 body,
 div,
@@ -110,6 +114,7 @@ body {
   line-height: 1;
   height: 100%;
   width: 100%;
+  background-color: var(--gray);
 }
 
 ol,
@@ -126,7 +131,6 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
   content: none;
 }
 
@@ -139,22 +143,17 @@ table {
   --blue3: #295493;
   --blue2: #3776c6;
   --blue1: #83b0e6;
-  --gray: #d7dde2;
+  --gray: #D7DDE2;
   --white: #f6f8f8;
   --warning: #ee2222;
   --safe: #1ed33c;
 }
 
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
-
-@font-face {
-  font-family: "Nanum Gothic";
-  src: url("../nanum-gothic/NanumGothic.ttf") format("truetype");
-}
-
 * {
-  font-family: "Nanum Gothic" !important;
+  font-family: 'NanumSquareRound' !important;
+  line-height: 120% !important;
 }
+
 
 h2 {
   font-size: 2.6em;
@@ -178,7 +177,7 @@ h3 {
   background-color: var(--white);
   /* border: 3px solid var(--blue1); */
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
   /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
@@ -198,7 +197,7 @@ h3 {
 
 button {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .title {
@@ -208,7 +207,7 @@ button {
 }
 
 .title {
-  margin-bottom: 100px;
+  margin-bottom: 82px;
   padding-left: 40px;
   font-weight: bold;
   height: 85px;
