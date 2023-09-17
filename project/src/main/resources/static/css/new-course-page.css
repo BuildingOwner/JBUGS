@@ -10,7 +10,7 @@
 }
 
 .class-content {
-  margin: 16px;
+  margin: 16px 16px 0px 16px
 }
 
 
@@ -229,9 +229,9 @@
 }
 
 .sticky-bar {
+  position: sticky;
   display: flex;
   justify-content: center;
-  position: sticky;
   top: 10px;
 }
 
@@ -241,16 +241,22 @@
   height: 200px;
   text-align: center;
   margin-bottom: 10px;
-  background-color: rgba(120, 120, 120, 1) !important;
+  background-color: var(--white) !important;
+  border-collapse: collapse;
+  border-radius: 10px;
+  border-style: hidden;
 }
 
 .course-table tr td {
   border: 1px solid black;
 }
-
+td:hover{
+  background-color: red;
+  border-radius: 10px;
+}
 tr>td>a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .content-progress {
@@ -260,7 +266,7 @@ tr>td>a {
 }
 
 .bar-holder {
-  width: 30%;
+  width: 40%;
   background-color: rgb(231, 231, 231);
   border-radius: 20px;
   /* -webkit-border-radius: 20px;
@@ -273,7 +279,7 @@ tr>td>a {
 /* INDIVIDUAL BAR'S STYLING, SAME GOES WITH OTHER BARS */
 
 .bar {
-  width: 40%;
+  width: 00%;
   background-color: rgb(22, 21, 21);
   color: #fff;
   border-radius: 20px;
@@ -284,4 +290,19 @@ tr>td>a {
   text-align: center;
   /* margin-top: 15px; */
   font-weight: 400;
+}
+
+.videoInfo{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.content-file{
+  margin: 5px;
+  cursor: pointer;
+}
+.content-file:hover{
+  color: red;
 }
