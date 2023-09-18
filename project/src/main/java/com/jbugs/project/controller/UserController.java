@@ -19,19 +19,19 @@ public class UserController {
 
 
     private final UserRepository userRepository;
-//    @GetMapping("html/login")
-//    public String createForm(Model model){
-//        return "html/login";
-//    }
-//
-//    @PostMapping("html/login")
-//    public String save(@Valid @ModelAttribute User user, BindingResult bindingResult){
-//        if(bindingResult.hasErrors()){
-//            return "html/login";
-//        }
-//
-//        userRepository.save(user);
-//        return "redirect:/";
-//    }
+    @GetMapping("html/login")
+    public String createForm(Model model){
+        return "html/login";
+    }
+
+    @PostMapping("html/login")
+    public String save(@Valid @ModelAttribute User user, BindingResult bindingResult){
+        if(bindingResult.hasErrors()){
+            return "html/login";
+        }
+
+        userRepository.save(user);
+        return "redirect:/";
+    }
 
 }
