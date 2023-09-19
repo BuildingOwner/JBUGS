@@ -183,6 +183,7 @@ const addContent = () => {
       newFile.addEventListener("click", () => {
         window.location.href = `${MyContent[i].files[k].filesrc}`;
       });
+      //
       panel.appendChild(newFile);
     }
   }
