@@ -21,14 +21,16 @@ public class Classes {
     private Long id;
 
     private String className;
-    private String partClass; //분반
+    private String division; //분반
     private int year;
     private String file_name;
     private int view_count;
+    private String imgsrc;
 
-    public Classes(String className, String partClass, String prof) {
+    public Classes(String className, String division, String imgsrc, String prof) {
         this.className = className;
-        this.partClass = partClass;
+        this.division = division;
+        this.imgsrc = imgsrc;
         this.prof = prof;
     }
 

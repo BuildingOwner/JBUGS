@@ -34,7 +34,7 @@
         </button>
       </li>
       <li>
-        <button onclick="location.href='/new-lib.html'">
+        <button onclick="location.href='/lib'">
           <i class="bi bi-folder"></i>자료실
         </button>
       </li>
@@ -66,11 +66,17 @@
     <div class="classroom">
       <h3>나의 강좌</h3>
       <table>
-        <tr >
+        <tr>
           <th></th>
           <th>과목명</th>
           <th>분반</th>
           <th>교수명</th>
+        </tr>
+        <tr th:each="classes : ${classes}">
+          <td></td>
+          <td th:text="${classes.className}"></td>
+          <td th:text="${classes.division}"></td>
+          <td th:text="${classes.prof}"></td>
         </tr>
       </table>
     </div>
