@@ -10,9 +10,15 @@
 }
 
 .class-content {
-  margin: 16px;
+  margin: 16px 0px 16px 0px
 }
 
+.TitleAndProgressBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 
 .nav {
   width: 190px;
@@ -33,19 +39,21 @@
   border-radius: 10px;
 }
 
-.title_prof {
-  display: flex;
-  justify-content: space-between;
-}
+/*.title_prof {*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*}*/
 
 .title {
+  display: flex;
+  justify-content: space-between;
   margin-top: 0px;
   font-weight: bold;
 }
 
 .prof {
-  font-size: 1.6em;
-  margin: 35px 0 0 0;
+  font-size: 30px;
+  /*margin: 35px 0 0 0;*/
   font-weight: bold;
 }
 
@@ -72,13 +80,17 @@
   color: #000000;
   padding: 5px;
   text-decoration: none;
-  padding: 20px 40px;
+  padding: 20px;
 }
 
 .dropdown-options span:hover {
   color: #0a0a23;
   background-color: #ddd;
   border-radius: 5px;
+}
+
+.dropdown span{
+  font-size: 16px;
 }
 
 .area {
@@ -91,7 +103,7 @@
 
 /* 아코디언 css */
 .accordion {
-  background-color: #ffffff;
+  background-color: var(--white);
   cursor: pointer;
   padding: 16px;
   width: 100%;
@@ -99,12 +111,14 @@
   border: none;
   text-align: left;
   font-size: 16px;
-  transition: 0.4s;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: none;
 }
 
 .active,
 .accordion:hover {
-  background-color: #f5f5f5;
+  background-color: var(--blue1);
   font-weight: bold;
 }
 
@@ -121,11 +135,10 @@
 
 .panel {
   padding: 0 16px;
-  background-color: #ffffff;
+  background-color: var(--gray);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  border-bottom: 1px solid #eeeeee;
 }
 
 /* 아코디언 css */
@@ -141,74 +154,32 @@
 }
 
 .info-bar {
-  width: 25%;
+  width: 30%;
   padding: 20px;
-  margin-top: 25px;
-  min-width: 310px;
+  min-width: 350px;
   max-width: 400px;
-}
-
-.userInfo {
-  text-align: center;
-  padding: 30px;
-  margin-bottom: 20px;
   flex-grow: 0;
-}
-
-.userInfo h4 {
-  margin-bottom: 20px;
-}
-
-.info-bar-top {
-  display: flex;
-  justify-content: space-between;
-}
-
-.info-bar-top button {
-  width: 35px;
-  height: 35px;
-  border-radius: 10px;
-  border: none;
-  font-size: 1.2em;
-  text-align: center;
-  background-color: var(--gray);
-}
-
-.info-bar-top button:hover {
-  background-color: var(--blue1);
-  cursor: pointer;
-}
-
-.profile {
-  width: 200px;
-  height: 200px;
-  margin-bottom: 20px;
-  background-color: var(--gray);
-  border-radius: 10000px;
-}
-
-#calendar {
-  height: 30%;
-  margin-bottom: 20px;
-  min-height: 370px;
 }
 
 .homework {
   height: auto;
   min-height: 200px;
-  padding-bottom: 20px;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 10px;
 }
 
 .homework-content {
   margin-top: 10px;
   padding: 10px;
-  width: 100%;
+  width: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   border-radius: 10px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  background-color: white;
 }
 
 .homework-content:hover {
@@ -229,9 +200,9 @@
 }
 
 .sticky-bar {
+  position: sticky;
   display: flex;
   justify-content: center;
-  position: sticky;
   top: 10px;
 }
 
@@ -240,17 +211,23 @@
   width: 200px;
   height: 200px;
   text-align: center;
-  margin-bottom: 10px;
-  background-color: rgba(120, 120, 120, 1) !important;
+  margin-top: 50px;
+  background-color: var(--blue3) !important;
+  border-collapse: collapse;
+  border-radius: 10px;
+  border-style: hidden;
 }
 
 .course-table tr td {
   border: 1px solid black;
 }
-
+td:hover{
+  background-color: var(--white);
+  border-radius: 10px;
+}
 tr>td>a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .content-progress {
@@ -260,7 +237,7 @@ tr>td>a {
 }
 
 .bar-holder {
-  width: 30%;
+  width: 60%;
   background-color: rgb(231, 231, 231);
   border-radius: 20px;
   /* -webkit-border-radius: 20px;
@@ -273,9 +250,9 @@ tr>td>a {
 /* INDIVIDUAL BAR'S STYLING, SAME GOES WITH OTHER BARS */
 
 .bar {
-  width: 40%;
-  background-color: rgb(22, 21, 21);
-  color: #fff;
+  width: 00%;
+  background-color: greenyellow;
+  color: black;
   border-radius: 20px;
   /* -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -285,3 +262,20 @@ tr>td>a {
   /* margin-top: 15px; */
   font-weight: 400;
 }
+
+.videoInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.content-file{
+  margin: 5px;
+  cursor: pointer;
+}
+.content-file:hover{
+  color: red;
+}
+
