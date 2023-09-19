@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.sql.Date;
 import java.time.LocalDate;
 
 import static javax.persistence.FetchType.LAZY;
@@ -28,6 +27,6 @@ public class ClassNotice {
 
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name="class_id")
-    private Class aClass;
+    private Classes aClass;
 
 }

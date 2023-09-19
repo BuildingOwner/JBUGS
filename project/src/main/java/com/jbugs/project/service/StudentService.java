@@ -14,6 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class StudentService {
 
+
     private final StudentRepository studentRepository;
 
     //회원가입

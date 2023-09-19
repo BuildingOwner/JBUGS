@@ -26,7 +26,7 @@ public class Professor {
     private User user;
 
     @OneToMany(mappedBy = "professor")
-    private List<Class> classes = new ArrayList<>();
+    private List<Classes> classes = new ArrayList<>();
 
     public Professor(Long id, String name, String major) {
         this.id = id;

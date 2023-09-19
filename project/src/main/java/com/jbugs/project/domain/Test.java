@@ -21,7 +21,7 @@ public class Test {
 
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "class_id")
-    private Class aClass;
+    private Classes aClass;
 
     @OneToOne(mappedBy = "test", fetch = LAZY)
     private TestScore testScore;
