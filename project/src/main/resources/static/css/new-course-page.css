@@ -49,12 +49,17 @@
   justify-content: space-between;
   margin-top: 0px;
   font-weight: bold;
+  padding-right: 40px;
 }
 
 .prof {
-  font-size: 30px;
+  font-size: .5em;
   /*margin: 35px 0 0 0;*/
   font-weight: bold;
+  background-color: var(--blue3);
+  color: white;
+  border: none;
+  box-shadow: none;
 }
 
 .dropdown {
@@ -167,6 +172,7 @@
   padding: 20px;
   background-color: var(--white);
   border-radius: 10px;
+  margin-top: -20px;
 }
 
 .homework-content {
@@ -207,7 +213,6 @@
 }
 
 #course-table {
-  border: 1px solid black;
   width: 200px;
   height: 200px;
   text-align: center;
@@ -215,7 +220,7 @@
   background-color: var(--blue3) !important;
   border-collapse: collapse;
   border-radius: 10px;
-  border-style: hidden;
+  font-weight: bold;
 }
 
 .course-table tr td {
@@ -224,10 +229,16 @@
 td:hover{
   background-color: var(--white);
   border-radius: 10px;
+  color: black;
 }
+
+td:hover a {
+  color: black;
+}
+
 tr>td>a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .content-progress {
