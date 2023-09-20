@@ -5,9 +5,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ClassForm {
-
+public class QuizForm {
     private Long id;
-    private String className;
-    private String prof;
+
+    private String name;
+    private String answer1;
+
 }
