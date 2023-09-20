@@ -54,7 +54,7 @@
         </button>
       </li>
       <li>
-        <button onclick="location.href='/quiz.html'">
+        <button onclick="location.href='/quiz'">
           <i class="bi bi-gear"></i>setting
         </button>
       </li>
@@ -72,8 +72,8 @@
           <th>분반</th>
           <th>교수명</th>
         </tr>
-        <tr th:each="classes : ${classes}">
-          <td></td>
+        <tr th:each="classes : ${classes}" onclick="location.href='/course'">
+          <td> <img th:src="${classes.imgsrc}" alt="" /></td>
           <td th:text="${classes.className}"></td>
           <td th:text="${classes.division}"></td>
           <td th:text="${classes.prof}"></td>
