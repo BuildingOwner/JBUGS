@@ -1,18 +1,18 @@
 const Homeworks = [
   {
-    classTitle: "알고리즘",
-    homeworkTitle: "그래프 구현",
+    classTitle: "모바일&스마트시스템",
+    homeworkTitle: "라즈베리파이 연결 동영상 제출",
     deadline: "2023-10-13T23:55:00",
     isSummit: 'Y'
   },
   {
-    classTitle: "자료구조",
-    homeworkTitle: "링크드 리스트 구현",
+    classTitle: "네트워크프로그래밍",
+    homeworkTitle: "해보기 문제 결과 제출",
     deadline: "2023-10-10T23:55:00",
     isSummit: 'N'
   },
   {
-    classTitle: "안드로이드 프로그래밍",
+    classTitle: "고급모바일프로그래밍",
     homeworkTitle: "커스텀뷰 과제",
     deadline: "2023-09-27T23:55:00",
     isSummit: 'Y'

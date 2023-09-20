@@ -82,8 +82,6 @@ connection.query(query, (err, results) => {
 });
 
 
-
-
 const addClass = () => {
   const classroom = document.querySelector(".classroom");
   const tableTag = classroom.querySelector("table");
