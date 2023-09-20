@@ -1,47 +1,86 @@
-const MyClass = [
-  {
-    imgsrc: "/img/sangsangbugi.png",
-    className: "네트워크프로그래밍",
-    division: "B",
-    prof: "신성",
-  },
-  {
-    imgsrc: "/img/sangsangbugi.png",
-    className: "설계패턴",
-    division: "C",
-    prof: "한기준",
-  },
-  {
-    imgsrc: "/img/sangsangbugi.png",
-    className: "데이터통신",
-    division: "D",
-    prof: "김동욱",
-  },
-  {
-    imgsrc: "/img/sangsangbugi.png",
-    className: "모바일&스마트시스템",
-    division: "B",
-    prof: "이재문",
-  },
-  {
-    imgsrc: "/img/sangsangbugi.png",
-    className: "고급모바일프로그래밍",
-    division: "A",
-    prof: "허준영",
-  },
-  {
-    imgsrc: "/img/sangsangbugi.png",
-    className: "웹프레임워크",
-    division: "B",
-    prof: "박승현",
-  },
-  {
-    imgsrc: "/img/sangsangbugi.png",
-    className: "시스템프로그래밍",
-    division: "D",
-    prof: "안영아",
-  },
-];
+// const MyClass = [
+//   {
+//     imgsrc: "/img/sangsangbugi.png",
+//     className: "알고리즘",
+//     division: "1",
+//     prof: "상상부기",
+//   },
+//   {
+//     imgsrc: "/img/sangsangbugi.png",
+//     className: "자료구조",
+//     division: "A",
+//     prof: "상상부기2",
+//   },
+//   {
+//     imgsrc: "/img/sangsangbugi.png",
+//     className: "자료구조",
+//     division: "A",
+//     prof: "상상부기2",
+//   },
+//   {
+//     imgsrc: "/img/sangsangbugi.png",
+//     className: "알고리즘",
+//     division: "1",
+//     prof: "상상부기",
+//   },
+//   {
+//     imgsrc: "/img/sangsangbugi.png",
+//     className: "자료구조",
+//     division: "A",
+//     prof: "상상부기2",
+//   },
+//   {
+//     imgsrc: "/img/sangsangbugi.png",
+//     className: "자료구조",
+//     division: "A",
+//     prof: "상상부기2",
+//   },
+//   {
+//     imgsrc: "/img/sangsangbugi.png",
+//     className: "자료구조",
+//     division: "A",
+//     prof: "상상부기2",
+//   },
+// ];
+
+const mysql = require('mysql');
+
+const connection = mysql.createConnection({
+    host: '13.125.120.116:3306',
+    user: 'jbugs',
+    password: '1234',
+    database: 'webdb'
+});
+
+connection.connect((err) => {
+    if (err) {
+        console.error('MySQL 연결 오류: ' + err.stack);
+        return;
+    }
+    console.log('MySQL에 연결되었습니다.');
+});
+
+
+let MyClass
+
+const query = 'SELECT * FROM classes';
+
+connection.query(query, (err, results) => {
+    if (err) {
+        console.error('쿼리 실행 오류: ' + err.stack);
+        return;
+    }
+
+    // JSON 형태로 결과 데이터를 변환
+    MyClass = JSON.stringify(results);
+
+    // 이제 jsonData를 원하는 대로 처리할 수 있습니다.
+    console.log('JSON 데이터: ' + jsonData);
+
+    // MySQL 연결 종료
+    connection.end();
+});
+
 
 const addClass = () => {
   const classroom = document.querySelector(".classroom");

@@ -112,7 +112,7 @@ const loadQuistion = () => {
 const selectionQuiz = (i, quiz) => {
   return `
   <div class="quiz-box" id="quiz${i + 1}">
-    <h4 class="question">${i + 1}. ${quiz.Question.trim()}</h4>
+    <h5 class="question">${i + 1}. ${quiz.Question.trim()}</h5>
     <ul class="option">
       <li><input type="radio" name="answer${i}" class="option1" value="1"/> ${quiz.Selection[0].trim()}</li>
       <li><input type="radio" name="answer${i}" class="option2" value="2"/> ${quiz.Selection[1].trim()}</li>
@@ -126,7 +126,7 @@ const selectionQuiz = (i, quiz) => {
 const shortQuiz = (i, quiz) => {
   return `
   <div class="quiz-box" id="quiz${i + 1}">
-    <h4 class="question">${i + 1}. ${quiz.Question.trim()}</h4>
+    <h5 class="question">${i + 1}. ${quiz.Question.trim()}</h5>
     답 : <input type="text" name="answer">
   </div>
   `;
@@ -137,7 +137,7 @@ const blankQuiz = (i, quiz) => {
   let input = `<input type="text" name="answer">`
   return `
   <div class="quiz-box" id="quiz${i + 1}">
-    <h4 class="question">${i + 1}. ${editQuiz.replace("_", input).trim()}</h4>
+    <h5 class="question">${i + 1}. ${editQuiz.replace("_", input).trim()}</h5>
   </div>
   `
 }
