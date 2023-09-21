@@ -127,19 +127,36 @@ const shortQuiz = (i, quiz) => {
   return `
   <div class="quiz-box" id="quiz${i + 1}">
     <h5 class="question">${i + 1}. ${quiz.Question.trim()}</h5>
-    답 : <input type="text" name="answer">
+    답 : <input type="text" name="answer${i}">
   </div>
   `;
 };
 
 const blankQuiz = (i, quiz) => {
   let editQuiz = quiz.Question;
-  let input = `<input type="text" name="answer">`
+  let input = `<input type="text" name="answer${i}">`
   return `
   <div class="quiz-box" id="quiz${i + 1}">
     <h5 class="question">${i + 1}. ${editQuiz.replace("_", input).trim()}</h5>
   </div>
   `
 }
+
+function submitForm() {
+  const form = document.querySelector('form');
+  const formData = new FormData(form);
+  const answers = [];
+
+  for (let i = 0; i < 10; i++) {
+    const key = `answer${i}`;
+    const value = formData.get(key);
+    const answer = value !== null ? value.trim() : '답변 없음';
+    answers.push({ question: key, answer });
+  }
+
+  const jsonAnswers = JSON.stringify(answers);
+  window.location.href = '/quizScore?answers=' + encodeURIComponent(jsonAnswers);
+}
+
 
 loadQuistion()

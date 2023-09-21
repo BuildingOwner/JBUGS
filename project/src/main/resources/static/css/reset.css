@@ -214,3 +214,14 @@ button {
   display: flex;
   align-items: center;
 }
+
+.container {
+  padding: 20px;
+  display: flex;
+}
+
+.section {
+  flex-grow: 1;
+  padding: 0 20px;
+  min-width: 615px;
+}
