@@ -8,7 +8,9 @@ import lombok.Setter;
 public class QuizForm {
     private Long id;
 
-    private String name;
-    private String answer1;
+    private String question;
+    private String answer;
+    private String selection;
+    private String hint;
 
 }

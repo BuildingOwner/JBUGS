@@ -17,7 +17,11 @@ public class Test {
     @Column(name="test_id")
     private Long id;
 
-    private int year;
+
+    private String question;
+    private String answer;
+    private String selection;
+    private String hint;
 
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "class_id")
@@ -25,6 +29,8 @@ public class Test {
 
     @OneToOne(mappedBy = "test", fetch = LAZY)
     private TestScore testScore;
+
+
 
 
 }
