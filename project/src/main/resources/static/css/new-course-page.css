@@ -53,8 +53,7 @@
 }
 
 .prof {
-  font-size: .5em;
-  /*margin: 35px 0 0 0;*/
+  font-size: 1.2em;
   font-weight: bold;
   background-color: var(--blue3);
   color: white;
@@ -288,5 +287,17 @@ tr>td>a {
 }
 .content-file:hover{
   color: red;
+}
+
+.title{
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+  rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.title h2 {
+  background-color: var(--blue3);
+  box-shadow: none;
 }
 
