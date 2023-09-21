@@ -20,7 +20,7 @@
 
   <script src="/js/course-add.js"></script>
   <script src="/js/course-add-homework.js"></script>
-<!--  <script src="/js/main-add-homework.js"></script>-->
+  <!--  <script src="/js/main-add-homework.js"></script>-->
 </head>
 
 
@@ -63,18 +63,19 @@
   </div>
   <div class="classroom">
     <form th:Object="${form}" method="get">
-    <div class="title_prof">
-      <h2 class="title" th:text="${form.className}">
-        <div class="dropdown">
-          <button class="prof" th:text="${form.prof}"></button>
-          <div class="dropdown-options">
-            <span href="#">email@email.com</span>
-            <span href="#">강의실 : 공학관 305호</span>
-            <span href="#">연구실 : 연구관 xxx호</span>
+      <div class="title_prof">
+        <div class="title">
+          <h2 th:text="${form.className}"></h2>
+          <div class="dropdown">
+            <button class="prof" th:text="${form.prof}"></button>
+            <div class="dropdown-options">
+              <span href="#">email@email.com</span>
+              <span href="#">강의실 : 공학관 305호</span>
+              <span href="#">연구실 : 연구관 xxx호</span>
+            </div>
           </div>
         </div>
-      </h2>
-    </div>
+      </div>
     </form>
 
     <div class="lib1">
@@ -146,7 +147,7 @@
   <div class="info-bar">
 
 
-<!--    <div id="calendar"></div>-->
+    <!--    <div id="calendar"></div>-->
     <div class="homework">
       <h3>과제</h3>
       <div class="get-homework"></div>
