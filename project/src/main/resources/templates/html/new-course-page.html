@@ -62,10 +62,11 @@
     </ul>
   </div>
   <div class="classroom">
+    <form th:Object="${form}" method="get">
     <div class="title_prof">
-      <h2 class="title">설계패턴
+      <h2 class="title" th:text="${form.className}">
         <div class="dropdown">
-          <button class="prof">정인상</button>
+          <button class="prof" th:text="${form.prof}"></button>
           <div class="dropdown-options">
             <span href="#">email@email.com</span>
             <span href="#">강의실 : 공학관 305호</span>
@@ -74,6 +75,7 @@
         </div>
       </h2>
     </div>
+    </form>
 
     <div class="lib1">
       <button class="accordion" id="1week">1주차</button>

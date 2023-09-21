@@ -19,12 +19,6 @@ public class MainController {
         return "html/new-lib";
     }
 
-    @RequestMapping("/course")
-    public String course_page(){
-        log.info("main controller go course-page");
-        return "html/new-course-page";
-    }
-
     @RequestMapping("/quiz")
     public String quiz(){
         log.info("main controller go quiz");
