@@ -72,15 +72,11 @@
           <th>분반</th>
           <th>교수명</th>
         </tr>
-        <tr th:each="classes : ${classes}">
+        <tr th:each="classes : ${classes}" th:onclick="|location.href='@{/classes/{id}/edit (id=${classes.id})}'|">
           <td> <img th:src="${classes.imgsrc}" alt="" /></td>
           <td th:text="${classes.className}"></td>
           <td th:text="${classes.division}"></td>
           <td th:text="${classes.prof}"></td>
-          <td>
-            <a href="#" th:href="@{/classes/{id}/edit (id=${classes.id})}"
-            role="button">a</a>
-          </td>
         </tr>
       </table>
 
