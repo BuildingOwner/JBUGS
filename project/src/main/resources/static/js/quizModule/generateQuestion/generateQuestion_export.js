@@ -348,6 +348,17 @@ async function startChat() {
 
   rl.close();
 }
+module.exports = async function runChat() {
+  try {
+    await startChat();
 
-// 채팅 시작
-startChat();
+    // JSON 파일에서 데이터 읽어오기
+    const jsonData = await fs.readFile(jsonFilePath, 'utf-8');
+    const questionsData = JSON.parse(jsonData);
+
+    return questionsData;
+  } catch (error) {
+    console.error('Error in runChat:', error.message);
+    return null; // 오류 발생 시 null 반환 또는 오류 처리 방법을 선택하세요.
+  }
+};

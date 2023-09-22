@@ -1,0 +1,19 @@
+아래 그림과 같이 Binary Search Tree가 있다고 가정하고, Pre-order traversal을 실행한 결과가 아래 결과가 나왔다고 할 때,
+트리의 root 에 해당하는 숫자는 무엇인지 말하라
+Pre-order traversal 결과 : 26, 15, 10, 4, 12, 22, 18, 24, 50, 35, 31, 44, 70
+Root : 26
+Q. Stack 자료구조에서 Push  연산이 수행되면 데이터의 순서는 어떻게 되나요?
+A. Push 연산이 수행되면 데이터는 Last-In-First-Out(LIFO) 순서로 정렬됩니다.
+Q. 노드가 연결되는 방법은 무엇인가?
+A. 노드가 연결되는 방법은 링크(link)를 이용하는 방법입니다. 링크는 노드간의 관계를 형성하는 연결고리로, 연결된 노드들간 data를 전달하거나 연결된 노드의 정보를 참조하는 데에 사용됩니다.
+Q. What does the root node of a tree represent?
+A. The root node of a tree represents the top most node, which represents the whole tree and serves as the starting point for any traversal of the tree's nodes.
+Q. Binary Tree에서 루트 노드를 제외한 모든 노드가 가진 left_node는 무엇인가?
+A. left_node는 자기보다 값이 작은 노드를 의미합니다.
+Q. 다음과 같이 구성된 자료구조가 있다. 
+A: <E, O, L> 
+여기서 O 의 값은 무엇일까?
+A. O는 해당 자료구조의 중간 값을 의미합니다.
+Q. Binary Tree가 주어졌을 때 preorder traversal을 실행하면 아래와 같은 순서가 됩니까?
+A. Yes.
+Preorder: A, B, D, E, C, F

@@ -1,0 +1,80 @@
+{
+  "questions": [
+    {
+      "Question": "Binary Search Tree에서 In-order Traverse는 다음과 같이 진행되는 것인가?",
+      "Answer": "1",
+      "Selection": [
+        "Parent Node부터 시작하여 Left Child로 간다.",
+        "Left Child의 모든 노드를 순화하며 진행한다.",
+        "Left Child를 순화하고 다시 Parent Node를 Visit한다.",
+        "Parent Node부터 Right Child로 간다."
+      ]
+    },
+    {
+      "Question": "DataStructure에서 order는 무엇인가요?",
+      "Answer": "3",
+      "Selection": [
+        "자료구조의 저장 방식",
+        "자료간의 관계",
+        "자료의 입출력 순서",
+        "자료의 났람"
+      ]
+    },
+    {
+      "Question": "노드는 무엇인가?",
+      "Answer": "3",
+      "Selection": [
+        "두 개의 변수를 갖고 있는 저장 공간",
+        "데이터의 시각적 표현",
+        "데이터를 연결하는 연결고리",
+        "데이터 유형을 나타내는 인터페이스"
+      ]
+    },
+    {
+      "Question": "트리에 관한 다음 중 옳은 것은? (1번 2번 3번 4번중)",
+      "Answer": "4번",
+      "Selection": [
+        "트리는 노드와 엣지로 이루어져 있다.",
+        "트리에서 노드로는 크게 루트 노드와 각 노드 마다 정해진 값들로 나눌 수 있다.",
+        "트리는 데이터가 중복 될 수 있고 데이터는 아무데나 저장할 수 있다.",
+        "트리는 탐색에 빠르고 다루기 쉬우며, 일정하게 배치되어있다."
+      ]
+    },
+    {
+      "Question": "노드 X는 다음 중 어느 노드를 포함하고 있을까?",
+      "Answer": "3번",
+      "Selection": [
+        "X의 부모 노드",
+        "X의 자식 노드",
+        "X의 왼쪽 형제 노드",
+        "X의 오른쪽 형제 노드"
+      ]
+    },
+    {
+      "Question": "데이터 구조에서 head는 무엇을 의미합니까?",
+      "Answer": "1번",
+      "Selection": [
+        "첫 번째 노드",
+        "마지막 노드",
+        "맨 앞의 데이터",
+        "맨 뒤의 데이터"
+      ]
+    },
+    {
+      "Question": "자료구조에서 'Link'는 무엇을 뜻하는가?",
+      "Answer": "연결점"
+    },
+    {
+      "Question": "리스트에서 앞에 원소를 삽입하는 연산은 무엇인가?",
+      "Answer": "Insert"
+    },
+    {
+      "Question": "node들을 연결하는 자료구조는?",
+      "Answer": "linkedlist"
+    },
+    {
+      "Question": "링크는 무엇인가?",
+      "Answer": "Pointer"
+    }
+  ]
+}
