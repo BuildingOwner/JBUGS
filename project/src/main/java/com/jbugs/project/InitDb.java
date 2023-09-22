@@ -84,6 +84,16 @@ public class InitDb {
             class6.setDivision("B");
             class6.setProf("박승현");
             em.persist(class6);
+
+            Test test1 = new Test();
+            test1.setQuestion("LinkedList에 대한 traverse는?");
+            test1.setAnswer("순회");
+            em.persist(test1);
+
+            Test test2 = new Test();
+            test2.setQuestion(" _는 데이터의 구조, 특성 또는 속성의 측면을 나타냅니다.");
+            test2.setAnswer(" order는 데이터의 구조와 특성이나 속성들이 가지는 면의 순서를 말한다.");
+            em.persist(test2);
         }
     }
 

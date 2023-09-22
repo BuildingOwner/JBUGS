@@ -29,12 +29,12 @@ public class ClassController {
     public String classesForm(@PathVariable("classesId") Long classesId, Model model){
         Classes one = (Classes) classService.findOne(classesId);
 
-        ClassForm form = new ClassForm();
-        form.setId(one.getId());
-        form.setClassName(one.getClassName());
-        form.setProf(one.getProf());
+//        ClassForm form = new ClassForm();
+//        form.setId(one.getId());
+//        form.setClassName(one.getClassName());
+//        form.setProf(one.getProf());
 
-        model.addAttribute("form", form);
+        model.addAttribute("form", one);
 
         return "html/new-course-page";
     }

@@ -42,6 +42,9 @@ public class Classes {
     @OneToMany(mappedBy = "aClass", cascade = CascadeType.ALL)
     private List<Test> tests = new ArrayList<>();
 
+    @OneToMany(mappedBy = "aClass", cascade = CascadeType.ALL)
+    private List<ClassNotice> classNotices = new ArrayList<>();
+
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "professor_id")
     private Professor professor;
