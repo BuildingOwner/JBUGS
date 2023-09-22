@@ -1,0 +1,1504 @@
+장 연결 리스트 11 11 리스트 연결 장 Q&A
+- 언제라도 질문하세요
+모르면 외우면 되지만 코딩 안되면 꼭 질문
+➔ 기말 오픈북 코딩시험, 인터넷차단
+1. 한성e-class 질의응답게시판
+2. 온라인 코딩 라운지 (자세한 내용은 공지사항 게시판)
+□ 강사의 1번 선생님은 여러분들의 질문
+□매주 정답이 있는 연습문제 홀수문제 꼭 해결해보세요
+11xsy-2=2
+119-5
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 Q & A 질문 하세요 언제 라도 - 모르면 외우 면 되지만 코딩 안되면 꼭 질문 ➔ 기말 오픈 북 코딩 시험 , 인터넷 차단 1. 한성 e - class 질의 응답 게시판 2. 온라인 코딩 라운지 ( 자세한 내용 은 공지 사항 게시판 ) □ 강사 의 1 번 선생님 은 여러분들 의 질문 □ 매주 정답 이 있는 연습 문제 홀수 문제 꼭 해결 해보세요 2 - 2 = 11xsy 119-5 생능 출판사 2019 C 로 쉽게 풀어 쓴 자료 구조 ● 앞으로 나는 할 수 있다 (7장 목표)
+1. 나는 리스트 자료구조를 원형연결리스트로 구현할 수 있다.
+2. 나는 리스트 자료구조를 이중연결리스트로 구현할 수 있다.
+3.나는 스택 자료구조를 연결 리스트로 구현할 수 있다.
+4. 나는 큐 자료구조를 연결 리스트로 구현할 수 있다.
+그리스트와 연결리스트와의 관계는 햄과 햄스터와의 관계
+아무런 관계가 없음
+그리스트 자료구조는 배열 또는 연결리스트로 구현할 수 있다.
+그리스트는 n개의 element로 구성된 순서 있는 모임
+예: My To-Do list, My bucket list
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 앞으로 나는 할 수 있다 ( 7 장 목표 ) 1. 나는 리스트 자료 구조 를 원형 연결 리스트 로 구현할 수 있다 . 2. 나는 리스트 자료 구조 를 이중 연결 리스트 로 구현할 수 있다 . 3. 나는 스택 자료 구조 를 연결 리스트 로 구현할 수 있다 . 4. 나는 큐 자료 구조 를 연결 리스트 로 구현할 수 있다 . 그 리스트 와 연결 리스트 와 의 관계 는 햄 과 햄스터 와 의 관계 아무런 관계 가 없음 그 리스트 자료 구조 는 배열 또는 연결 리스트 로 구현할 수 있다 . 그 리스트 는 n 개의 element 로 구성된 순서 있는 모임 : My To - Do list , My bucket list 예 생능 출판사 2019 C 로 쉽게 풀어 쓴 자료 구조 ● 연결 리스트의 종류 3가지
+헤드 포인터
+리드 포인터 ·
+허드 포인터
+C로 쉽게 풀어쓴 자료구조
+단순 연결 리스트
+원형 연결 리스트
+이중 연결 리스트
+● 생능출판사 2019
+NULL 연결 리스트 의 종류 3 가지 NULL 헤드 포인터 단순 연결 리스트 리드 포인터 · 원형 연결 리스트 허드 포인터 이중 연결 리스트 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 위해 여기 리스트
+LO LE
+ㅁ 마지막 노드의 링크가 첫 번째 노드를 가리키는 리스트
+ㅁ 한 노드에서 다른 모든 노드로의 접근이 가능
+- 단순연결리스트는 항상 헤드포인트에서 시작해야 함
+head
+레드 포인터
+40
+C로 쉽게 풀어쓴 자료구조
+20
+단순 연결 리스트
+● 생능출판사 2019
+30
+NULL 리스트 위해 여기 LO LE ㅁ 마지막 노드 의 링크 가 첫 번째 노드 를 가리키는 리스트 ㅁ 한 노드 에서 다른 모든 노드 로 의 접근 이 가능 - 단순 연결 리스트 는 항상 헤드 포인트 에서 시작 해야 함 head 40 20 30 NULL 레드 포인터 단순 연결 리스트 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 위해 여기 리스트
+LO LE
+ㅁ 보통 헤드포인터가 마지막 노드를 가리키게끔 구성하
+면 리스트의 처음이나 마지막에 노드를 삽입하는 연산
+이 단순 연결 리스트에 비하여 용이
+40
+C로 쉽게 풀어쓴 자료구조
+1
+10
+● 생능출판사 2019
+20
+head
+30 리스트 위해 여기 LO LE ㅁ 보통 헤드 포인터 가 마지막 노드 를 가리키게 끔 구성 하 면 리스트 의 처음 이나 마지막 에 노드 를 삽입 하는 연산 단순 연결 리스트 에 비하여 용이 이 head 1 40 20 10 30 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 원형 연결 리스트의 처음에 삽입 insert_first()
+위해
+node
+node
+C로 쉽게 풀어쓴 자료구조
+10
+10 +
+10 .
+23
++ 28
+20
+● 생능출판사 2019
+head
+head
+head
+30
+30
+30 원형 연결 리스트 의 처음 에 삽입 위해 insert_first ( ) head 10 23 30 head node 10 + 28 30 + node head 30 10 20 . C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 위해 여겨 리스트의 처음에 사이
+LO LE
+처음에 사이
+학생> 교수님~ 코드 보아도 이해가 되지 않습니다.
+| ListNode* insert_first(ListNode* head, element data)
+{
+1}
+ListNode *node = (ListNode*)malloc(sizeof(ListNode));
+node->data = data;
+if (head == NULL) {
+}
+else {
+head = node;
+node->link = head;
+node->link = head->link;
+head->link = node;
+// (1)
+// (2)
+}
+return head; // 변경된 헤드 포인터를 반환한다.
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 사이 에 위해 여겨 리스트 의 처음 에 사이 처음 LO LE 학생 > 교수님 ~ 코드 보아도 이해 가 되지 않습니다 . | ListNode * insert_first ( ListNode * head , element data ) { ListNode * node = ( ListNode * ) malloc ( sizeof ( ListNode ) ) ; node- > data = data ; if ( head == NULL ) { head = node ; node- > link = head ; } else { node- > link = head- > link ; // ( 1 ) head- > link = node ; // ( 2 ) } 를 반환 한다 . return head ; // 변경된 헤드 포인터 } 1 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 위해 여겨 리스트의 처음에 사이
+LO LE
+ㅂㅂ
+| ListNode" insert_first(ListNode* head, element data)
+{
+|}
+ListNode *node = (ListNode *)malloc(sizeof(ListNode));
+node->data = data;
+if (head == NULL) {
+}
+else {
+head = node;
+node->link = head;
+_node->link = head->link;
+head->link = node;
+// (1)
+// (2)
+}
+return head; // 변경된 헤드 포인터를 반환한다.
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019
+1455
+(1)
+N
+beal
+최은주입
+(2) 처음 에 사이 위해 여겨 리스트 의 ㅂㅂ LO LE | ListNode " insert_first ( ListNode * head , element data ) { ListNode * node = ( ListNode * ) malloc ( sizeof ( ListNode ) ) ; node- > data = data ; if ( head == NULL ) { head = node ; node- > link = head ; } else { _node- > link = head- > link ; // ( 1 ) head- > link = node ; // ( 2 ) beal } 포인터 를 반환 한다 . return head ; // 변경된 헤드 } | 1 ) ( N 최은주 입 2 ) ( 1455 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 우리스트의 끝에 사이
+E
+ㅂㅂ
+node
+40
+C로 쉽게 풀어쓴 자료구조
+10
+20
+● 생능출판사 2019
+head
+30 우리 스트 의 끝에 사이 ㅂㅂ E node head 20 40 10 30 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 크리스트의 끝에 삽입 (insert_last() )
+학생> 교수님~ (3)단계 그림만 있어요. (1) (2)단계 그림은?
+| ListNode* insert_last(ListNode* head, element data)
+{
+ListNode *node = (ListNode*)malloc(sizeof(ListNode));
+node->data = data;
+if (head == NULL) {
+}
+node
+else{
+_head = node;
+node->link = head;
+}
+return head; // 변경된 헤드 포인터를 반환한다.
+40
+_node->link = head->link;// (1)
+head->link = node; // (2)
+head = node;
+11 (3)
+10
+20
+head
+30 크리스트 의 끝에 삽입 ( insert_last ( ) ) 학생 > 교수님 ~ ( 3 ) 단계 그림 만 있어요 . ( 1 ) ( 2 ) 단계 그림 은 ? | ListNode * insert_last ( ListNode * head , element data ) { ListNode * node = ( ListNode * ) malloc ( sizeof ( ListNode ) ) ; node- > data = data ; if ( head == NULL ) { _head = node ; node- > link = head ; } else { _node- > link = head- > link ; // ( 1 ) head- > link = node ; // ( 2 ) head = node ; 11 ( 3 ) } 한다 . return head ; // 변경된 헤드 포인터 를 반환 head node 40 10 20 30 [리스트의 끝에 삽입 (insert_last() )
+| ListNode* insert_last(ListNode* head, element data)
+{
+ListNode *node = (ListNode*)malloc(sizeof(ListNode));
+node->data = data;
+if (head == NULL) {
+head = node;
+node->link = head;
+}
+else {
+node
+}
+return head; // 변경된 헤드 포인터를 반환한다.
+_node->link = head->link;// (1)
+head->link = node; // (2)
+head = node; // (3)
+40
+SE NIT
+10
+20
+rote
+VON CUIS
+1965
+(3) head
+"
+30
+33
+33
+head
+Acad
+30
+38
+(2) [ 리스트 의 끝에 삽입 ( insert_last ( ) ) | ListNode * insert_last ( ListNode * head , element data ) { ListNode * node = ( ListNode * ) malloc ( sizeof ( ListNode ) ) ; node- > data = data ; if ( head == NULL ) { head = node ; node- > link = head ; head } 33 30 else { _node- > link = head- > link ; // ( 1 ) head- > link = node ; // ( 2 ) rote Acad head = node ; // ( 3 ) " } 반환 한다 . return head ; // 변경된 헤드 포인터 를 2 ) ( 1965 33 38 ( 3 ) head node 10 40 20 30 SE NIT VON CUIS 테스트 프로그래
+#include <stdio.h>
+#include <stdlib.h>
+typedef int element;
+typedef struct ListNode {
+//노드 타입
+element data;
+struct ListNode *link;
+} ListNode;
+// 리스트의 항목 출력
+void print_list(ListNode* head)
+{
+ListNode* p;
+if (head == NULL) return;
+p = head->link;
+do {
+printf("%d->", p->data);
+p = p->link;
+} while (p != head);
+printf("%d->", p->data); // O
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 테스트 프로 그래 #include < stdio.h > #include < stdlib.h > typedef int element ; // 노드 타입 typedef struct ListNode { element data ; struct ListNode * link ; ListNode ; } // 리스트 의 항목 출력 void print_list ( ListNode * head ) { ListNode * p ; if ( head == NULL ) return ; link ; = head- > p do { printf ( " % d- > " , p- > data ) ; p = p- > link ; } while ( p ! = head ) ; data ) ; // O printf ( " % d- > " , p- > C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 테스트 프로그램
+int main(void)
+{
+ListNode *head = NULL;
+// list = 10->20->30->40
+_head = insert_last(head, 20);
+head = insert_last(head, 30);
+_head = insert_last(head, 40);
+head = insert_first(head, 10);
+print_list(head);
+return 0;
+10->20->30->40->
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 테스트 프로그램 int main ( void ) { ListNode * head = NULL ; // list = 10- > 20- > 30- > 40 _head = insert_last ( head , 20 ) ; head = insert_last ( head , 30 ) ; _head = insert_last ( head , 40 ) ; head = insert_first ( head , 10 ) ; head ) ; print_list ( return 0 ; 10- > 20- > 30- > 40- > C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 EC
+vs로 원형연결리스트 자료구조 보기 (여러줄실행)
+ㅁ cir_list.c의 52번 라인에 중단점 설정하고 [계속]버튼 3회
+하면 3개 노드의 내용(data+link)가 무한반복 표시됨
+08
+□ 원형연결리스트(무한반복표시)
+단순연결리스트(NULL로 종료)
+head
+Cal
+Mend
+lex
+1500
+das
+달
+스커드
+20
+30
+004000325600
+김
+0
+D006256001a 2015 K
+20
+30
+and foreadlinke
+G
+20
+40
+0006256091200615650cm 40
+DEDI
+D20625140000325500
+로컬
+색(CHI-E
+had
+› @lik
+→ dela
+**Fik
+10 Inc
+20
+hood
+강
+0000cc 5566 (de=2 fin-0x004:0635 (det. ListNode"
+7
+감사 신도 3
+0x03e-0038 {doux-"Faie-0x03e0030 (det. LaNode"
+0x0De: 956E fla:9m2 intm0x0D4:053% (dat... LietNide
+2
+in
+2
+HEL
+자 메모리 스레드
+_0x0Dec0ESC (data=0 fine=0x00020203 IU_ListNode"
+0
+in
+Ind
+El
+ODDD
+N
+gx vs 로 원형 연결 리스트 자료 구조 보기 ( 여러 줄 실행 ) ㅁ cir_list.c 의 52 번 라인 에 중단 점 설정 하고 [ 계속 ] 버튼 3 회 하면 3 개 노드 의 내용 ( data + link ) 가 무한 반복 표시됨 □ 원형 연결 리스트 ( 무한 반복 표시 ) 단순 연결 리스트 ( NULL 로 종료 ) head hood HEL 40 30 로컬 gx EC 색 ( CHI - E 감사 신도 3 Cal 김 강 08 had 0000cc 5566 ( de = 2 fin - 0x004 : 0635 ( det . ListNode " Mend 004000325600 7 0 0x03e - 0038 { doux- " Faie - 0x03e0030 ( det . LaNode " › @lik D006256001a 2015 lex K 0x0De : 956E fla : 9m2 intm0x0D4 : 053 % ( dat ... LietNide das 20 2 in N 30 → dela and foreadlinke ** Fik _0x0Dec0ESC ( data = 0 fine = 0x00020203 IU_ListNode " G in 달 0 Ind 20 10 Inc ODDD 0006256091200615650cm 40 2 El 20 20 DEDI 1500 D20625140000325500 자 메모리 스레드 스커드 VS로
+| insert_last() : 20
+ㅁ cir_list.c의 43번 라인에 중단점 설정하고 한줄씩 실행
+이름
+edita
+ht
+A des
+Xinx
+1 02:5
+영연결리스트 자료구조 보기 (한줄씩 실행)
+dele
+head
+- head = node:
+da
+I line
+cata
+head
+20
+Badachis
+읽을수없음
+제모기를 읽을 수 있습기
+|0x009d5552 |daz=20km Oxcdc.
+node->link=head;
+20
+0x0C9d5558 (datem.20 E-boxedco
+20
+lik
+C로 쉽게 풀어쓴 자료구조
+갔
+20
+| 0x000d5563 [dita20fing
+0
+_C006-J5363 [lola-20 Exc
+20
+● 생능출판사 2019
+head
+head 영 연결 리스트 자료 구조 로 보기 ( 한줄 씩 실행 ) VS insert_last ( ) : 20 | 설정 하고 한줄 씩 실행 cir_list.c 의 43 번 라인 에 중단 점 ㅁ 이름 edita 20 ht Badachis 읽을수 없음 A des 제모기 를 읽을 수 있습 기 Xinx 1 02 : 5 | 0x009d5552 | daz = 20km Oxcdc . node : head = - head 20 dele 20 head 0x0C9d5558 ( datem.20 E - boxedco 20 da I line node- > link = head ; head 갔 20 cata | 0x000d5563 [ dita20fing head 0 _C006 - J5363 [ lola - 20 Exc lik C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 'VS로
+「insert_last() : 20, 30
+이름
+dang
+Bend
+.de
+@ink
+CE
+D0209de568cate=20 line
+node->link = head->link;
+data
+head
+10
+19
+>
+cabe
+doo
+hend
+da
+Ink
+:
+ink
+영연결리스트 자료구조 보기 (한줄씩실행)
+> Int
+Cine
+한
+30
+20
+30
+2200d5563 d
+집
+- head->link = node;
+915
+함
+20084556301
+20
+(D:200d5562 [d:
+30
+0095563fd
+30
+D었고 이를 받았고 여
+20
+Ox006d55a0da
+50
+20
+20
+20
+C-0063534010-
+30
+0x000d5563 d • 생능출판사 2019
+head
+30
+30
+- head = node;
+웠
+i dele
+.head
+8
+201
+10 int
+nade
+DOEL
+30
+30
+02-550
+30
+20
+0x009:558011
+0x029:55:01:
+E
+0-009.2508144
+head 로 영 연결 리스트 자료 구조 보기 ( 한줄 씩 실행 ) VS ' 30 insert_last ( ) : 20 , 「 한 이름 30 dang - head = node ; head Bend 20 .de 20 웠 @ink D0209de568cate = 20 line i dele 30 node- > link = head- > link ; .head 02-550 30 201 CE 20 30 data 10 int 0x009 : 558011 2200d5563 d head nade 0x029 : 55 : 01 : cabe 집 E 20 30 10 20084556301 0-009.2508144 DOEL da 20 ( D : 200d5562 [ d : > Ink 19 head 30 ink 0095563fd 30 8 link = node ; head- > - 915 함 doo 30 20 30 hend D 었고 이를 받았고 여 20 Ox006d55a0da 50 > Int 0063534010 C - 30 : 0x000d5563 d • 생능 출판사 2019 Cine 학생> 고수님~ VS를 왜 보나요?
+교수> VS 로 코드 한 줄씩 수행하면서 자료구조 변화를 볼 수 있습니다.
+학생> 하지만 VS는 자료구조의 값(숫자)만 보여주어서 이해하기 어려워요
+교수> 그래서 여러분이 자료구조 그림을 그리면 이해하기 쉽습니다.
+천인국교수님은 교재에서 단계별 자료구조 그림을 많이 보여 주었기에 이제 여
+러분이 필요한 그림을 만들면 코드 이해하기 쉽습니다.
+head->link = node;
+이름
+dea
+@hend
+o
+ink
+Ink
+cat
+Pink
+C로 쉽게 풀어쓴 자료구조
+2
+30
+도 불렸다.
+20
+CxCOSd53a01da
+50
+C-006253004
+50
+0x000d5563 da
+20
+● 생능출판사 2019
+30 나요 ? VS 를 왜 보 고수님 ~ 학생 > 교수 > VS 로 코드 한 줄씩 수행 하면서 자료 구조 변화 를 볼 수 있습니다 . 학생 > 하지만 VS 는 자료 구조 의 값 ( 숫자 ) 만 보여 주어서 이해 하기 어려워요 교수 > 그래서 여러분 이 자료 구조 그림 을 그리면 이해 하기 쉽습니다 . 천인국 교수님 은 교재 에서 단계별 자료 구조 그림 을 많이 보여 주었기 에 이제 여 러분 이 필요한 그림 을 만들면 코드 이해 하기 쉽습니다 . head- > link = node ; 이름 2 20 30 dea 30 @hend 도 불렸다 . 20 CxCOSd53a01da ink 50 Ink 006253004 C - o 50 cat 0x000d5563 da Pink C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 위형 연결 리스트의 응용: 멀티 플레이어 게임
+LO
+ㅁ 현재 차례가 누구인가?
+|현재 차례=KIM
+|현재 차례 = CHI
+현재 차례=PARK
+현재 차례=KIM
+현재 차례= CHI
+현재 차례=PARK
+현재 차례=KIM
+현재 차례 = CHOI
+현재 차례=PARK
+현재 차례=KIM
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019
+S 위형 연결 리스트 의 응용 : 멀티 플레이어 게임 LO ? 현재 차례 가 누구 인가 ㅁ | 현재 차례 = KIM | 현재 차례 = CHI 현재 차례 = PARK 현재 차례 = KIM 현재 차례 = CHI 현재 차례 = PARK 현재 차례 = KIM 현재 차례 = CHOI 현재 차례 = PARK 현재 차례 = KIM S C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+typedef char element [100];
+typedef struct ListNode {
+element data;
+struct ListNode "link;
+} ListNode;
+//노드 타입
+ListNode* insert_first (ListNode* head, element data)
+{
+ListNode *node = (ListNode *)malloc(sizeof (ListNode));
+strcpy(node->data, data);
+if (head == NULL) {
+}
+else {
+head = node;
+node->link= head;
+node->link= head->link;
+head->link = node;
+}
+return head;
+// (1)
+// (2)
+// 변경된 헤드 포인터를 반환한다. #include < stdio.h > #include < stdlib.h > #include < string.h > typedef char element [ 100 ] ; // 노드 타입 typedef struct ListNode { element data ; struct ListNode " link ; } ListNode ; ListNode * insert_first ( ListNode * head , element data ) { ListNode * node = ( ListNode * ) malloc ( sizeof ( ListNode ) ) ; strcpy ( node- > data , data ) ; if ( head == NULL ) { head = node ; node- > link = head ; } else { node- > link = head- > link ; // ( 1 ) head- > link = node ; // ( 2 ) } // 변경된 헤드 포인터 를 반환 한다 . return head ; '멀티 플레이어 게임 (3사람이 원형으로 무한 반복)
+ㄹ
+// 원형 연결 리스트 테스트 프로그램
+- int main (void)
+{
+ListNode *head = NULL;
+head = insert_first(head, "KIM");
+_head = insert_first(head, "PARK");
+head = insert_first(head, "CHOI");
+for (int i = 0; i < 10; i++) {
+ListNode* p = head;
+printf("현재 차례=%s \n", p->data);
+_p = p->link;
+}
+return 0;
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 ' 멀티 플레이어 게임 ( 3 사람 이 원형 으로 무한 반복 ) ㄹ // 원형 연결 리스트 테스트 프로그램 - int main ( void ) { ListNode * head = NULL ; head = insert_first ( head , " KIM " ) ; _head = insert_first ( head , " PARK " ) ; head = insert_first ( head , " CHOI " ) ; ListNode * p = head ; for ( int i = 0 ; i < 10 ; i ++ ) { printf ( " 현재 차례 = % s \ n " , p- > data ) ; link ; _p = p- > } return 0 ; C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 <학생> 고수님~ warning aom
+바새해어요
+1. strcpy()에 클릭한후 F1
+2.string.h 추가
+3. strcpy_s () 변경
+4.strcpy_s()에 클릭한 후 F1
+5.strcpy_s(node->data, _countof(node->data), data); 변경
+교수> 야호~ warning 0
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 < 학생 > 고수님 바 새해 어요 ~ warning aom 후 F1 클릭 한 ( ) 에 1. strcpy 추가 2.string.h ( ) 변경 3. strcpy_s 후 F1 클릭 한 ( ) 에 4.strcpy_s 5.strcpy_s ( node- > data , _countof ( node- > data ) , data ) ; 변경 교수 > 야호 ~ warning 0 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 유식
+1. 나는 리스트 자료구조를 원형연결리스트로 구현할 수 있다
+2. 나는 리스트 자료구조를 이중연결리스트로 구현할 수 있다.
+3.나는 스택 자료구조를 연결 리스트로 구현할 수 있다.
+4. 나는 큐 자료구조를 연결 리스트로 구현할 수 있다
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 유식 1. 나는 리스트 자료 구조 를 원형 연결 리스트 로 구현할 수 있다 2. 나는 리스트 자료 구조 를 이중 연결 리스트 로 구현할 수 있다 . 3. 나는 스택 자료 구조 를 연결 리스트 로 구현할 수 있다 . 4. 나는 큐 자료 구조 를 연결 리스트 로 구현할 수 있다 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 이주 여겨 리스트
+'8 LE
+- 단순 연결 리스트의 문제점: 선행 노드를 찾기가 힘들다
+원형 연결 리스트도 선행 노드 찾기 힘들다
+head o
+C로 쉽게 풀어쓴 자료구조
+10
+나의 선행
+노드는?
+4.201.
+20
+● 생능출판사 2019
+head
+30
+***
+NULL 리스트 이주 여겨 ' 8 LE - 단순 연결 리스트 의 문제점 : 선행 노드 를 찾기 가 힘들다 원형 연결 리스트 도 선행 노드 찾기 힘들다 나의 선행 노드 는 ? head o NULL *** head 4.201 . 10 30 20 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 아이주 여기 리스트
+'8 LE
+이중 연결 리스트: 하나의 노드가 선행 노드와 후속 노드
+에 대한 두 개의 링크를 가지는 리스트
+- 단점은 공간을 많이 차지하고 코드가 복잡
+헤드노드
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 아이 주 여기 리스트 ' 8 LE 이중 연결 리스트 : 하나 의 노드 가 선행 노드 와 후속 노드 에 대한 두 개의 링크 를 가지는 리스트 - 단점 은 공간 을 많이 차지하고 코드 가 복잡 헤드 노드 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 헤드노드
+ㅁ헤드노드(head node): 데이터를 가지지 않고 단지 삽입,
+삭제 코드를 간단하게 할 목적으로 만들어진 노드
+ㅁ 헤드 포인터와의 구별 필요
+■ 공백상태에서는 헤드 노드만 존재
+허드노드
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019
+f 헤드 노드 ㅁ 헤드 노드 ( head node ) : 데이터 를 가지지 않고 단지 삽입 , 삭제 코드 를 간단 하게 할 목적 으로 만들어진 노드 구별 필요 헤드 포인터 와 의 ㅁ ■ 공백 상태 에서는 헤드 노드 만 존재 허드 노드 f C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 노드의 구조
+ㅁ 이중연결리스트에서의 노드의 구조
+typedef int element;
+typedef struct DlistNode {
+element data;
+struct DlistNode *llink;
+struct DlistNode *rlink;
+) DlistNode;
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 노드 의 구조 ㅁ 이중 연결 리스트 에서 의 노드 의 구조 element ; typedef int typedef struct DlistNode { element data ; struct DlistNode * llink ; struct DlistNode * rlink ; ) DlistNode ; C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 사이여사
+HULL
+before
+new mode
+c_node
+// 새로운 데이터를 노드 before의 오른쪽에 삽입한다.
+void dinsert(DListNode *before, element data)
+{
+DListNode *newnode - (DListNode *)malloc(sizeof(DListNode));
+strcpy(newnode->data, data);
+_newnode->llink = before; // (1)
+_newnode->rlink = before->rlink; // (2)
+C로 쉽게 풀어쓴 자료구조
+before->rlink->llink = newnode; // (3}
+before->rlink = newnode; // (4)
+● 생능출판사 2019 사이 여사 HULL before c_node mode new // 새로운 데이터 를 노드 before 의 오른쪽 에 삽입 한다 . void dinsert ( DListNode * before , element data ) { DListNode * newnode - ( DListNode * ) malloc ( sizeof ( DListNode ) ) ; strcpy ( newnode- > data , data ) ; _newnode- > llink = before ; // ( 1 ) _newnode- > rlink = before- > rlink ; // ( 2 ) before- > rlink- > llink = newnode ; // ( 3 } before- > rlink = newnode ; // ( 4 ) C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 기사제연산
+1 LI
+removed
+0
+C로 쉽게 풀어쓴 자료구조
+(2)
+// 노드 removed를 삭제한다.
+| void ddelete(DListNode* head, DListNode" removed)
+{
+if (removed == head) return;
+removed->llink->rlink = removed->rlink; // (1)
+_removed->rlink->llink = removed->llink; // (2)
+free(removed);
+● 생능출판사 2019 기사 제 연산 1 LI 0 ( 2 ) removed // 노드 removed 를 삭제 한다 . | void ddelete ( DListNode * head , DListNode " removed ) { if ( removed == head ) return ; removed- > llink- > rlink = removed- > rlink ; // ( 1 ) _removed- > rlink- > llink = removed- > llink ; // ( 2 ) free ( removed ) ; C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 테스트 프로그래
+| #include <stdio.h>
+| #include <stdlib.h>
+typedef int element;
+typedef struct DListNode { // 이중연결 노드 타입
+element data;
+struct DListNode" llink;
+struct DListNode" rlink;
+| DListNode;
+// 이중 연결 리스트를 초기화
+void init(DListNode* phead)
+{
+_phead->llink = phead;
+_phead->rlink = phead;
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 그래 테스트 프로 | #include < stdio.h > | #include < stdlib.h > typedef int element ; 연결 노드 타입 typedef struct DListNode { // 이중 element data ; struct DListNode " llink ; struct DListNode " rlink ; | DListNode ; // 이중 연결 리스트 를 초기화 void init ( DListNode * phead ) { _phead- > llink = phead ; _phead- > rlink = phead ; C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 테스트 프로그래
+// 이중 연결 리스트의 노드를 출력
+| void print_dlist(DListNode* phead)
+{
+DListNode* p;
+for (p = phead->rlink; p != phead; p = p->rlink) {
+_printf("<- 1 1%d| |->', p->data);
+}
+printf("\n");
+|}
+// 새로운 데이터를 노드 before의 오른쪽에 삽입한다.
+void dinsert(DListNode *before, element data)
+{
+DListNode *newmode = (DListNode *)malloc(sizeof(DListNode));
+strcpy(newnode->data, data);
+_newnode->llink = before;
+newnode->rlink = before->rlink;
+before->rlink->llink = newnode;
+before->rlink = newnode;
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 그래 테스트 프로 // 이중 연결 리스트 의 노드 를 출력 | void print_dlist ( DListNode * phead ) { DListNode * p ; for ( p = phead- > rlink ; p ! = phead ; p = p- > rlink ) { _printf ( " < - 1 1 % d | | - > ' , p- > data ) ; } printf ( " \ n " ) ; } | // 새로운 데이터 를 노드 before 의 오른쪽 에 삽입 한다 . void dinsert ( DListNode * before , element data ) { DListNode * newmode = ( DListNode * ) malloc ( sizeof ( DListNode ) ) ; strcpy ( newnode- > data , data ) ; _newnode- > llink = before ; newnode- > rlink = before- > rlink ; before- > rlink- > llink newnode = ; before- > rlink newnode = ; 생능 출판사 2019 C 로 쉽게 풀어 쓴 자료 구조 ● 테스트 프로그래
+// 노드 removed를 삭제한다.
+| void ddelete(DListNode" head, DListNode* removed)
+{
+if (removed == head) return;
+removed->llink->rlink = removed->rlink;
+_removed->rlink->llink = removed->llink;
+free (removed);
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 그래 테스트 프로 // 노드 removed 를 삭제 한다 . | void ddelete ( DListNode " head , DListNode * removed ) { if ( removed == head ) return ; removed- > llink- > rlink = removed- > rlink ; _removed- > rlink- > llink = removed- > llink ; free ( removed ) ; C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 테스트 프로그래
+// 이중 연결 리스트 테스트 프로그램
+int main(void)
+{
+DListNode" head = (DListNode*)malloc(sizeof(DListNode));
+init(head);
+printf("추가 단계\n");
+for (int i = 0; i < 5; i++) {
+// 헤드 노드의 오른쪽에 삽입
+dinsert(head, i);
+print_dlist(head);
+}
+printf("\n삭제 단계\n");
+for (int i = 0; i < 5; i++){
+C로 쉽게 풀어쓴 자료구조
+_print_dlist(head);
+ddelete(head, head->rlink);
+}
+free(head);
+return 0;
+● 생능출판사 2019 그래 테스트 프로 // 이중 연결 리스트 테스트 프로그램 int main ( void ) { DListNode " head = ( DListNode * ) malloc ( sizeof ( DListNode ) ) ; init ( head ) ; printf ( " 추가 단계 \ n " ) ; for ( int i = 0 ; i < 5 ; i ++ ) { // 헤드 노드 의 오른쪽 에 삽입 dinsert ( head , i ) ; print_dlist ( head ) ; } ; printf ( " \ n 삭제 단계 \ n " ) for ( int i = 0 ; i < 5 ; i ++ ) { _print_dlist ( head ) ; ddelete ( head , head- > rlink ) ; } free ( head ) ; return 0 ; 로 쉽게 풀어 쓴 자료 구조 C ● 생능 출판사 2019 실행 결과 교수님~ 결과화면이 이상해요)
+(
+| 추가 단계
+<-|10| |->
+<-||1||-→-| 10| |-→>
+<- 12| |-> <-||1| |-> <-||0| |->
+<- 13| |-> <- 12| |-> <-||1| |-> <-||0| |->
+<- 14| |-<-| |3| |-> <-| |2| |→<-| |1| |-→> <-| 10| |->
+삭제 단계
+<- 14| |-- |3| |-<-| |2| |-<- |1| |-> <-||0|| |->
+<-| |3| |-> <- 12| |-> <-||1| |-> <-| 10| |->
+<- 12| |-> <-||1| |-> <-||0| |->
+<-||1| |-> <-||0| |-→
+<-| 10| |->
+C:\WINDOWS\system32\cmd.exe
+주가 단계
+계속하려면 아무 키나 누르십시오 ..
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 실행 결과 교수님 ~ 결과 화면 이 이상 해요 ) ( | 추가 단계 < - | 10 | | - > < - || 1 || - → - | 10 | | - → > < - 12 | | - > < - || 1 | | - > < - || 0 | | - > < - 13 | | - > < - 12 | | - > < - || 1 | | - > < - || 0 | | - > < - 14 | | - < - | | 3 | | - > < - | | 2 | | → < - | | 1 | | - → > < - | 10 | | - > 삭제 단계 < - 14 | | -- | 3 | | - < - | | 2 | | - < - | 1 | | - > < - || 0 || | - > < - | | 3 | | - > < - 12 | | - > < - || 1 | | - > < - | 10 | | - > < - 12 | | - > < - || 1 | | - > < - || 0 | | - > < - || 1 | | - > < - || 0 | | - → < - | 10 | | - > C : \ WINDOWS \ system32 \ cmd.exe 주가 단계 계속 하려면 아무 키나 누르 십시오 .. C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 학생> 교수님~ 결과화면이 이상해요
+1. data는 int 타입이기에 strcpy() 를 사용하면 안됨
+2. 교재 234페이지에 있는대로 newnode->data = data; 변경
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 학생 > 교수님 ~ 결과 화면 이 이상 해요 1. data 는 int 타입 이기에 strcpy ( ) 를 사용 하면 안됨 2. 교재 234 페이지 에 있는 대로 newnode- > data = data ; 변경 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 ㅁ 그림 방식의 자바 애플릿 vs. (학생이 그린 자료구조그림)과 VS
+348 07
+C
+이중 연결 리스트 자바 애플릿
+K
+**
+10
+C
+80-4
+noge Los
+고
+C로 쉽게 풀어쓴 자료구조
+4000
+nikinnabelificetente
+2
+b
+b
+da
+● 생능출판사 2019
+<연산>
+ㅁdinsert(DListNode *before,
+element data)
+ㅁ
+head,
+ddelete(DListNode*
+DListNode* removed)
+<자료구조>
+typedef struct DListNode {
+element data;
+struct DListNode' llink;
+struct DListNode' rlink;
+} DListNode; 이중 연결 리스트 자바 애플릿 ㅁ 그림 방식 의 자바 애플릿 vs. ( 학생 이 그린 자료 구조 그림 ) 과 VS 연산 > < nikinnabelificetente ㅁ dinsert ( DListNode * before , da element data ) b b ㅁ head , ddelete ( DListNode * 2 DListNode * removed ) < 자료 구조 > DListNode { typedef struct element data ; struct DListNode ' llink ; C 고 348 07 struct DListNode ' rlink ; 10 K } DListNode ; ** C 80-4 noge Los 4000 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 ㅁ
+VS로 이중연결리스트 자료구조 보기 (여러줄실행)
+36번 라인에 중단점 설정하고 [계속]버튼 3회하면 3개 노드의 내용
+dlinkedlist.c의
+이름
+(data+link)가 무한반복 표시됨
+ㅁ 이중연결리스트(무한반복표시, left link, right link)
+단순연결리스트(NULL로 종료)
+리디스
+bele
+at
+1 inc
+@rink
+link
+tink
+volid
+. tick
+dong
+10 t
+@cate
+19 fine
+4 rink
+김
+| 5067906000--342150451-
+ink
+› dink
+VI LEVENTE
+-61215215
+0x00795688 satz=0 fine=0x00735
+2
+_DSC07966COinata=-3(2:50151
+| 0x00796-463 [data= 1 | ink=0x00798
+1
+_DSC07902 (dete-214-0300795
+000796658icata=0 ince0o02735
+0
+Ok
+0x00790600-le--34220451
+-81215215
+C00795658=0=0x0735
+2
+0x00796600-catam-342:501511 inl
+2007963 dtalink000
+검색(CI-E
+had
+data
+› @lik
+..:
+→ dela
+10 Inc
+20
+hood
+10
+p. 김사신도 3
+강
+0000cc 5566 (de=2 fin-0x004:0635 (det. ListNode"
+7
+0x03e-0038 {doux-"Faie-0x03e0030 (det. LaNode"
+0x0De: 956E fla:9m2 intm0x0D4:053% (dat... LietNide
+2
+in
+2
+32 NULL
+자 메모리 스레드
+_0x0Dec0ESC (data=0 fine=0x00020203 IU_ListNode"
+0
+in
+Ind
+El
+ODDD
+N
+gx ) 보기 ( 여러 줄 실행 리스트 자료 구조 VS 로 이중 연결 ㅁ 36 번 라인 에 중단 점 설정 하고 [ 계속 ] 버튼 3 회 하면 3 개 노드 의 내용 dlinkedlist.c 의 반복 표시됨 data + link ) 가 무한 ( ㅁ 이중 연결 리스트 ( 무한 반복 표시 , left link , right link ) 단순 연결 리스트 ( NULL 로 종료 ) 리 디스 hood 10 32 NULL 이름 김 5067906000--342150451 | bele -61215215 gx at 0x00795688 satz = 0 fine = 0x00735 1 inc 사신도 3 검색 ( CI - E . 김 p @rink 강 2 0000cc 5566 ( de = 2 fin - 0x004 : 0635 ( det . ListNode " link _DSC07966COinata = -3 ( 2 : 50151 had tink data 7 | 0x00796-463 [ data = 1 | ink = 0x00798 0x03e - 0038 { doux- " Faie - 0x03e0030 ( det . LaNode " › @lik 1 _DSC07902 ( dete - 214-0300795 .. : 0x0De : 956E fla : 9m2 intm0x0D4 : 053 % ( dat ... LietNide volid 2 in 000796658icata = 0 ince0o02735 . tick N 0 dong → dela 10 t Ok 0x00790600 - le -- 34220451 _0x0Dec0ESC ( data = 0 fine = 0x00020203 IU_ListNode " in 0 @cate -81215215 Ind 19 fine C00795658 = 0 = 0x0735 10 Inc ODDD 2 El 20 rink 4 2 ink 0x00796600 - catam - 342 : 501511 inl 2007963 dtalink000 › dink 스레드 메모리 자 VI LEVENTE VS로 이중연결리스트 자료구조 보기 <하줄씩실행
+LE 12
+Idinsert() : 0 dlinkedlist.c의 31번 라인에 중단점 설정
+헤드노드
+이름
+before
+volid
+000 5000 de
+000cc560041
+newnode->data = data;
+newrode
+da:3
+l date
+0
+10
+Ox
+o_newnode->llink = before;
+before
+Cx005600
+mode
+cata
+inc
+brink
+befor:
+#
+10x00cc5600405
+344451
+10 link
+Cat
+nende
+Jale
+10 link
+rink
+0.04.
+NET
+De00cc5620 in
+seeded
+newnode->rlink = before->rlink;
+0x00kc5600
+헤드노드
+341547
+O
+0.00 76388-
+C
+0:00k,2000-111
+0x00kc5650:5
+0
+이
+0
+0x00kc5650-51
+0x00cc5600 (nik
+헤드노드
+● 생능출판사 2019
+0 실행 줄씩 < 하 구조 보기 자료 연결 리스트 이중 VS 로 LE 12 31 번 라인 에 중단 점 설정 Idinsert ( ) : 0 dlinkedlist.c 의 헤드 노드 이름 # before 10x00cc5600405 344451 volid 000 5000 de 000cc560041 newnode- > data = data ; newrode 0.04 . 이 da : 3 0 10 Ox ; llink = before o_newnode- > Cx005600 before 헤드 노드 l date O mode 0.00 76388 C cata inc De00cc5620 in brink seeded newnode- > rlink = before- > rlink ; 헤드 노드 befor : 0x00kc5600 341547 10 link : 00k , 2000-111 0 0 0x00kc5650 : 5 0 Cat nende 0 Jale 0x00kc5650-51 10 link rink 0x00cc5600 ( nik ● 생능 출판사 2019 NET VS로 이중연결리스트 자료구조 보기 <하줌씨시히
+(한줄씩실행)
+dinsert() : 0
+newnode->rlink = before->rlink; 헤드노드
+0x00kc2000jj
+-4215215
+0x00cc56006
+Lofure
+data
+link
+@rink
+a cale
+O reanoze
+data
+link
+dink
+be
+● Data
++ link
+1
+before->rlink->llink = newnode;
+Detokk06001
+-34215215
+0x0c658
+> link
+betore
+0
+0x00cc56680
+data
+11
+mode
+before->rlink = newnode;
+Itine
+dele
+0x00x200014-
+CC05600
+-042153451
+0x00cc658
+0x00cc5600:
+20
+0100kc06881
+new ode
+C도 쉽게 풀어쓴 사소
+cl
+-$4150/51
+0:00cc5638 16
+0
+00:20cc563816
+● 생능출판사 2019
+헤드노드
+헤드노드
+이 히 시 씨 하줌 보기 < 구조 자료 리스트 ) 이중 연결 씩 실행 로 한줄 ( VS 0 dinsert ( ) : newnode- > rlink = before- > rlink ; 헤드 노드 0x00kc2000jj Lofure 이 data -4215215 0x00cc56006 link @rink a cale 0 O reanoze 0x00cc56680 data 11 link 0x00x200014 dink CC05600 newnode ; before- > rlink- > llink = 헤드 노드 Detokk06001 be ● Data -34215215 + link 0x0c658 -042153451 0x00cc658 link > 0x00cc5600 : 20 0100kc06881 mode before- > rlink = newnode ; 헤드 노드 betore cl $ 4150 / 51 data - 0 : 00cc5638 16 1 Itine dele 0 00 : 20cc563816 new ode ● 생능 출판사 2019 C 도 쉽게 풀어 쓴 사소 'vs로 이중연결리스트 자료구조 보기 (한줄씩실행)
+dinsert (DListNode *before, element data)
+1. newnode->llink = before;
+2. newnode->rlink = before.rlink;
+3. before->rlink->llink = newnode
+4. before->rlink = newnode;
+3단계에서 before->llink로 하지 않고
+before->rlink->llink로 한 이유는?
+(-> 가 2개나 있음)
+<프로그램 7.7 >
+dinsert (head, 0);
+dinsert (head, 1);
+헤드노드
+C로 쉽게 풀어쓴 자료구조
+헤드노드
+< before의 오른쪽에 insert>
+before
+● 생능출판사 2019
+new_node
+(3) ' vs 로 이중 연결 리스트 자료 구조 보기 ( 한줄 씩 실행 ) dinsert ( DListNode * before , element data ) 1. newnode- > llink = before ; < before 의 오른쪽 에 insert > 2. newnode- > rlink = before.rlink ; before 3. before- > rlink- > llink = newnode 4. before- > rlink = newnode ; 3 단계 에서 before- > llink 로 하지 않고 ( 3 ) before- > rlink- > llink 로 한 이유 는 ? ( - > 가 2 개나 있음 ) new_node 노드 프로그램 7.7 > 헤드 < dinsert ( head , 0 ) ; dinsert ( head , 1 ) ; 헤드 노드 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 vs로 이중연결리스트 자료구조 보기 (한줄씩실행)
+| ddelete(DListNode* head, DListNode* removed)
+1. removed->llink->rlink =
+removed->rlink;
+2.removed->rlink->llink =
+removed->llink;
+(-> 가 2개나 있음)
+그림없이 C코드만으로 이해하기 어려움
+<프로그램 7.7 >
+ddelete (head, head->rlink);
+11제거
+Ddelete (head, head->rlink);
+110 제거
+헤드노드
+<head의 오른쪽 delete >
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019
+renoved
+f vs 로 이중 연결 리스트 자료 구조 보기 ( 한줄 씩 실행 ) | ddelete ( DListNode * head , DListNode * removed ) < head 의 오른쪽 delete > 1. removed- > llink- > rlink = removed- > rlink ; 2.removed- > rlink- > llink = removed- > llink ; ( - > 가 2 개나 있음 ) 어려움 그림 없이 C 코드 만으로 이해 하기 renoved < 프로그램 7.7 > ddelete ( head , head- > rlink ) ; 11 제거 Ddelete ( head , head- > rlink ) ; 110 제거 헤드 노드 f C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 휴식 (이제 나는 할 수 있다)
+1. 나는 리스트 자료구조를 원형연결리스트로 구현할 수 있다
+2. 나는 리스트 자료구조를 이중연결리스트로 구현할 수 있다.
+3.나는 원형연결리스트와 이중연결리스트 내용변화를 C코드
+한줄씩 VS와 내가 그린 자료구조그림으로 보여줄 수 있다.
+헤드노드
+헤드노드
+0
+4.나는 스택 자료구조를 연결 리스트로 구현할 수 있다.
+5. 나는 큐 자료구조를 연결 리스트로 구현할 수 있다.
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 휴식 ( 이제 나는 할 수 있다 ) 1. 나는 리스트 자료 구조 를 원형 연결 리스트 로 구현할 수 있다 2. 나는 리스트 자료 구조 를 이중 연결 리스트 로 구현할 수 있다 . 3. 나는 원형 연결 리스트 와 이중 연결 리스트 내용 변화 를 C 코드 한줄 씩 VS 와 내가 그린 자료 구조 그림 으로 보여줄 수 있다 . 헤드 노드 헤드 노드 0 4. 나는 스택 자료 구조 를 연결 리스트 로 구현할 수 있다 . 5. 나는 큐 자료 구조 를 연결 리스트 로 구현할 수 있다 . C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 Cmp3 재생 프로그램 만들기 (이중 연결리스트)
+음악 6 0 0
+| <-I #Fernando# |-> <- | Dancing Queen |-> <-1 Mamamia |->
+명령어를 입력하시오(<, >, q): >
+<-1 Fernando | -> <- | #Dancing Queen# |-> <- Mamamia |->
+음악 3
+명령어를 입력하시오(<, >, q): >
+| <-1 Fernando |-> <- | Dancing Queen |-> <- #Mamamia# |->
+명령어를 입력하시오(<, >, q): <
+<-| Fernando |-> <- | #Dancing Queen# |-> <- Mamamia |->
+명령어를 입력하시오(<, >, q):
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 연결 리스트 ) 이중 만들기 ( 프로그램 재생 Cmp3 0 0 음악 6 음악 3 | < -I # Fernando # | - > < - | Dancing Queen | - > < -1 Mamamia | - > 명령어 를 입력 하시오 ( < , > , q ) : > < -1 Fernando | - > < - | #Dancing Queen # | - > < - Mamamia | - > 명령어 를 입력 하시오 ( < , > , q ) : > | < -1 Fernando | - > < - | Dancing Queen | - > < - # Mamamia # | - > 명령어 를 입력 하시오 ( < , > , q ) : < < - | Fernando | - > < - | #Dancing Queen # | - > < - Mamamia | - > 명령어 를 입력 하시오 ( < , > , q ) : 생능 출판사 2019 C 로 쉽게 풀어 쓴 자료 구조 ● 학생> 교수님~ 에러나요
+학생> 7장 multigame.c에서도 strcpy_s() 고쳐보았기에 이제는
+제가 고칠수 있어요.
+1. strcpy_s(newnode->data, _countof(newnode->data), data);
+변경
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019
+f 나요 에러 ~ 교수님 학생 > strcpy_s ( ) 고쳐 보았 기에 이제는 학생 > 7 장 multigame.c 에서도 제가 고칠 수 있어요 . 1. strcpy_s ( newnode- > data , _countof ( newnode- > data ) , data ) ; 변경 f C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 테스트 프로그램
+| #include <stdio.h>
+| #include <stdlib.h>
+| #include <string.h>
+typedef char element[100];
+typedef struct DListNode { // 이중 연결 노드 타입
+element data;
+struct DListNode* Ilink;
+struct DListNode* rlink;
+| } DListNode;
+DListNode* current;
+// 이중 연결 리스트를 초기화
+void init (DListNode* phead)
+{
+_phead->llink = phead;
+phead->rlink = phead;
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 테스트 프로그램 | #include < stdio.h > #include < stdlib.h > | | #include < string.h > typedef char element [ 100 ] ; 이중 연결 노드 타입 typedef struct DListNode { // element data ; struct DListNode * Ilink ; struct DListNode * rlink ; | } DListNode ; DListNode * current ; // 이중 연결 리스트 를 초기화 void init ( DListNode * phead ) { _phead- > llink = phead ; phead- > rlink = phead ; 로 쉽게 풀어 쓴 자료 구조 C ● 생능 출판사 2019 테스트 프로그래
+// 이중 연결 리스트 테스트 프로그램
+int main(void)
+{
+char ch;
+DListNode* head = (DListNode*)malloc(sizeof(DListNode));
+init(head);
+dinsert(head, "Mamamia");
+dinsert(head, "Dancing Queen");
+dinsert(head, "Fernando");
+current = head->rlink;
+print_dlist(head);
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 그래 테스트 프로 // 이중 연결 리스트 테스트 프로그램 int main ( void ) { char ch ; DListNode * head = ( DListNode * ) malloc ( sizeof ( DListNode ) ) ; init ( head ) ; dinsert ( head , " Mamamia " ) ; dinsert ( head , " Dancing Queen " ) ; dinsert ( head , " Fernando " ) ; current = head- > rlink ; print_dlist ( head ) ; C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 헤드노드
+do {
+printf("\n명령어를 입력하시오(<, >, q): ");
+ch = getchar();
+if (ch == '<') {
+G
+}
+else if (ch == '>') {
+}
+_current = current->llink;
+if (current == head) // 교수님 - 이 라인은 왜 있나요?
+_current = current->llink;
+_current = current->rlink;
+if (current == head) // 교수님 - 이 라인은 왜 있나요?
+current = current->rlink;
+print_dlist(head);
+getchar();
+} while (ch != 'q');
+// 동적 메모리 해제 코드를 여기에 (dlinkedlist.c의 삭제단계)
+|}
+C도 쉽게 풀어쓴 사료구소
+0 정릉출판사 2019 헤드 노드 G do { printf ( " \ n 명령어 를 입력 하시오 ( < , > , q ) : " ) ; getchar ch = ( ) ; if ( ch == ' < ' ) { _current = current- > llink ; 교수님 - 이 라인 은 왜 있나요 ? if ( current == head ) // current- > llink ; _current = } else if ( ch == ' > ' ) { rlink ; _current = current- > if ( current == head ) // 교수님 - 이 라인 은 왜 있나요 ? current = current- > rlink ; } print_dlist ( head ) ; getchar ( ) ; } while ( ch ! = ' q ' ) ; // 동적 메모리 해제 코드 를 여기 에 ( dlinkedlist.c 의 삭제 단계 ) | } 정릉 출판사 2019 C 도 쉽게 풀어 쓴 사료 구소 0 교수> 자료구조 그림 없이 코드설명 불가능합니다.
+교수> 여러분도 코드가 이상하면 자료구조 그림 그리면 됩니다.
+헤드노드
+do {
+ر ر ر ر
+C로 쉽게 풀어쓴 자료구조
+printf("\n명령어를 입력하시오(<, >, q): ");
+ch = getchar();
+if (ch == '<') {
+}
+current = current->llink;
+if (current == head) // 교수님~ 이 라인은 왜 있나요?
+current = current->llink;
+● 생능출판사 2019 교수 > 자료 구조 그림 없이 코드 설명 불가능 합니다 . 교수 > 여러분 도 코드 가 이상 하면 자료 구조 그림 그리면 됩니다 . 헤드 노드 ر ر ر ر do { printf ( " \ n 명령어 를 입력 하시오 ( < , > , q ) : " ) ; ch = getchar ( ) ; if ( ch == ' < ' ) { current = current- > llink ; if ( current == head ) // 교수님 ~ 이 라인 은 왜 있나요 ? current = current- > llink ; } C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 연결 리스트로 구현한 스택 (단순 연결리스트)
+학생> 교수님~ 그림 보니까 감 잡았습니다.
+ㅁ 스택 : 후입선출(LIFO:Last-In First-Out): 가장 최근에 들어온
+데이터가 가장 먼저 나감.
+미로탈출문제에서 스택자료구조 사용하지 않으면 미로탈출 불
+가능. 무한반복 (살려주세요~~)
+3
+2
+1
+D
+9
+7
+3
+(a) 배열을 이용한 스택
+C로 쉽게 풀어쓴 자료구조
+top
+● 생능출판사 2019
+FEE
+9
+7
+3 NULL
+-top
+(6) 연결 리스트를 이용한 시댁 연결 리스트 로 구현 한 스택 ( 단순 연결 리스트 ) 학생 > 교수님 ~ 그림 보니까 감 잡았 습니다 . ㅁ 스택 : 후입 선출 ( LIFO : Last - In First - Out ) : 가장 최근 에 들어온 데이터 가 가장 먼저 나감 . 미로 탈출 문제 에서 스택 자료 구조 사용 하지 않으면 미로 탈출 불 가능 . 무한 반복 ( 살려 주세요 ~~ ) FEE -top 9 3 top 9 2 7 7 1 3 NULL 3 D ( 6 ) 연결 리스트 를 이용한 시댁 ( a ) 배열 을 이용한 스택 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 typedef int element;
+typedef struct StackNode {
+element data;
+struct StackNode *link;
+) StackNode;
+typedef struct {
+StackNode *top;
+} LinkedStackType;
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019
+f typedef int element ; typedef struct StackNode { element data ; struct StackNode * link ; ) StackNode ; typedef struct { StackNode * top ; } LinkedStackType ; f C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 사이 여사
+HH LL
+8
+temp.
+C로 쉽게 풀어쓴 자료구조
+C
+D
+B
+● 생능출판사 2019
+A NULL
+f 사이 여사 HH LL C B A NULL 8 temp . D f C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 사제 연산
+LL
+top
+temp
+C로 쉽게 풀어쓴 자료구조
+C
+++
+B
+● 생능출판사 2019
+A NULL 사제 연산 LL top ++ C B A NULL temp C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 #include <stdio.h>
+#include <malloc.h>
+typedef int element;
+typedef struct StackNode {
+element data;
+struct StackNode "link;
+} StackNode;
+typedef struct {
+StackNode *top;
+} LinkedStackType;
+// 초기화 함수
+void init (LinkedStackType *s)
+{
+s->top = NULL;
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 #include < stdio.h > malloc.h > #include < typedef int element ; typedef struct StackNode { element data ; struct StackNode " link ; StackNode ; } typedef struct { StackNode * top ; } LinkedStackType ; // 초기화 함수 LinkedStackType void init ( * s ) { ; s- > top = NULL C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 // 공백 상태 검출 함수
+int is_empty(LinkedStackType 's)
+{
+return (s->top== NULL):
+}
+// 포화 상태 검출 함수
+int is full (LinkedStackTy!
+{
+return 0;
+|}
+top
+temp
+// 삽입 함수
+void push (LinkedStackType *s, element item)
+{
+D
+D}
+void print_stack(LinkedStackType *s)
+{
+StackNode *temp = (StackNode *)malloc(sizeof (StackNode));
+temp->data = item;
+temp->link = s->top; (1)
+s->top = temp; (2)
+C로 쉽게 풀어쓴 자료구조
+B
+for (StackNode *p=s-> top; p != NULL; p = p->link)
+printf("%d->", p->data);
+printf("NULL \n");
+● 생능출판사 2019
+A NULL // 공백 상태 검출 함수 int is_empty ( LinkedStackType ' s ) { == NULL ) : return ( s- > top } // 포화 상태 검출 함수 top B A NULL int is full ( LinkedStackTy ! { return 0 ; } | D temp // 삽입 함수 void push ( LinkedStackType * s , element item ) { StackNode * temp = ( StackNode * ) malloc ( sizeof ( StackNode ) ) ; temp- > data = item ; temp- > link = s- > top ; ( 1 ) s- > top = temp ; ( 2 ) D } void print_stack ( LinkedStackType * s ) { for ( StackNode * p = s- > top ; p ! = NULL ; p = p- > link ) printf ( " % d- > " , p- > data ) ; printf ( " NULL \ n " ) ; C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 top
+temp
+// 삭제 함수
+element pop (LinkedStackType *s)
+{
+if (is_empty(s)) {
+}
+else {
+B
+}
+fprintf(stderr, "OI
+exit(1);
+StackNode *temps-> top;
+int data = temp->data;
+s->top=s->top->link; (1)
+free (temp);
+return data;
+A MULL top B A MULL temp // 삭제 함수 element pop ( LinkedStackType * s ) { if ( is_empty ( s ) ) { fprintf ( stderr , " OI exit ( 1 ) ; } else { StackNode temps- * > top ; int data = temp- > data ; s- > top = s- > top- > link ; ( 1 ) free ( temp ) ; return data ; } // 주 함수
+int main(void)
+{
+LinkedStackTypes;
+init(&s);
+push (&s, 1); print_stack(s);
+push(&s, 2); print_stack(s);
+push(&s, 3); print_stack(s);
+pop(s); print_stack(s);
+pop(s); print_stack(s);
+pop(s); print_stack(s);
+return 0;
+1-> NULL
+2->1->NULL
+3->2->1->NULL
+2->1->NULL
+1-> NULL
+NULL
+C도 쉽게 줄어든 사료구소
+6 성동출판사 2019 // 주 함수 int main ( void ) { LinkedStackTypes ; init ( & s ) ; push ( & s , 1 ) ; print_stack ( s ) ; push ( & s , 2 ) ; print_stack ( s ) ; push ( & s , 3 ) ; print_stack ( s ) ; pop ( s ) ; print_stack ( s ) ; print_stack ( s ) ; pop ( s ) ; print_stack ( s ) ; pop ( s ) ; return 0 ; 1- > NULL 2- > 1- > NULL 3- > 2- > 1- > NULL 2- > 1- > NULL 1- > NULL NULL 성동 출판사 2019 C 도 쉽게 줄어든 사료 구소 6 ㅁ 그림 방식의 자바 애플릿 vs. 텍스트 방식의 VS 디버깅
+출단위로 자료구조와 알고리즘 동시에 봄
+주요
+연결된 스택 자바 애플릿
++
+278
+-2
+73
+28 <400
+C
+2
+182-
+n-
+C로 쉽게 풀어쓴 자료구조
+연결된 스택
+helleh
+}
+ext
+1
+--
+02-
+● 생능출판사 2019
+<연산>
+o void push(LinkedStackType *s,
+element item)
+element
+pop(LinkedStackType *s)
+<자료구조>
+typedef int element;
+typedef struct StackNode {
+element data;
+struct StackNode *link;
+} StackNode; 연결된 스택 자바 애플릿 ㅁ 그림 방식 의 자바 애플릿 vs. 텍스트 방식 의 VS 디버깅 출 단위 로 자료 구조 와 알고리즘 동시에 봄 < 연산 > 연결된 스택 o void push ( LinkedStackType * s , element item ) helleh element s ) pop ( LinkedStackType * 28 < 400 } ext C -- 구조 > 자료 < 2 182 02 1 ; typedef int element typedef struct StackNode { element data ; 주요 struct StackNode * link ; StackNode ; } -2 + 73 n 278 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 VS로 stack 자료구조 보기
+ㅁ 6장 연결리스트-1에서 VS로 단순연결리스트 자료구조를
+보았음( 6장.pdf의 42page)
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 보기 구조 자료 stack 로 VS ㅁ 6 장 연결 리스트 -1 에서 VS 로 단순 연결 리스트 자료 구조 를 보았 음 ( 6 장 .pdf 의 42page ) C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 VSE stack
+linked_stack.c의 35번 라인에 중단점 설정하고 [계속]버
+튼 3회하면 3개 노드의 내용(data+link)가 표시됨
+부분
+tem
+→ dele
+i
+19
+link
+Ink
+자료구조 보기 (여러줄 실행)
+C로 쉽게 풀어쓴 자료구조
+P.E
+강
+3
+0x006-Setooe 00
+3
+0x029155a01data=211
+2
+003151111
+-
+자기 스레드 모듈
+_0x02030203 <NULL>
+0x02915420 (data=311
+● 생능출판사 2019 자료 구조 보기 ( 여러 줄 실행 VSE ) stack linked_stack.c 의 35 번 라인 에 중단 점 설정 하고 [ 계속 ] 버 튼 3 회 하면 3 개 노드 의 내용 ( data + link ) 가 표시됨 부분 P.E 강 3 tem 0x006 - Setooe 00 → dele 3 i 0x029155a01data = 211 2 003151111 link - Ink _0x02030203 < NULL > 19 0x02915420 ( data = 311 자기 스레드 모듈 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 vs로 stack 자료구조 보기 아줌~
+(한줄씩실행) 31줄 중단
+(한줄씩실행) OLA
+Ivoid push(LinkedStackType *s, element item)
+이름
+-
+tomo
+-
+Gink
+m
+181
+.@temp
+DE
+ㅁ StackNode *temp = (StackNode *)malloc(sizeof(StackNode));
+deta
+item
+0013319-00000000GALL] LikeSickTre
+Occccccccc (data?????
+Stocode
+메모리를 읽을 수 없음
+<비디읽는 수없
+o temp->data = item;
+105
+1
+010-337 dk {top-23,00002000 NULL}_Line.SeckTipe"
+00:165600 (data=-8121501 inked Stacklone
+642150451
+t
+didark
+형식
+temp
+@dela 1
+1
+|D:D:33fcdc (top= 2:20202020 <NJLL>LinkcdStackType
+Dxdcococd{data="" ink=???}
+24
+ander
+C로 쉽게 풀어쓴 자료구조
+int
+StackN:de"
+s->topi
+● 생능출판사 2019
+1 NULL ~ 아줌 보기 구조 자료 ( 한줄 ( 한줄 씩 실행 ) 31 씩 stack 줄 중단 실행 로 vs ) OLA Ivoid push ( LinkedStackType * s , element item ) 형식 이름 - 0013319-00000000GALL ] LikeSickTre s- > topi 1 NULL Occccccccc ( data ????? Stocode tomo - 메모리 를 읽을 수 없음 Gink < 비디 읽는 수없 ㅁ StackNode * temp = ( StackNode * ) malloc ( sizeof ( StackNode ) ) ; 1 m 010-337 dk { top - 23,00002000 NULL } _Line.SeckTipe " 181 00 : 165600 ( data = -8121501 inked Stacklone . @ temp deta 642150451 t didark = item ; temp- > data o DE 24 item 1 | D : D : 33fcdc ( top = 2 : 20202020 < NJLL > LinkcdStackType 105 temp ander @dela 1 int Dxdcococd { data = " " ink = ??? } StackN : de " C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 vs로 stack 자료구조 보기 아줌씨
+(한줄씩실행)
+Ivoid push(LinkedStackType *s, element item)
+o temp->link = s->top
+• tem
+INS
+● 1
+link
+VE
+s->top = temp;
+✔rm
+• top
+1
+_0013fed: [to=0&DCOCOCOO<ALLL] LnkodStackp="
+0000000<NULL
+d
+10 In
+A
+1
+DDDDINEED
+식
+int
+data
+1
+* SDDDD NII
+010-33uck (Jup-00463600
+Skip
+| 00:165620 { data="inc=0:0202020. Stack Vode"
+inm
+C로 쉽게 풀어쓴 자료구조
+200vnd
+희.
+"S:aciliode"
+고
+00463620{der-nc-00000000 Blackele
+m
+● 생능출판사 2019
+s->top.
+1 NULL 아줌씨 보기 구조 자료 ( 한줄 씩 실행 ) stack 로 vs Ivoid push ( LinkedStackType * s , element item ) o temp- > link = s- > top 식 s- > top . 1 NULL int • tem 1 INS _0013fed : [ to = 0 & DCOCOCOO < ALLL ] LnkodStackp = " 200vnd ● 1 희 . link 0000000 < NULL S : aciliode " " s- > top = temp ; VE A 1 ✔rm 고 010-33uck ( Jup - 00463600 Skip | 00 : 165620 { data = " inc = 0 : 0202020 . Stack Vode " • top d inm 10 In DDDDINEED 00463620 { der - nc - 00000000 Blackele data 1 m SDDDD NII * C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 015
+VS로 linked list 자료구조 보기 (한줄씩실행) 50줄 중단점
+element pop(LinkedStackType *s)
+dit
+@temp
+201
+Det karkly
+40.p 0:00253-3-00236. Succhiude
+2
+858003430
+data:
+in:
+Ink C0025658 (cat=2 ink=0x00a560. Stochode
+cercera?!!nk.!!!!
+Ⓒhemp
+dele
+24
+in:
+StackNode *temp = s->top
+48.klypa
+lup 0x00468-3-002563. Stecke
+@ daca 3
+nt
+in 0x005638 (dta-2-000c2550 Stack Voce
+whB[data_Tinca-dacke
+.:
+nil
+3
+0x00a25635 (data=21-b-0x002550. Stack Voce
+int data = temp->data;
+.de
+0006f810(top=2032518/cata Li-kedStacype"
+00025468|d=3inc=0x002553- StockNode
+@deta I
+int
+>kOx0025638 (dele-2-000c2560 Stock Nude
+0:00a25/68 (data=3 lin<=0x0a2553. StackNode"
+int
+tamp
+da 3
+› @ Ink Gwdk0N-de
+C로 쉽게 풀어쓴 자료구조
+S->top
+● 생능출판사 2019
+1 NULL VS 로 linked list 자료 구조 보기 ( 한줄 씩 실행 ) 50 줄 중단 점 element pop ( LinkedStackType * s ) 015 2 24 858003430 dit in : 201 Det karkly 0 : 00253-3-00236 . Succhiude 40.p data : in : Ink C0025658 ( cat = 2 ink = 0x00a560 . Stochode S- > top cercera ? !! nk . !!!! @temp 1 NULL StackNode * temp = s- > top 48.klypa 0x00468-3-002563 . Stecke lup @ daca 3 nt in 0x005638 ( dta - 2-000c2550 Stack Voce Ⓒhemp whB [ data_Tinca - dacke dele 3 nil 0x00a25635 ( data = 21 - b - 0x002550 . Stack Voce int data = temp- > data ; .de 0006f810 ( top = 2032518 / cata Li - kedStacype " . : 00025468 | d = 3inc = 0x002553- StockNode @deta I int > kOx0025638 ( dele - 2-000c2560 Stock Nude 0 : 00a25 / 68 ( data = 3 lin < = 0x0a2553 . StackNode " tamp da 3 int @ Ink › Gwdk0N - de C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 Vs linked list 자료구조 보기 (안줄씩실행)
+element pop(LinkedStackType *s)
+emp
+0x0025166 (data=0256. Stackade S->top
+int
+Ink&D St
+002536 (del-3-0.00226 SteckNude"
+data
+3
+int
+Ink 0x00a25532 (data=21mk-0012560 StockNode
+0.006343-00025468
+da 3
+s->top = s->top->link
+top
+Ox540 (top=00295638 Ida Linic:StockType
+(detark
+darke
+اول -
+1
+lin0x0025600 (data=1 li-k-xc000000 Stack Voce"
+M
+BE
+daca
+Inc
+☐free(tmp);
+bep
+0025180 ink-OCCO. Staciode
+t
+darkod
+0
+DDDD <NJI>
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019
+1 NULL linked Vs list 자료 구조 보기 ( 안 줄씩 실행 ) element pop ( LinkedStackType * s ) 0.006343-00025468 0x0025166 ( data = 0256 . Stackade S- > top int da 3 1 NULL Ink & D St 002536 ( del - 3-0.00226 SteckNude " emp 3 data int 0x00a25532 ( data = 21mk - 0012560 StockNode Ink s- > top = s- > top- > link Ox540 ( top = 00295638 Ida Linic : StockType detark darke ( top اول - 1 lin0x0025600 ( data = 1 li - k - xc000000 Stack Voce " M BE ☐free ( tmp ) ; 0025180 ink - OCCO . Staciode bep daca 0 t darkod Inc DDDD < NJI > C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 휴식 (이제 나는 할 수 있다)
+1. 나는 리스트 자료구조를 원형연결리스트로 구현할 수 있다
+2. 나는 리스트 자료구조를 이중연결리스트로 구현할 수 있다.
+3.나는 원형연결리스트와 이중연결리스트 내용변화를 C코드
+한줄씩 VS와 내가 그린 자료구조그림으로 보여줄 수 있다.
+헤드노드
+헤드노드
+0
+4. 나는 스택 자료구조를 연결 리스트로 구현할 수 있다
+5. 나는 큐 자료구조를 연결 리스트로 구현할 수 있다.
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 휴식 ( 이제 나는 할 수 있다 ) 1. 나는 리스트 자료 구조 를 원형 연결 리스트 로 구현할 수 있다 2. 나는 리스트 자료 구조 를 이중 연결 리스트 로 구현할 수 있다 . 3. 나는 원형 연결 리스트 와 이중 연결 리스트 내용 변화 를 C 코드 한줄 씩 VS 와 내가 그린 자료 구조 그림 으로 보여줄 수 있다 . 헤드 노드 헤드 노드 0 4. 나는 스택 자료 구조 를 연결 리스트 로 구현할 수 있다 5. 나는 큐 자료 구조 를 연결 리스트 로 구현할 수 있다 . C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 연결 큐
+리스트로 구현한 코 (단순연결리스트)
+큐: 먼저 들어온 데이터가 먼저 나가는 자료구조
+ㅁ선입선출(FIFO: First-In First-Out)
+ㅁenqueue_rear(), dequeue_front()
+front
+A
+C로 쉽게 풀어쓴 자료구조
+item link
+B
+C
+● 생능출판사 2019
+rear
+D
+NULL 연결 리스트 로 구현 한 코 ( 단순 연결 리스트 큐 ) 큐 : 먼저 들어온 데이터 가 먼저 나가는 자료 구조 ㅁ 선입 선출 ( FIFO : First - In First - Out ) ( ) ( ) , dequeue_front enqueue_rear ㅁ front rear item link A C D NULL B C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 typedef int element;
+// 요소의 타입
+typedef struct QueueNode { //959 E
+element data;
+struct QueueNode *link;
+} QueueNode;
+typedef struct {
+QueueNode "front, rear;
+} LinkedQueue Type;
+// 큐 ADT 구현
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019
+f // 요소 의 타입 typedef int element ; 959 E typedef struct QueueNode { // element data ; struct QueueNode * link ; QueueNode ; } // 큐 ADT 구현 typedef struct { QueueNode " front , rear ; LinkedQueue Type ; } f C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 삽입 연산 ( enqueue_rear() )
+front
+A
+front
+A
+C로 쉽게 풀어쓴 자료구조
+B
+B
+rear
+C NULL
+● 생능출판사 2019
+temp
+D NULL
+rear
+D NULL
+f 삽입 연산 ( enqueue_rear ( ) ) front temp rear C NULL D NULL A B front rear A B D NULL f C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 front
+front
+A
+B
+}
+else {
+B
+}
+rear
+C NULL
+// 삽입 함수
+void enqueue (LinkedQueueType *q, element data)
+{
+q->front = temp;
+q->rear = temp;
+C
+(1)
+temp
+D
+// 큐가 공백이 아니면
+q->rear->link = temp; // (1)
+q->rear = temp; // (2)
+rear
+QueueNode *temp = (QueueNode *)malloc(sizeof(QueueNode));
+temp->data = data;
+//데이터 저장
+temp->link = NULL;
+if (is_empty(q)) {
+MULL
+(2)
+D NULL
+// 링크 필드를 NULL
+// 큐가 공백이면 front temp rear MULL B C NULL D front rear 2 ) ( 1 ) ( B C D NULL A // 삽입 함수 void enqueue ( LinkedQueueType * q , element data ) { QueueNode * temp = ( QueueNode * ) malloc ( sizeof ( QueueNode ) ) ; // 데이터 저장 temp- > data = data ; // 링크 필드 를 NULL temp- > link = NULL ; if ( is_empty ( q ) ) { // 큐 가 공백 이면 q- > front = temp ; q- > rear = temp ; } else { // 큐 가 공백 이 아니면 q- > rear- > link = temp ; // ( 1 ) ; // ( 2 ) q- > rear = temp } 삭제 연산 ( dequeue_front() )
+front
+A
+temp
+A
+C로 쉽게 풀어쓴 자료구조
+B
+front
+1
+B
+● 생능출판사 2019
+C
+구
+rear
+D NULL
+rear
+D NULL 삭제 연산 ( dequeue_front ( ) ) front rear 구 A B D NULL front temp rear 1 C A B D NULL C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 // 삭제 함수
+element dequeue(LinkedQ A
+{
+}
+QueueNode *temp=q-> front;
+element data;
+if (is_empty(q)) {
+else {
+front
+}
+temp
+C도 쉽게 풀어쓴 사료구소
+q->rear = NULL;
+front
+// 공백상태
+fprintf(stderr, "스택이 비어있음\n");
+exit(1);
+free(temp);
+return data;
+B
+data = temp->data;
+// 데이터를 꺼낸다.
+_q->front = q->front->link; // (1) front로 다음노드
+if (q->front == NULL)
+// 공백 상태
+ㅇ 생능출판사 2019
+(1)
+// 동적 메모리 해제
+// 데이터 반환
+redr
+DMULL
+rear
+DMULL front redr DMULL front temp rear ( 1 ) // 삭제 함수 element dequeue ( LinkedQ A B DMULL { QueueNode * temp = q- > front ; element data ; // 공백 상태 if ( is_empty ( q ) ) { fprintf ( stderr , " 스택 이 비어 있음 \ n " ) ; exit ( 1 ) ; } else { data = temp- > data ; // 데이터 를 꺼낸다 . 노드 link ; // ( 1 ) front 로 다음 _q- > front = q- > front- > if ( q- > front == NULL ) // 공백 상태 NULL ; = q- > rear free ( temp ) ; // 동적 메모리 해제 // 데이터 반환 return data ; } C 도 쉽게 풀어 쓴 사료 구소 ㅇ 생능 출판사 2019 연결된 자바 애플릿
+ㅁ 그림 방식의 자바 애플릿 vs. 텍스트 방식의 VS 디버깅
+출단위로 자료구조와 알고리즘 동시에 봄
+<연산>
+□void
+2
+4/ME
+ㅍㄱ 23
+***
+Is
+AAN
+C로 쉽게 풀어쓴 자료구조
+theonsiverackerSoundow
+ha)-9713
+(232-
+}
+[
+M
+● 생능출판사 2019
+enqueue (LinkedQueue Type
+*q, element data)
+element de queue
+(LinkedQueue Type *q)
+<자료구조>
+typedef int element;
+typedef struct QueueNode {
+element data;
+struct QueueNode *link;
+}QueueNode; 연결된 자바 애플릿 ㅁ 그림 방식 의 자바 애플릿 vs. 텍스트 방식 의 VS 디버깅 출 단위 로 자료 구조 와 알고리즘 동시에 봄 연산 > < void □ theonsiverackerSoundow enqueue ( LinkedQueue Type * q , element data ) ha ) -9713 M element de queue LinkedQueue ( Type * q ) ( 232 } [ 자료 구조 > < element ; typedef int typedef struct QueueNode { Is element data ; 4 / ME AAN 2 QueueNode struct * link ; ㅍㄱ 23 *** } QueueNode ; C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 이제 나는 할 수 있다
+1. 나는 리스트 자료구조를 원형연결리스트로 구현할 수 있다
+2. 나는 리스트 자료구조를 이중연결리스트로 구현할 수 있다.
+3.나는 원형연결리스트와 이중연결리스트 내용변화를 C코드
+한줄씩 그림으로 보여줄 수 있다.
+헤드노드
+헤드노드
+0
+4. 나는 스택 자료구조를 연결 리스트로 구현할 수 있다.
+5. 나는 큐 자료구조를 연결 리스트로 구현할 수 있다
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 이제 나는 할 수 있다 1. 나는 리스트 자료 구조 를 원형 연결 리스트 로 구현할 수 있다 2. 나는 리스트 자료 구조 를 이중 연결 리스트 로 구현할 수 있다 . 3. 나는 원형 연결 리스트 와 이중 연결 리스트 내용 변화 를 C 코드 한줄 씩 그림 으로 보여줄 수 있다 . 헤드 노드 헤드 노드 0 4. 나는 스택 자료 구조 를 연결 리스트 로 구현할 수 있다 . 5. 나는 큐 자료 구조 를 연결 리스트 로 구현할 수 있다 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 이제 나는 원형, 이중연결리스트를 할 수 있기에
+1. 자료구조 구현 방법은 배열 또는 연결리스트로 구현
+2. 자료구조 구현 방법을 이제 모두 배움
+3. 이제까지 배운 자료구조는 4장 스택, 5장 큐, 6장 리스트
+앞으로 8장 트리배우고 2학기에 9장~14장 자료구조 배움
+4. 매주 정답이 있는 연습문제 홀수문제 꼭 해결해보세요
+5. 코딩시험 성적은 코딩한 만큼 나옴
+대학교육의 목표는 학생들의 <문제해결능력생성>
+ㅁ <문제해결능력생성>의 판단 방법은 연습문제 해결할 수 있나?
+<회사에서 개발자에게 요구사항>
+1. 문제해결능력
+2. 회사에서는 매일 문제가 터지고 있어서 실전문제가 널려 있음
+이제 <문제해결능력생성> 되었기에 회사가서 실전문제 풀면 됩니다
+C로 쉽게 풀어쓴 자료구조
+● 생능출판사 2019 있기에 리스트 를 할 수 이중 연결 원형 , 이제 나는 1. 자료 구조 구현 방법 은 배열 또는 연결 리스트 로 구현 2. 자료 구조 구현 방법 을 이제 모두 배움 3. 이제까지 배운 자료 구조 는 4 장 스택 , 5 장 큐 , 6 장 리스트 앞으로 8 장 트리 배우고 2 학기 에 9 장 ~ 14 장 자료 구조 배움 4. 매주 정답 이 있는 연습 문제 홀수 문제 꼭 해결 해보세요 5. 코딩 시험 성적 은 코딩 한 만큼 나옴 대학 교육 의 목표 는 학생들 의 < 문제 해결 능력 생성 > ㅁ < 문제 해결 능력 생성 > 의 판단 방법 은 연습 문제 해결할 수 있나 ? < 회사 에서 개발자 에게 요구 사항 > 1. 문제 해결 능력 2. 회사 에서는 매일 문제 가 터지고 있어서 실전 문제 가 널려 있음 이제 < 문제 해결 능력 생성 > 되었기에 회사 가서 실전 문제 풀면 됩니다 C 로 쉽게 풀어 쓴 자료 구조 ● 생능 출판사 2019 
