@@ -135,14 +135,12 @@
 
 .info-bar {
   width: 30%;
-  padding: 20px;
   min-width: 350px;
   max-width: 400px;
   flex-grow: 0;
 }
 
 .userInfo {
-  margin-top: -20px;
   text-align: center;
   padding: 20px;
   margin-bottom: 20px;

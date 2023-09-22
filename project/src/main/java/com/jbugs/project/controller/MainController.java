@@ -27,14 +27,20 @@ public class MainController {
 
     @RequestMapping("/quizHome")
     public String quizHome(){
-        log.info("main controller go quiz");
+        log.info("main controller go quizHome");
         return "html/quiz-home";
     }
 
     @RequestMapping("/quizScore")
     public String quizScore(){
-        log.info("main controller go quiz");
+        log.info("main controller go quizScore");
         return "html/quiz-score";
+    }
+
+    @RequestMapping("/developer")
+    public String developer(){
+        log.info("main controller go developer");
+        return "html/developer";
     }
 
 }
