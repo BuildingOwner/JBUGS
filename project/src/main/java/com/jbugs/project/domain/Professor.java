@@ -19,7 +19,10 @@ public class Professor {
     @Column(name = "professor_id")
     private Long id;
     private String name;
-    private String major;
+
+    private String email;
+    private String laboratory;
+    private String lectureRoom;
 
     @OneToOne(fetch = LAZY)
     @JoinColumn(name = "user_id")
@@ -27,11 +30,5 @@ public class Professor {
 
     @OneToMany(mappedBy = "professor")
     private List<Classes> classes = new ArrayList<>();
-
-    public Professor(Long id, String name, String major) {
-        this.id = id;
-        this.name = name;
-        this.major = major;
-    }
 
 }
