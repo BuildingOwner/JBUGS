@@ -12,10 +12,11 @@
 
 .quiz-container h3 {
   font-size: 1.2em;
-  background-color: var(--blue1);
+  background-color: var(--white);
 }
+
 
 .quiz-container h3:hover {
   cursor: pointer;
-  background-color: var(--white);
+  background-color: var(--blue1);
 }
