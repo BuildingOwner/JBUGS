@@ -1,9 +1,6 @@
 package com.jbugs.project;
 
-import com.jbugs.project.domain.Classes;
-import com.jbugs.project.domain.Student;
-import com.jbugs.project.domain.Test;
-import com.jbugs.project.domain.User;
+import com.jbugs.project.domain.*;
 import com.jbugs.project.repository.ClassRepository;
 import com.jbugs.project.repository.StudentRepository;
 import com.jbugs.project.repository.UserRepository;
@@ -42,6 +39,10 @@ public class InitDb {
             student.setTrack1("웹공학");
             student.setTrack2("모바일소프트웨어");
             em.persist(student);
+
+            Professor professor = new Professor();
+            professor.setName("김동욱");
+            professor.setLectureRoom("공학관305호");
 
             Classes class1 = new Classes();
             class1.setClassName("데이터통신");
@@ -92,7 +93,7 @@ public class InitDb {
 
             Test test2 = new Test();
             test2.setQuestion(" _는 데이터의 구조, 특성 또는 속성의 측면을 나타냅니다.");
-            test2.setAnswer(" order는 데이터의 구조와 특성이나 속성들이 가지는 면의 순서를 말한다.");
+            test2.setAnswer(" order");
             em.persist(test2);
         }
     }

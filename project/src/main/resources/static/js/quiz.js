@@ -1,3 +1,5 @@
+const apiUrl = '/api/v2/quizs';
+
 const quizs = {
   "questions": [
     {
