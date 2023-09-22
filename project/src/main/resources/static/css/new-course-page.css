@@ -205,10 +205,11 @@
 }
 
 .sticky-bar {
-  position: sticky;
+  position: fixed;
   display: flex;
   justify-content: center;
-  top:70%
+  bottom:10%;
+  margin-left:100px;
 }
 
 #course-table {
