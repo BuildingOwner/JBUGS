@@ -43,7 +43,7 @@ public class MainController {
         return "html/developer";
     }
 
-    @RequestMapping("homeworks")
+    @RequestMapping("/homeworks")
     public String homeworks(){
         log.info("main controller go homeworks");
         return "html/homework-page";
