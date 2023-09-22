@@ -43,7 +43,7 @@ public class Classes {
     private List<Test> tests = new ArrayList<>();
 
     @OneToMany(mappedBy = "aClass", cascade = CascadeType.ALL)
-    private List<ClassNotice> classNotices = new ArrayList<>();
+    private List<ClassContents> classNotices = new ArrayList<>();
 
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "professor_id")
