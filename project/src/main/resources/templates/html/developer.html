@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/dev.css">
+</head>
+<body>
+<div class="container">
+  <form action="">
+    <div class="form">
+      <label for="classes">과목</label>
+      <select name="classes" id="classes">
+        <option value="1">과목을 선택해 주세요</option>
+        <option value="2">과목 1</option>
+        <option value="3">과목 2</option>
+        <option value="4">과목 3</option>
+        <option value="5">과목 4</option>
+      </select>
+
+      <label for="week">주차</label>
+      <select name="week" id="week">
+        <option value="0">주차를 선택해 주세요</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+      </select>
+
+      <label for="video">비디오 추가</label>
+      <input type="file" name="video" id="video">
+
+      <label for="file">파일 추가</label>
+      <input type="file" name="file" id="file">
+
+      <label for="homework-title">과제 제목</label>
+      <input type="text" name="homework-title" id="homework-title">
+      <label for="homework-description">과제 설명</label>
+      <textarea name="homework-description" id="homework-description" cols="30" rows="10"></textarea>
+      <label for="homework-deadline-date">과제 기한(날짜)</label>
+      <input type="date" name="homework-deadline-date" id="homework-deadline-date">
+      <label for="homework-deadline-date">과제 기한(시간)</label>
+      <input type="time" name="homework-deadline-time" id="homework-deadline-time">
+    </div>
+
+    <button type="submit">제출</button>
+  </form>
+</div>
+</body>
+</html>

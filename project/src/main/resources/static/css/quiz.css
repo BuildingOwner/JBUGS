@@ -28,6 +28,7 @@
 
 .quiz-control div:hover{
   background-color: var(--blue1);
+  cursor: pointer;
 }
 
 .quiz-control div a {

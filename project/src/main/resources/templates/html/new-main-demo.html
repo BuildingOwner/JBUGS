@@ -49,12 +49,12 @@
         </button>
       </li>
       <li>
-        <button onclick="location.href='#'">
+        <button onclick="location.href='/quizHome'">
           <i class="bi bi-pc-display-horizontal"></i>한성 MOOC
         </button>
       </li>
       <li>
-        <button onclick="location.href='/quiz'">
+        <button onclick="location.href='/developer'">
           <i class="bi bi-gear"></i>setting
         </button>
       </li>
@@ -73,7 +73,7 @@
           <th>교수명</th>
         </tr>
         <tr th:each="classes : ${classes}" th:onclick="|location.href='@{/classes/{id}/edit (id=${classes.id})}'|">
-          <td> <img th:src="${classes.imgsrc}" alt="" /></td>
+          <td><img th:src="${classes.imgsrc}" alt="" /></td>
           <td th:text="${classes.className}"></td>
           <td th:text="${classes.division}"></td>
           <td th:text="${classes.prof}"></td>
