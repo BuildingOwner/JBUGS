@@ -16,14 +16,14 @@
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css" rel="stylesheet"/>
   <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js"></script>
   <!-- fullcalendar 언어 CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/fuㅍllcalendar@5.8.0/locales-all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/locales-all.min.js"></script>
 
-  <script src="/js/main-add-class.js"></script>
-  <script src="/js/main-add-community.js"></script>
+<!--  <script src="/js/main-add-class.js"></script>-->
+<!--  <script src="/js/main-add-community.js"></script>-->
   <script src="/js/main-add-homework.js"></script>
 </head>
 
-<body onload="addClass();addCommunity();addHomework()">
+<body onload="addHomework()">
 <div class="container">
   <div class="nav">
     <img src="/img/국영문시그니쳐.png" alt="logo" class="logo" onclick="location.href = '/'"/>
@@ -39,7 +39,7 @@
         </button>
       </li>
       <li>
-        <button onclick="location.href='#'">
+        <button onclick="location.href='homework-page'">
           <i class="bi bi-people"></i>커뮤니티
         </button>
       </li>
@@ -81,6 +81,7 @@
       </table>
 
     </div>
+
     <div class="recommendation">
       <div class="reco-top">
         <h3>추천 커뮤니티</h3>
@@ -89,7 +90,7 @@
       <div class="reco-list">
         <div class="reco-contents">
           <div class="img-center">
-            <img src="/img/sangsangbugi.png" alt="reco1Img" />
+            <img src="/img/sangsangbugi.png" alt="reco1Img"/>
           </div>
           <h5 class="reco1-title">${RecoContents[i].title}</h5>
           <span class="reco1-discription">${RecoContents[i].discription}</span>
@@ -115,7 +116,20 @@
 
     <div class="homework">
       <h3>과제</h3>
-      <div class="get-homework"></div>
+      <div class="get-homework">
+        <div class="homework-content">
+          <div class="isSummit">
+            <i class="bi bi-check-lg ${check}"></i>
+            <i class="bi bi-x-circle ${no}"></i>
+          </div>
+          <div class="homework-info">
+            <div class="homework-class">${Homeworks[i].classTitle}</div>
+            <div class="homework-title">${Homeworks[i].homeworkTitle}</div>
+            <div class="duration">${deadline} 남음..</div>
+          </div>
+          <div class="homework-icon"><i class="bi bi-chevron-right"></i></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

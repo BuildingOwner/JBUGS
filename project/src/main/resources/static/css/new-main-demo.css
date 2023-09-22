@@ -28,8 +28,9 @@
   justify-content: space-between;
 }
 .nav {
-  
   flex-grow: 0;
+  min-width: 10%;
+  /*width: 10%;*/
 }
 
 .reco-top button,
@@ -229,3 +230,5 @@
 .fc-view-harness{
   background-color: var(--white);
 }
+
+
