@@ -102,15 +102,17 @@
   </div>
 
   <div class="info-bar">
+    <form th:Object="${userForm}" method="get">
     <div class="userInfo">
       <div class="info-bar-top">
         <h3>학생 정보</h3>
         <button><i class="bi bi-pen"></i></button>
       </div>
       <img src="/img/sangsangbugi.png" alt="profile" class="profile"/>
-      <h4 class="userName">상상부기</h4>
-      <h5 class="track">모바일소프트웨어트랙</h5>
+      <h4 class="userName" th:text="${userForm.getName()}"></h4>
+      <h5 class="track" th:text="${userForm.getTrack1()}"></h5>
     </div>
+    </form>
 
     <div id="calendar"></div>
 

@@ -36,8 +36,8 @@ public class InitDb {
 
             Student student = new Student();
             student.setName(user.getName());
-            student.setTrack1("웹공학");
-            student.setTrack2("모바일소프트웨어");
+            student.setTrack1("웹공학트랙");
+            student.setTrack2("모바일소프트웨어트랙");
             em.persist(student);
 
             Classes class1 = new Classes();

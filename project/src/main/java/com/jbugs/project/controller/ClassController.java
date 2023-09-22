@@ -1,7 +1,9 @@
 package com.jbugs.project.controller;
 
 import com.jbugs.project.domain.Classes;
+import com.jbugs.project.domain.Student;
 import com.jbugs.project.service.ClassService;
+import com.jbugs.project.service.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,11 +19,14 @@ import java.util.List;
 public class ClassController {
 
     private final ClassService classService;
+    private final StudentService studentService;
 
     @GetMapping("/")
     public String list(Model model){
         List<Classes> classes = classService.findClass();
         model.addAttribute("classes", classes);
+        Student two = studentService.findOne(2L);
+        model.addAttribute("userForm",two);
         return "html/new-main-demo";
     }
 
