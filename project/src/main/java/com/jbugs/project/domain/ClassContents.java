@@ -13,7 +13,7 @@ import static javax.persistence.FetchType.LAZY;
 @Getter
 @Setter
 @NoArgsConstructor
-public class ClassNotice {
+public class ClassContents {
     @Id @GeneratedValue
     @Column(name = "notice_id")
     private Long id;

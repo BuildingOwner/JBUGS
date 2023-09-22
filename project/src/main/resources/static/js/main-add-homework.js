@@ -1,23 +1,49 @@
-const Homeworks = [
-  {
-    classTitle: "모바일&스마트시스템",
-    homeworkTitle: "라즈베리파이 연결 동영상 제출",
-    deadline: "2023-10-13T23:55:00",
-    isSummit: 'Y'
-  },
-  {
-    classTitle: "네트워크프로그래밍",
-    homeworkTitle: "해보기 문제 결과 제출",
-    deadline: "2023-10-10T23:55:00",
-    isSummit: 'N'
-  },
-  {
-    classTitle: "고급모바일프로그래밍",
-    homeworkTitle: "커스텀뷰 과제",
-    deadline: "2023-09-27T23:55:00",
-    isSummit: 'Y'
-  },
-];
+// const Homeworks = [
+//   {
+//     classTitle: "모바일&스마트시스템",
+//     homeworkTitle: "라즈베리파이 연결 동영상 제출",
+//     deadline: "2023-10-13T23:55:00",
+//     isSummit: 'Y'
+//   },
+//   {
+//     classTitle: "네트워크프로그래밍",
+//     homeworkTitle: "해보기 문제 결과 제출",
+//     deadline: "2023-10-10T23:55:00",
+//     isSummit: 'N'
+//   },
+//   {
+//     classTitle: "고급모바일프로그래밍",
+//     homeworkTitle: "커스텀뷰 과제",
+//     deadline: "2023-09-27T23:55:00",
+//     isSummit: 'Y'
+//   },
+// ];
+
+let Homeworks
+
+// JavaScript code in your script.js file
+
+const apiUrl = '/api/v2/quizs'; // Replace with your API endpoint URL
+
+// Fetch data from the API
+fetch(apiUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Handle the data received from the API
+    Homeworks = data
+    console.log(Homeworks); // You can process and use the data here
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
+
+
+
 
 const addHomework = () => {
   const homeworkBoard = document.querySelector(".get-homework");
