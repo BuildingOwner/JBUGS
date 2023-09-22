@@ -29,7 +29,7 @@
 }
 .nav {
   flex-grow: 0;
-  min-width: 10%;
+  /*min-width: 10%;*/
   /*width: 10%;*/
 }
 
