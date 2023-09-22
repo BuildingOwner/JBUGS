@@ -208,7 +208,7 @@
   position: sticky;
   display: flex;
   justify-content: center;
-  top: 10px;
+  top:70%
 }
 
 #course-table {
