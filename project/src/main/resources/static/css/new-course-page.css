@@ -19,6 +19,9 @@
   align-items: center;
   width: 100%;
 }
+.TitleAndProgressBar span{
+  font-size: 1.2em;
+}
 
 .nav {
   width: 190px;
@@ -208,7 +211,7 @@
   position: fixed;
   display: flex;
   justify-content: center;
-  bottom:10%;
+  bottom:5%;
   margin-left:100px;
 }
 
@@ -262,16 +265,17 @@ tr>td>a {
 
 .bar {
   width: 00%;
-  background-color: greenyellow;
+  /*background-color: blue;*/
   color: black;
   border-radius: 20px;
-  /* -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px; */
+  /* -webkit-border-radius: 20px;*/
+  /*-moz-border-radius: 20px;*/
+  /*-ms-border-radius: 20px;*/
+  /*-o-border-radius: 20px;*/
   text-align: center;
   /* margin-top: 15px; */
   font-weight: 400;
+  background-image: linear-gradient(90deg, lightblue, dodgerblue);
 }
 
 .videoInfo{
@@ -285,6 +289,10 @@ tr>td>a {
 .content-file{
   margin: 5px;
   cursor: pointer;
+  font-size: 1.2em;
+}
+.content-file .bi{
+  color:red;
 }
 .content-file:hover{
   color: red;
