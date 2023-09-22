@@ -15,14 +15,14 @@ import static javax.persistence.FetchType.LAZY;
 @NoArgsConstructor
 public class ClassContents {
     @Id @GeneratedValue
-    @Column(name = "notice_id")
+    @Column(name = "class_contents_id")
     private Long id;
-    private String name;
-    private String title;
-    private String content;
+    private String classTitle;
+    private String homeworkTitle;
+    private String deadline;
+    private String isSummit;
     private int viewCount;
     private LocalDate updateDate;
-    private String writer;
     private LocalDate deleteDate;
 
     @ManyToOne(fetch = LAZY)
