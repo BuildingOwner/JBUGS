@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import static javax.persistence.FetchType.LAZY;
 
@@ -17,13 +18,14 @@ public class ClassContents {
     @Id @GeneratedValue
     @Column(name = "class_contents_id")
     private Long id;
+    private int weeks;
     private String classTitle;
     private String homeworkTitle;
     private String deadline;
     private String isSummit;
-    private int viewCount;
-    private LocalDate updateDate;
-    private LocalDate deleteDate;
+
+    //private String dates;
+
 
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name="class_id")
