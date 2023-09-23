@@ -1,38 +1,60 @@
-const RecoContents = [
-  {
-    title: "자소서 특강",
-    imgsrc: "/img/sangsangbugi.png",
-    discription: "자기소개서 특강합니다!",
-    people: "11",
-  },
-  {
-    title: "직업윤리교육",
-    imgsrc: "/img/sangsangbugi.png",
-    discription: "직업 의식 고취를 위한 특강",
-    people: "35",
-  },
-  {
-    title: "천원의 아침밥 시행안내",
-    imgsrc: "/img/sangsangbugi.png",
-    discription: "천원의 아침밥 시행안내",
-    people: "693",
-  },
-];
+// const RecoContents = [
+//   {
+//     title: "자소서 특강",
+//     imgsrc: "/img/sangsangbugi.png",
+//     discription: "자기소개서 특강합니다!",
+//     people: "11",
+//   },
+//   {
+//     title: "직업윤리교육",
+//     imgsrc: "/img/sangsangbugi.png",
+//     discription: "직업 의식 고취를 위한 특강",
+//     people: "35",
+//   },
+//   {
+//     title: "천원의 아침밥 시행안내",
+//     imgsrc: "/img/sangsangbugi.png",
+//     discription: "천원의 아침밥 시행안내",
+//     people: "693",
+//   },
+// ];
+
+let RecoContents
+
+// JavaScript code in your script.js file
+
+let apiUrl = '/api/v2/communities'; // Replace with your API endpoint URL
+
+// Fetch data from the API
+fetch(apiUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Handle the data received from the API
+    RecoContents = data
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
 
 const addCommunity = () => {
   const recoList = document.querySelector(".reco-list");
   recoList.innerHTML = "";
 
-  for (let i = 0; i < RecoContents.length; i++) {
+  for (let i = 0; i < RecoContents.data.length; i++) {
     const newCommunity = document.createElement("div");
     newCommunity.className = "reco-contents";
     newCommunity.innerHTML = `
       <div class="img-center">
-        <img src="${RecoContents[i].imgsrc}" alt="reco1Img" />
+        <img src="${RecoContents.data[i].imgsrc}" alt="reco1Img" />
       </div>
-      <h5 class="reco1-title">${RecoContents[i].title}</h5>
-      <span class="reco1-discription">${RecoContents[i].discription}</span>
-      <span class="reco1-people">${RecoContents[i].people}명 참여중</span>`;
+      <h5 class="reco1-title">${RecoContents.data[i].title}</h5>
+      <span class="reco1-discription">${RecoContents.data[i].discription}</span>
+      <span class="reco1-people">${RecoContents.data[i].people}명 참여중</span>`;
 
     recoList.appendChild(newCommunity);
   }

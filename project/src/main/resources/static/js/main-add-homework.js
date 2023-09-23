@@ -23,7 +23,7 @@ let Homeworks
 
 // JavaScript code in your script.js file
 
-const apiUrl = '/api/v2/homeworks'; // Replace with your API endpoint URL
+apiUrl = '/api/v2/homeworks'; // Replace with your API endpoint URL
 
 // Fetch data from the API
 fetch(apiUrl)
