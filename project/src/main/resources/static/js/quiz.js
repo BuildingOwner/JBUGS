@@ -1,4 +1,4 @@
-const apiUrl = '/api/v2/quizs';
+
 
 // const quizs = {
 //   "questions": [
@@ -84,38 +84,125 @@ const apiUrl = '/api/v2/quizs';
 //   ]
 // };
 
-let quizs;
+// let quizs = null; // 초기값을 null로 설정
+//
+// const apiUrl = '/api/v2/quizs';
+// fetch(apiUrl)
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error('Network response was not ok');
+//     }
+//     return response.json();
+//   })
+//   .then(data => {
+//     // Handle the data received from the API
+//     quizs = data
+//   })
+//   .catch(error => {
+//     console.error('There was a problem with the fetch operation:', error);
+//   });
+//
+//
+//
+// const loadQuistion = () => {
+//   const quizContainer = document.querySelector(".quiz-container");
+//   const formTag = quizContainer.querySelector("form");
+//
+//   for (let i = 0; i < quizs.data.length; i++) {
+//     const newQuiz = document.createElement("div");
+//     let quizContent;
+//     if (quizs.data[i].Hint !== undefined) quizContent = blankQuiz(i, quizs.data[i]);
+//     else if (quizs.data[i].Selection !== undefined) quizContent = selectionQuiz(i, quizs.data[i]);
+//     else quizContent = shortQuiz(i, quizs.data[i]);
+//     newQuiz.innerHTML = quizContent;
+//
+//     formTag.appendChild(newQuiz);
+//
+//     const remote = document.querySelector(".quiz-control");
+//     const newRenote = document.createElement("div");
+//     newRenote.classList.add("remote");
+//     newRenote.addEventListener("click", () => {
+//       window.location.href = `#quiz${i + 1}`;
+//     })
+//     newRenote.innerText = `${i + 1}`;
+//     remote.appendChild(newRenote);
+//   }
+// };
+//
+// const selectionQuiz = (i, quiz) => {
+//   return `
+//   <div class="quiz-box" id="quiz${i + 1}">
+//     <h5 class="question">${i + 1}. ${quiz.Question.trim()}</h5>
+//     <ul class="option">
+//       <li><input type="radio" name="answer${i}" class="option1" value="1"/> ${quiz.Selection[0].trim()}</li>
+//       <li><input type="radio" name="answer${i}" class="option2" value="2"/> ${quiz.Selection[1].trim()}</li>
+//       <li><input type="radio" name="answer${i}" class="option3" value="3"/> ${quiz.Selection[2].trim()}</li>
+//       <li><input type="radio" name="answer${i}" class="option4" value="4"/> ${quiz.Selection[3].trim()}</li>
+//     </ul>
+//   </div>
+//   `;
+// };
+//
+// const shortQuiz = (i, quiz) => {
+//   return `
+//   <div class="quiz-box" id="quiz${i + 1}">
+//     <h5 class="question">${i + 1}. ${quiz.Question.trim()}</h5>
+//     답 : <input type="text" name="answer${i}">
+//   </div>
+//   `;
+// };
+//
+// const blankQuiz = (i, quiz) => {
+//   let editQuiz = quiz.Question;
+//   let input = `<input type="text" name="answer${i}">`
+//   return `
+//   <div class="quiz-box" id="quiz${i + 1}">
+//     <h5 class="question">${i + 1}. ${editQuiz.replace("_", input).trim()}</h5>
+//   </div>
+//   `
+// }
+//
+// function submitForm() {
+//   const form = document.querySelector('form');
+//   const formData = new FormData(form);
+//   const answers = [];
+//
+//   for (let i = 0; i < 10; i++) {
+//     const key = `answer${i}`;
+//     const value = formData.get(key);
+//     const answer = value !== null ? value.trim() : '답변 없음';
+//     answers.push({question: key, answer});
+//   }
+//
+//   const jsonAnswers = JSON.stringify(answers);
+//   window.location.href = '/quizScore?answers=' + encodeURIComponent(jsonAnswers);
+// }
 
-function processJSON(jsonData) {
-  const questionsList = document.getElementById('questionsList');
+let quizzes = null; // Set the initial value to null.
 
-  // JSON 데이터를 JavaScript 객체로 파싱
-  quizs = JSON.parse(jsonData);
-}
+const apiUrl = '/api/v2/quizs';
+fetch(apiUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    quizzes = data; // Assign the data to the quizzes variable
+    loadQuestion(); // Call the function to load questions
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
 
-// JSON 파일을 로드하기 위한 XMLHttpRequest 사용
-const xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function () {
-  if (xhttp.readyState == 4 && xhttp.status == 200) {
-    const jsonText = xhttp.responseText;
-    processJSON(jsonText);
-  }
-};
-xhttp.open("GET", "/quizModule/generateQuestion/resources/questions.json", true);
-xhttp.send();
-
-const loadQuistion = () => {
+const loadQuestion = () => {
   const quizContainer = document.querySelector(".quiz-container");
   const formTag = quizContainer.querySelector("form");
 
-  for (let i = 0; i < quizs.questions.length; i++) {
+  for (let i = 0; i < quizzes.data.length; i++) {
     const newQuiz = document.createElement("div");
-    let quizContent;
-    if (quizs.questions[i].Hint !== undefined) quizContent = blankQuiz(i, quizs.questions[i]);
-    else if (quizs.questions[i].Selection !== undefined) quizContent = selectionQuiz(i, quizs.questions[i]);
-    else quizContent = shortQuiz(i, quizs.questions[i]);
-    newQuiz.innerHTML = quizContent;
-
+    newQuiz.innerHTML = shortQuiz(i, quizzes.data[i]); // Assuming you only have short quizzes for now
     formTag.appendChild(newQuiz);
 
     const remote = document.querySelector(".quiz-control");
@@ -129,56 +216,30 @@ const loadQuistion = () => {
   }
 };
 
-const selectionQuiz = (i, quiz) => {
-  return `
-  <div class="quiz-box" id="quiz${i + 1}">
-    <h5 class="question">${i + 1}. ${quiz.Question.trim()}</h5>
-    <ul class="option">
-      <li><input type="radio" name="answer${i}" class="option1" value="1"/> ${quiz.Selection[0].trim()}</li>
-      <li><input type="radio" name="answer${i}" class="option2" value="2"/> ${quiz.Selection[1].trim()}</li>
-      <li><input type="radio" name="answer${i}" class="option3" value="3"/> ${quiz.Selection[2].trim()}</li>
-      <li><input type="radio" name="answer${i}" class="option4" value="4"/> ${quiz.Selection[3].trim()}</li>
-    </ul>
-  </div>
-  `;
-};
-
 const shortQuiz = (i, quiz) => {
   return `
   <div class="quiz-box" id="quiz${i + 1}">
-    <h5 class="question">${i + 1}. ${quiz.Question.trim()}</h5>
-    답 : <input type="text" name="answer${i}">
+    <h5 class="question">${i + 1}. ${quiz.question.trim()}</h5>
+    답: <input type="text" name="answer${i}">
   </div>
   `;
 };
-
-const blankQuiz = (i, quiz) => {
-  let editQuiz = quiz.Question;
-  let input = `<input type="text" name="answer${i}">`
-  return `
-  <div class="quiz-box" id="quiz${i + 1}">
-    <h5 class="question">${i + 1}. ${editQuiz.replace("_", input).trim()}</h5>
-  </div>
-  `
-}
 
 function submitForm() {
   const form = document.querySelector('form');
   const formData = new FormData(form);
   const answers = [];
 
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < quizzes.data.length; i++) {
     const key = `answer${i}`;
     const value = formData.get(key);
-    const answer = value !== null ? value.trim() : '답변 없음';
-    answers.push({question: key, answer});
+    const answer = value !== null ? value.trim(): 'No answer';
+    answers.push({question: quizzes.data[i].question, answer});
   }
 
   const jsonAnswers = JSON.stringify(answers);
   window.location.href = '/quizScore?answers=' + encodeURIComponent(jsonAnswers);
 }
 
-
-loadQuistion()
 
 
