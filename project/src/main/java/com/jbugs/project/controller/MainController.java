@@ -1,15 +1,33 @@
 package com.jbugs.project.controller;
 
+import com.jbugs.project.domain.User;
+import com.jbugs.project.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Slf4j
+@RequiredArgsConstructor
 public class MainController {
+
+    private final UserRepository userRepository;
     @RequestMapping("/")
-    public String main(){
+    public String homeLogin(@CookieValue(name = "userId", required = false) Long userId, Model model){
         log.info("main controller");
+        if(userId == null){
+            return "html/login";
+        }
+
+        User loginUser = userRepository.findById(userId);
+        if (loginUser == null){
+            return "html/login";
+        }
+
+        model.addAttribute("user", loginUser);
         return "html/new-main-demo";
     }
 

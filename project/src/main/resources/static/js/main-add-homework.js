@@ -23,7 +23,7 @@ let Homeworks
 
 // JavaScript code in your script.js file
 
-const apiUrl = '/api/v2/quizs'; // Replace with your API endpoint URL
+const apiUrl = '/api/v2/homeworks'; // Replace with your API endpoint URL
 
 // Fetch data from the API
 fetch(apiUrl)
@@ -36,7 +36,6 @@ fetch(apiUrl)
   .then(data => {
     // Handle the data received from the API
     Homeworks = data
-    console.log(Homeworks); // You can process and use the data here
   })
   .catch(error => {
     console.error('There was a problem with the fetch operation:', error);
@@ -49,13 +48,13 @@ const addHomework = () => {
   const homeworkBoard = document.querySelector(".get-homework");
   // homeworkBoard.innerHTML = "";
 
-  for (let i = 0; i < Homeworks.length; i++) {
+  for (let i = 0; i < Homeworks.data.length; i++) {
     const newHomework = document.createElement("div");
     newHomework.className = "homework-content";
 
     let check = 'invisible';
     let no = 'invisible';
-    if(Homeworks[i].isSummit === 'Y') check = ''
+    if(Homeworks.data[i].isSummit === 'Y') check = ''
     else no = ''
 
     const deadline = diffDay(i);
@@ -66,8 +65,8 @@ const addHomework = () => {
       <i class="bi bi-x-circle ${no}"></i>
     </div>
     <div class="homework-info">
-      <div class="homework-class">${Homeworks[i].classTitle}</div>
-      <div class="homework-title">${Homeworks[i].homeworkTitle}</div>
+      <div class="homework-class">${Homeworks.data[i].classTitle}</div>
+      <div class="homework-title">${Homeworks.data[i].homeworkTitle}</div>
       <div class="duration">${deadline} 남음..</div>
     </div>
     <div class="homework-icon"><i class="bi bi-chevron-right"></i></div>`;
@@ -77,7 +76,7 @@ const addHomework = () => {
 };
 
 function diffDay(i) {
-  const masTime = new Date(Homeworks[i].deadline);
+  const masTime = new Date(Homeworks.data[i].deadline);
   const todayTime = new Date();
   
   const diff = masTime - todayTime;
