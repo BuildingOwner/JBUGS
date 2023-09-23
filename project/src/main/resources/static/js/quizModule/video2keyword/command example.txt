@@ -1,1 +1,0 @@
-node main.js "C:\\nodejs\\video2quiz\\resources\\video_file.mp4" DataStructure
