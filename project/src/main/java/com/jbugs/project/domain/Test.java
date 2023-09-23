@@ -6,6 +6,8 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+import java.util.List;
+
 import static javax.persistence.FetchType.*;
 
 @Entity
@@ -26,4 +28,6 @@ public class Test {
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "class_id")
     private Classes classes;
+
+
 }

@@ -136,7 +136,14 @@ public class InitDb {
             Test test2 = new Test();
             test2.setQuestion(" _는 데이터의 구조, 특성 또는 속성의 측면을 나타냅니다.");
             test2.setAnswer(" order");
+            test2.setHint("order");
             em.persist(test2);
+
+            Test test3 = new Test();
+            test3.setQuestion("노드는 다음 중 어느것에 해당하는가?");
+            test3.setAnswer("1");
+            test3.setSelection("['데이터 값과 다른 노드 사이의 연결 고리','저장공간','인덱스','연산']");
+            em.persist(test3);
 
             ClassContents classContents1 = new ClassContents();
             classContents1.setClassTitle(class1.getClassName());
