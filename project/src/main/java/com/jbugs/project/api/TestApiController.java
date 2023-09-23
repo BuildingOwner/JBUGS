@@ -28,7 +28,7 @@ public class TestApiController {
     public Result testsV2(){
         List<Test> findTests = testService.findTest();
         List<TestDto> collect = findTests.stream()
-                .map(t -> new TestDto(t.getQuestion(), t.getAnswer()))
+                .map(t -> new TestDto(t.getQuestion(), t.getAnswer(), t.getHint(), t.getSelection()))
                 .collect(Collectors.toList());
 
         return new Result(collect);
@@ -45,6 +45,8 @@ public class TestApiController {
     static class TestDto{
         private String question;
         private String answer;
+        private String hint;
+        private String selection;
         //내부에 필요한 데이터 더 추가
     }
     @PostMapping("/api/v1/quizs")
@@ -60,6 +62,7 @@ public class TestApiController {
         test.setQuestion(request.getQuestion());
         test.setAnswer(request.getAnswer());
         test.setSelection(request.getSelection());
+        test.setHint(request.getHint());
 
         Long id = testService.join(test);
         return new CreateTestResponse(id);
