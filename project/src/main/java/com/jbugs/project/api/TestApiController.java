@@ -26,8 +26,8 @@ public class TestApiController {
 
     @GetMapping("/api/v2/quizs")
     public Result testsV2(){
-        List<Test> findtests = testService.findTest();
-        List<TestDto> collect = findtests.stream()
+        List<Test> findTests = testService.findTest();
+        List<TestDto> collect = findTests.stream()
                 .map(t -> new TestDto(t.getQuestion(), t.getAnswer()))
                 .collect(Collectors.toList());
 
