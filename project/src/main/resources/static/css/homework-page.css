@@ -1,0 +1,31 @@
+.homework-form {
+border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.homework-title{
+    font-size: 1.6em;
+    font-weight: bold;
+}
+.homework-information{
+    margin-top: 50px;
+}
+.submit-homework{
+    margin-top: 50px;
+}
+.submit-title{
+    font-size: 1.6em;
+}
+.submit-table{
+
+    width: 60%;
+}
+tr, td{
+    text-align: center;
+    height: 40px;
+    border: 1px solid #444444;
+}
+.td-1{
+    width: 600px;
+}
