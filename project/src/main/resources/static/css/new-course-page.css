@@ -1,0 +1,312 @@
+.container {
+  padding: 20px;
+  display: flex;
+}
+
+.classroom {
+  padding: 0 20px;
+  flex-grow: 1;
+  min-width: 615px;
+}
+
+.class-content {
+  margin: 16px 0px 16px 0px
+}
+
+.TitleAndProgressBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.TitleAndProgressBar span{
+  font-size: 1.2em;
+}
+
+.nav {
+  width: 190px;
+  min-width: 190px;
+  padding: 20px;
+  text-align: center;
+  flex-grow: 0;
+  background-color: var(--blue2);
+  border-radius: 10px;
+}
+
+.logo {
+  width: 150px;
+  padding: 10px 20px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+/*.title_prof {*/
+/*  display: flex;*/
+/*  justify-content: space-between;*/
+/*}*/
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  font-weight: bold;
+  padding-right: 40px;
+}
+
+.prof {
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: var(--blue3);
+  color: white;
+  border: none;
+  box-shadow: none;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  overflow: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown:hover .dropdown-options {
+  display: block;
+}
+
+.dropdown-options span {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.dropdown-options span:hover {
+  color: #0a0a23;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.dropdown span{
+  font-size: 16px;
+}
+
+.area {
+  display: flex;
+  height: 100%;
+  width: 850px;
+  border: 1px solid rgb(207, 207, 207);
+  background-color: #f0f0f0;
+}
+
+/* 아코디언 css */
+.accordion {
+  background-color: var(--white);
+  cursor: pointer;
+  padding: 16px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: none;
+}
+
+.active,
+.accordion:hover {
+  background-color: var(--blue1);
+  font-weight: bold;
+}
+
+.accordion:after {
+  content: "\002B";
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 16px;
+  background-color: var(--gray);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/* 아코디언 css */
+.progressbar {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--blue2);
+}
+
+.info-bar {
+  width: 30%;
+  padding: 20px;
+  min-width: 350px;
+  max-width: 400px;
+  flex-grow: 0;
+}
+
+.homework {
+  height: auto;
+  min-height: 200px;
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 10px;
+  margin-top: -20px;
+}
+
+.homework-content {
+  margin-top: 10px;
+  padding: 10px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+  rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  background-color: white;
+}
+
+.homework-content:hover {
+  cursor: pointer;
+  background-color: var(--blue1);
+}
+
+.isSummit {
+  font-size: 2.2em;
+}
+
+.homework-icon {
+  font-size: 1.4em;
+}
+
+.homework-info div {
+  padding: 5px;
+}
+
+.sticky-bar {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  bottom:5%;
+  margin-left:100px;
+}
+
+#course-table {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin-top: 50px;
+  background-color: var(--blue3) !important;
+  border-collapse: collapse;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.course-table tr td {
+  border: 1px solid black;
+}
+td:hover{
+  background-color: var(--white);
+  border-radius: 10px;
+  color: black;
+}
+
+td:hover a {
+  color: black;
+}
+
+tr>td>a {
+  text-decoration: none;
+  color: white;
+}
+
+.content-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar-holder {
+  width: 60%;
+  background-color: rgb(231, 231, 231);
+  border-radius: 20px;
+  /* -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  margin: 0 auto; */
+}
+
+/* INDIVIDUAL BAR'S STYLING, SAME GOES WITH OTHER BARS */
+
+.bar {
+  width: 00%;
+  /*background-color: blue;*/
+  color: black;
+  border-radius: 20px;
+  /* -webkit-border-radius: 20px;*/
+  /*-moz-border-radius: 20px;*/
+  /*-ms-border-radius: 20px;*/
+  /*-o-border-radius: 20px;*/
+  text-align: center;
+  /* margin-top: 15px; */
+  font-weight: 400;
+  background-image: linear-gradient(90deg, lightblue, dodgerblue);
+}
+
+.videoInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.content-file{
+  margin: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+.content-file .bi{
+  color:red;
+}
+.content-file:hover{
+  color: red;
+}
+
+.title{
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+  rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.title h2 {
+  background-color: var(--blue3);
+  box-shadow: none;
+}
+

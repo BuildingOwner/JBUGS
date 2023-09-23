@@ -1,0 +1,78 @@
+.container {
+  padding: 20px;
+  display: flex;
+}
+
+.nav {
+  margin-bottom: 0;
+}
+
+.section {
+  flex-grow: 1;
+  padding: 0 20px;
+  min-width: 615px;
+}
+
+.section h2 {
+  margin-bottom: 70px;
+}
+
+.select {
+  background-color: var(--blue1);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  width: fit-content;
+  margin-bottom: 50px;
+}
+
+#classes {
+  font-size: 1em;
+  border-radius: 8px;
+  border: none;
+}
+
+#classes:hover {
+  cursor: pointer;
+}
+
+.accordion {
+  background-color: var(--white);
+  cursor: pointer;
+  padding: 16px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: none;
+}
+
+.active,
+.accordion:hover {
+  background-color: var(--blue1);
+}
+
+.accordion:after {
+  content: "\002B";
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 16px;
+  background-color: var(--gray);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.class-content {
+  padding: 20px;
+}

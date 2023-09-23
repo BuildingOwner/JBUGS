@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <!-- <link rel="stylesheet" href="../../static/css/reset.css"> -->
+</head>
+
+<body class="login-background">
+    <div class="page-header">
+        <a href="https://learn.hansung.ac.kr/login.php" class="logo">
+            <span class="sr-only">CyberCampus</span>
+        </a>
+    </div>
+    <div class="page-content">
+        <div class="col-login">
+            <h2 class="login_top">LOGIN</h2>
+            <form class="form_login" th:object="${loginForm}" method="post">
+                <div th:if="${#fields.hasGlobalErrors()}">
+                    <p class="field-error" th:each="err : ${#fields.globalErrors()}" th:text="${err}">전체 오류 메시지</p>
+                </div>
+                <div class="text_form">
+                    <input type="text" id="loginId" th:field="*{loginId}" th:errorclass="field-error" placeholder="사용자 아이디">
+                    <div class="field-error" th:errors="*{loginId}"/>
+                    <input type="password" id="password" th:field="*{password}" th:errorclass="field-error" placeholder="비밀번호">
+                    <div class="field-error" th:errors="*{password}"/>
+                </div>
+                <div class="submit_form">
+                    <input type="submit" class="submit_button" id="user_login" value="로그인">
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">사용자 이름 기억
+                    </label>
+                </div>
+                <div class="loginfind">
+                    <a href="">아이디/비밀번호 찾기</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-family">
+            <ul>
+                <li class="family_1"><a href="https://www.hansung.ac.kr" target="_blank">한성대학교</a></li>
+                <li class="family_2"><a href="https://info.hansung.ac.kr/" target="_blank">종합정보시스템</a></li>
+                <li class="family_3"><a href="http://hsel.hansung.ac.kr/" target="_blank">학술정보관</a></li>
+                <li class="family_4"><a href="http://intra.hansung.ac.kr/" target="_blank">한성인트라넷</a></li>
+                <li class="family_5"><a href="https://mail.hansung.ac.kr/" target="_blank">한성웹메일</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="/js/login.js"></script>
+</body>
+
+</html>

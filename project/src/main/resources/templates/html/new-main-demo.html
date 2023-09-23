@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+
+  <link rel="stylesheet" href="/css/reset.css"/>
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/new-main-demo.css"/>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- fullcalendar CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js"></script>
+  <!-- fullcalendar 언어 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/locales-all.min.js"></script>
+
+<!--  <script src="/js/main-add-class.js"></script>-->
+  <script src="/js/main-add-community.js"></script>
+  <script src="/js/main-add-homework.js"></script>
+</head>
+
+<body onload="addCommunity();addHomework()">
+<div class="container">
+  <div class="nav">
+    <img src="/img/국영문시그니쳐.png" alt="logo" class="logo" onclick="location.href = '/'"/>
+    <ul>
+      <li>
+        <button onclick="location.href='/'">
+          <i class="bi bi-house"></i>HOME
+        </button>
+      </li>
+      <li>
+        <button onclick="location.href='/lib'">
+          <i class="bi bi-folder"></i>자료실
+        </button>
+      </li>
+      <li>
+        <button onclick="location.href='homeworks'">
+          <i class="bi bi-people"></i>커뮤니티
+        </button>
+      </li>
+      <li>
+        <button onclick="location.href='#'" id="gptButton">
+          <i class="bi bi-chat"></i>메시지
+        </button>
+      </li>
+      <li>
+        <button onclick="location.href='/quizHome'">
+          <i class="bi bi-pc-display-horizontal"></i>한성 MOOC
+        </button>
+      </li>
+      <li>
+        <button onclick="location.href='/developer'">
+          <i class="bi bi-gear"></i>setting
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2 class="title">HOME</h2>
+    <div class="classroom">
+      <h3>나의 강좌</h3>
+      <table>
+        <tr>
+          <th></th>
+          <th>과목명</th>
+          <th>분반</th>
+          <th>교수명</th>
+        </tr>
+        <tr th:each="classes : ${classes}" th:onclick="|location.href='@{/classes/{id}/edit (id=${classes.id})}'|">
+          <td><img th:src="${classes.imgsrc}" alt="" /></td>
+          <td th:text="${classes.className}"></td>
+          <td th:text="${classes.division}"></td>
+          <td th:text="${classes.prof}"></td>
+        </tr>
+      </table>
+
+    </div>
+
+    <div class="recommendation">
+      <div class="reco-top">
+        <h3>추천 커뮤니티</h3>
+        <button onclick="addCommunity()"><i class="bi bi-arrow-counterclockwise"></i></i></button>
+      </div>
+      <div class="reco-list">
+        <div class="reco-contents">
+          <div class="img-center">
+            <img src="/img/sangsangbugi.png" alt="reco1Img"/>
+          </div>
+          <h5 class="reco1-title">${RecoContents[i].title}</h5>
+          <span class="reco1-discription">${RecoContents[i].discription}</span>
+          <span class="reco1-people">${RecoContents[i].people}명 참여중</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="info-bar">
+    <form th:Object="${userForm}" method="get">
+    <div class="userInfo">
+      <div class="info-bar-top">
+        <h3>학생 정보</h3>
+        <button><i class="bi bi-pen"></i></button>
+      </div>
+      <img src="/img/sangsangbugi.png" alt="profile" class="profile"/>
+      <h4 class="userName" th:text="${userForm.getName()}"></h4>
+      <h5 class="track" th:text="${userForm.getTrack1()}"></h5>
+    </div>
+    </form>
+
+    <div id="calendar"></div>
+
+    <div class="homework">
+      <h3>과제</h3>
+      <div class="get-homework">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="/js/calendar.js"></script>
+</body>
+
+</html>

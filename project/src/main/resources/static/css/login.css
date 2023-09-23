@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-background {
+  background: url(../img/한성대.jpg) no-repeat;
+  background-size: cover;
+}
+
+body {
+  height: 100vh;
+}
+
+body .page-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 200px;
+}
+
+.page-header {
+  padding: 13px 12px;
+  height: 100px;
+}
+
+.page-header .logo {
+  background: url(../img/logo.png) no-repeat;
+  display: block;
+  height: 68px;
+  width: 190px;
+  background-size: 150px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.page-content {
+  margin: 0 0 10px 0;
+}
+
+.page-content .col-login {
+  display: block;
+  padding: 19px 15px 22px 16px;
+  background: rgba(11, 77, 162, 0.9);
+  width: 280px;
+  float: left;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.col-login h2 {
+  margin: 0;
+  font-size: 14px;
+  color: white;
+  float: none;
+}
+
+.col-login form {
+  margin: 27px 0 0;
+  position: relative;
+}
+
+.text_form {
+  width: 165px;
+  float: left;
+}
+
+.text_form input {
+  margin-bottom: 1px;
+  border-radius: 0;
+  border: 0;
+  background-color: white;
+  box-shadow: none;
+  height: 36px;
+  width: 100%;
+  padding: 12px 6px;
+}
+
+.text_form input:focus {
+  outline: none;
+}
+
+.submit_form {
+  margin-left: 168px;
+}
+
+.submit_form input {
+  width: 80px;
+  height: 73px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #24b1f2;
+  color: white;
+}
+
+input[type="button"] {
+  cursor: pointer;
+}
+
+.checkbox {
+  opacity: 0.8;
+  margin: 24px 0 0 0;
+}
+
+.checkbox label {
+  font-size: 11px;
+  color: white;
+  min-height: inherit;
+}
+
+.checkbox input {
+  margin-top: 2px;
+}
+
+.loginfind {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.loginfind a {
+  color: white;
+  font-size: 11px;
+}
+
+.col-family {
+  padding: 0;
+  width: 145px;
+  margin-left: 10px;
+  float: left;
+  background: rgba(76, 76, 76, 0.9);
+  height: 200px;
+  border-radius: 20px;
+
+}
+
+.col-family ul {
+  margin: 0;
+  list-style: none;
+  /* background: rgba(76, 76, 76, 0.9); */
+  padding: 25px 15px;
+  height: 200px;
+}
+
+.col-family ul .family_1 {
+  background-position: 0 0;
+  line-height: 30px;
+}
+
+.col-family ul .family_2 {
+  background-position: 0 -30;
+  line-height: 30px;
+}
+
+.col-family ul .family_3 {
+  background-position: 0 -60;
+  line-height: 30px;
+}
+
+.col-family ul .family_4 {
+  background-position: 0 -90;
+  line-height: 30px;
+}
+
+.col-family ul .family_5 {
+  background-position: 0 -120;
+  line-height: 30px;
+}
+
+.col-family ul li a {
+  color: #edeeed;
+  font-size: 11px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-decoration: none;
+
+.field-error {
+  border-color: #dc3545;
+  color: #dc3545;
+}

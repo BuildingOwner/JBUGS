@@ -1,0 +1,22 @@
+.section h3 {
+  margin-bottom: 50px;
+}
+
+.description {
+  margin-bottom: 50px;
+}
+
+.quiz-container {
+  margin-right: 50px;
+}
+
+.quiz-container h3 {
+  font-size: 1.2em;
+  background-color: var(--white);
+}
+
+
+.quiz-container h3:hover {
+  cursor: pointer;
+  background-color: var(--blue1);
+}
