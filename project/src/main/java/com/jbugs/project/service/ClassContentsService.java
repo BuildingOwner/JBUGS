@@ -25,7 +25,7 @@ public class ClassContentsService {
     private final VideoRepository videoRepository;
 
     @Transactional
-    public Long order(Long classesId, Long fileId, Long videoId){
+    public Long order(Long classesId, String weeks, Long fileId, Long videoId){
         Classes classes = classRepository.findOne(classesId);
         File file = fileRepository.findOne(fileId);
         Video video = videoRepository.findOne(videoId);

@@ -19,7 +19,7 @@ public class ClassContents {
     @Id @GeneratedValue
     @Column(name = "class_contents_id")
     private Long id;
-    private int weeks;
+    private String weeks;
     private String classTitle;
     private String homeworkTitle;
     private String deadline;

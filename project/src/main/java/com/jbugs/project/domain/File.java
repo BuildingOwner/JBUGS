@@ -25,4 +25,5 @@ public class File {
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name="class_contents_id")
     ClassContents classContents;
+
 }
