@@ -33,9 +33,4 @@ public class Student {
     private Takes takes;
 
 
-
-
-
-
-
 }
