@@ -32,4 +32,5 @@ public class Student {
     @JoinColumn(name = "takes_id")
     private Takes takes;
 
+
 }
