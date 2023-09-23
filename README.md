@@ -13,3 +13,9 @@ E class 개선안
 UI/UX 사용자 경험 개선: [e-class +]는 사용자 경험을 개선하기 위한 진보된 사용자 인터페이스를 제공합니다. 직관적이고 사용하기 쉬운 디자인을 통해 학생들이 플랫폼을 보다 편리하게 이용할 수 있습니다.
 
 AI 기반 강의 자료 추출 및 연습문제 생성: [e-class +]는 구글 클라우드 비전 OCR 및 구글 비디오 인텔리전스와 같은 첨단 기술을 활용하여 강의 자료를 텍스트로 추출합니다. 그 후, OpenAI GPT API를 활용하여 추출된 텍스트를 기반으로 연습 문제를 자동으로 생성합니다. 이를 통해 학생들은 수업 이해도를 높일 수 있으며, 효율적인 학습을 지원합니다.
+
+**주요 적용 기술 및 특이 사항**
+개발 도구 : Visual Studio Code, Intellij IDEA 23.2, Spring Boot, Mysql
+개발 언어 : HTML5, CSS3, JavaScript, Node.js, Java
+주요 적용 기술 : fullcalendar를 통해 일정 입력이 가능한 달력을 구현, Spring Data JPA,
+nodejs 의 pdf2pic라이브러리를 통한 pdf – jpg변환, 구글 클라우드 비전 OCR(광학문자인식), 구글 비디오 인텔리전스(텍스트 추출), openAI gpt API를 통한 키워드를 이용한 연습문제 출제
