@@ -183,7 +183,7 @@ loadQuistion()
 
 document.getElementById('videoButton').addEventListener('click', async (event) => {
   try {
-    const videoPath = '!/resources/input.mp4';
+    const videoPath = '/video/input.mp4';
     const videoSubject = '/datastructure'
     videoJson = await fetch('http://localhost:5500' + videoSubject + videoPath);
   } catch (error) {
