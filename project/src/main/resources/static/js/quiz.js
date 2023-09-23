@@ -181,30 +181,4 @@ function submitForm() {
 
 loadQuistion()
 
-document.getElementById('videoButton').addEventListener('click', async (event) => {
-  try {
-    const videoPath = '/video/input.mp4';
-    const videoSubject = '/datastructure'
-    videoJson = await fetch('http://localhost:5500' + videoSubject + videoPath);
-  } catch (error) {
-    console.error('An error occurred:', error);
-    document.getElementById('output').textContent = 'An error occurred during chat execution.';
-  }
-})
-document.getElementById('getVideoKeyword').addEventListener('click', async (event) => {
-  try {
-    // Fetch 요청
-    const response = await fetch('http://localhost:5500/getVideoKeyword');
 
-    // 응답이 성공적인 경우
-    if (response.ok) {
-      videoJson = await response.json(); // JSON 데이터 추출 ㅁㄴㅇㄹ
-      console.log(videoJson);
-    } else {
-      throw new Error('An error occurred: ' + response.statusText);
-    }
-  } catch (error) {
-    console.error('An error occurred:', error);
-    document.getElementById('output').textContent = 'An error occurred during chat execution.';
-  }
-})
