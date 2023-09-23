@@ -36,14 +36,14 @@ public class Classes {
 
     private String prof;
 
-    @OneToMany(mappedBy = "aClass", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "classes", cascade = CascadeType.ALL)
     private List<Takes> takes = new ArrayList<>();
 
-    @OneToMany(mappedBy = "aClass", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "classes", cascade = CascadeType.ALL)
     private List<Test> tests = new ArrayList<>();
 
-    @OneToMany(mappedBy = "aClass", cascade = CascadeType.ALL)
-    private List<ClassContents> classNotices = new ArrayList<>();
+    @OneToMany(mappedBy = "classes", cascade = CascadeType.ALL)
+    private List<ClassContents> classContents = new ArrayList<>();
 
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "professor_id")

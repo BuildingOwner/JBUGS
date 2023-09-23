@@ -25,7 +25,7 @@ public class Takes {
 
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "class_id")
-    private Classes aClass;
+    private Classes classes;
 
     /*
     * 여기에 진도 증가 검사

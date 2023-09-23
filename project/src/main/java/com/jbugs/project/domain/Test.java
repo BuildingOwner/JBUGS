@@ -25,12 +25,5 @@ public class Test {
 
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "class_id")
-    private Classes aClass;
-
-    @OneToOne(mappedBy = "test", fetch = LAZY)
-    private TestScore testScore;
-
-
-
-
+    private Classes classes;
 }

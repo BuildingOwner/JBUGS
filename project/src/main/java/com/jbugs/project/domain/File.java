@@ -9,18 +9,20 @@ import javax.persistence.*;
 import static javax.persistence.FetchType.LAZY;
 
 @Entity
-@NoArgsConstructor
 @Getter
 @Setter
-public class TestScore {
+@NoArgsConstructor
+public class File {
+
     @Id
     @GeneratedValue
-    @Column(name = "test_score_id")
+    @Column(name = "file_id")
     private Long id;
 
-    @OneToOne(fetch = LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "test_id")
-    private Test test;
+    private String filename;
+    private String filesrc;
 
-
+    @ManyToOne(fetch = LAZY)
+    @JoinColumn(name="class_contents_id")
+    ClassContents classContents;
 }
