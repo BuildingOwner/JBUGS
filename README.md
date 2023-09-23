@@ -33,7 +33,7 @@ E class+는 코로나 19 이후 대학 교육 환경에서 급속히 증가하�
 </div>
 
 *  __강의 페이지__
-<img src="./image/course.png" width="800" height="500" />
+
 
 *  __퀴즈 페이지__
 <img src="./image/quiz.png" width="800" height="500" />
