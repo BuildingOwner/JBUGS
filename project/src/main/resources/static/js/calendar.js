@@ -54,7 +54,7 @@
         }
         calendar.unselect()
       },
-      // 이벤트 
+      // 이벤트
       events: [
         // {
         //   title: 'All Day Event',
@@ -116,4 +116,3 @@
     calendar.render();
   });
 })();
-
