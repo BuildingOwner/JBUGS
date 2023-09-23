@@ -36,9 +36,13 @@ public class InitDb {
 
             Student student = new Student();
             student.setName(user.getName());
-            student.setTrack1("웹공학");
-            student.setTrack2("모바일소프트웨어");
+            student.setTrack1("웹공학트랙");
+            student.setTrack2("모바일소프트웨어트랙");
             em.persist(student);
+
+            Video video = new Video();
+            video.setVideoname("1주차 영상");
+            video.setVideosrc("/video/video1.mp4");
 
             Classes class1 = new Classes();
             class1.setClassName("데이터통신");
@@ -154,6 +158,28 @@ public class InitDb {
             classContents3.setDeadline("2023-10-13T23:55:00");
             classContents3.setIsSummit("Y");
             em.persist(classContents3);
+
+            Community community1 = new Community();
+            community1.setTitle("자소서 특강");
+            community1.setImgsrc("/img/sangsangbugi.png");
+            community1.setDiscription("자기소개서 특강합니다!");
+            community1.setPeople("11");
+            em.persist(community1);
+
+            Community community2 = new Community();
+            community2.setTitle("직업윤리교육");
+            community2.setImgsrc("/img/sangsangbugi.png");
+            community2.setDiscription("직업 의식 고취를 위한 특강");
+            community2.setPeople("35");
+            em.persist(community2);
+
+            Community community3 = new Community();
+            community3.setTitle("천원의 아침밥 시행안내");
+            community3.setImgsrc("/img/sangsangbugi.png");
+            community3.setDiscription("천원의 아침밥 시행안내");
+            community3.setPeople("693");
+            em.persist(community3);
+
         }
     }
 

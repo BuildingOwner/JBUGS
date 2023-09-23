@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,11 +54,7 @@
         <h2 class="title">자료실</h2>
         <div class="select">
           <select name="classroom" id="classes">
-            <option value="1">과목을 선택해 주세요</option>
-            <option value="2">과목 1</option>
-            <option value="3">과목 2</option>
-            <option value="4">과목 3</option>
-            <option value="5">과목 4</option>
+            <option th:each="classes : ${classes}" th:value="${classes.id}" th:text="${classes.className}"/>
           </select>
         </div>
 

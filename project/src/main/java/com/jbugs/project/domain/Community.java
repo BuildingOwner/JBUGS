@@ -1,7 +1,6 @@
 package com.jbugs.project.domain;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -10,15 +9,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-@NoArgsConstructor
 @Getter
 @Setter
-public class TestSelect {
-
+public class Community {
     @Id
     @GeneratedValue
-    @Column(name="test_select_id")
+    @Column(name = "community_id")
     private Long id;
 
-    private String question;
+    private String title;
+    private String imgsrc;
+    private String discription;
+    private String people;
+
 }
