@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -31,8 +33,7 @@ public class TestApiController {
                 .map(t -> new TestDto(t.getQuestion(), t.getAnswer()))
                 .collect(Collectors.toList());
 
-        return new Result(collect);
-
+        return new Result<>(collect);
     }
 
     @Data
@@ -59,7 +60,6 @@ public class TestApiController {
         Test test = new Test();
         test.setQuestion(request.getQuestion());
         test.setAnswer(request.getAnswer());
-        test.setSelection(request.getSelection());
 
         Long id = testService.join(test);
         return new CreateTestResponse(id);
