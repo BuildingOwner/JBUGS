@@ -23,7 +23,7 @@ public class ClassContentsController {
     private final FileService fileService;
     private final VideoService videoService;
 
-    @GetMapping
+    @GetMapping("/developer")
     public String creatForm(Model model){
 
         List<ClassContents> classContents = classContentsService.findClass();
@@ -34,4 +34,6 @@ public class ClassContentsController {
 
         return "html/developer";
     }
+
+
 }
