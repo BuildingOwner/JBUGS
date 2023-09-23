@@ -198,7 +198,7 @@ document.getElementById('getVideoKeyword').addEventListener('click', async (even
 
     // 응답이 성공적인 경우
     if (response.ok) {
-      videoJson = await response.json(); // JSON 데이터 추출
+      videoJson = await response.json(); // JSON 데이터 추출 ㅁㄴㅇㄹ
       console.log(videoJson);
     } else {
       throw new Error('An error occurred: ' + response.statusText);
