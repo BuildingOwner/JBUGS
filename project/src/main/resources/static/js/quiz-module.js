@@ -168,7 +168,7 @@ async function executeVideoAndGptTasks() {
 
         const gptJson1 = await response1.json(); // JSON data extraction
         console.log('First Response:', gptJson1);
-        sendStringToJava(JSON.stringify(gptJson1));
+        sendStringToJava(JSON.stringify(gptJson1));  //얘
 
       } catch (error) {
         console.error('An error occurred:', error);

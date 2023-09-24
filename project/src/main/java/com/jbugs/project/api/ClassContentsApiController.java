@@ -32,7 +32,7 @@ public class ClassContentsApiController {
     public Result classFilesV2(){
         List<ClassContents> findClassContents = classContentsService.findClass();
         List<ClassFilesDto> collect = findClassContents.stream()
-                .map(c -> new ClassFilesDto(c.getWeek(), c.getFilePath(), c.getFileName(), c.getVideoPath(), c.getVideoName()))
+                .map(c -> new ClassFilesDto(c.getClasses().getId(),c.getWeek(), c.getFilePath(), c.getFileName(), c.getVideoPath(), c.getVideoName()))
                 .collect(Collectors.toList());
 
         return new Result(collect);
@@ -60,6 +60,7 @@ public class ClassContentsApiController {
     @Data
     @AllArgsConstructor
     static class ClassFilesDto{
+        private Long id;
         private String week;
         private String filePath;
         private String fileName;
