@@ -35,7 +35,7 @@ E class+는 코로나 19 이후 대학 교육 환경에서 급속히 증가하�
 ## ✔개선된 페이지
 * __메인 페이지__
 <div align="center">
- <img src="./image/main.png" width="800" height="450" />
+ <img src="./image/main.PNG" width="800" height="450" />
  <p>
  캘린더 추가 / 과제 표시 / UI 간결화
 </p>
@@ -45,8 +45,8 @@ E class+는 코로나 19 이후 대학 교육 환경에서 급속히 증가하�
  
 * __강의 페이지__
 <div align="center">
+<img src="./image/course1.PNG" width="400" height="250" />
 <img src="./image/course2.PNG" width="400" height="250" />
-<img src="./image/course.png" width="400" height="250" />
 <p>
  아코디언바 추가 / 강의 진도율 시각화 / Sticky Bar를 통한 주차별 이동 간결화
 </p>
@@ -66,6 +66,11 @@ E class+는 코로나 19 이후 대학 교육 환경에서 급속히 증가하�
 ## ⚙퀴즈 생성 모듈 구조
 <div align="center">
 <img src="./image/module.png" width="800" height="500" />
+</div>
+
+## Domain 다이어그램
+<div align="center">
+<img src="./image/diagram.png" width="800" height="500" />
 </div>
 
 ## ⌨주요 적용 기술 및 특이 사항
