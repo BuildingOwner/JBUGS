@@ -34,31 +34,43 @@ E class+는 코로나 19 이후 대학 교육 환경에서 급속히 증가하�
 
 ## ✔개선된 페이지
 * __메인 페이지__
-<div align="center">
+<div>
  <img src="./image/main.PNG" width="800" height="450" />
  <p>
- 캘린더 추가 / 과제 표시 / UI 간결화
-</p>
+  <strong>캘린더 추가</strong> -> 날짜 확인 간편화 및 개인 일정 등록 가능
+  <br> 
+  <strong>과제 표시</strong> -> 미완료 과제 확인 가능
+  <br> 
+  <strong>UI 간결화</strong> -> 불필요한 기능 축소화
+  </p>
 </div>
 <br>
 <br>
  
 * __강의 페이지__
-<div align="center">
+<div>
 <img src="./image/course1.PNG" width="400" height="250" />
 <img src="./image/course2.PNG" width="400" height="250" />
 <p>
- 아코디언바 추가 / 강의 진도율 시각화 / Sticky Bar를 통한 주차별 이동 간결화
+  <strong>아코디언바 추가</strong> -> 마우스 드래그 횟수 감소
+  <br> 
+  <strong>강의 진도율 시각화</strong> -> 주차별 강의 진행도 확인 가능
+  <br> 
+  <strong>Sticky Bar</strong> -> 주차별 이동 간결화
+  <br>
+  <strong>과제 표시</strong> -> 완료/미완료 과제 확인 가능
 </p>
 </div>
 <br>
 <br>
 
 * __퀴즈 페이지__
-<div align="center">
+<div>
 <img src="./image/quiz.png" width="800" height="450" />
-<p>
- 모듈을 통한 퀴즈 생성 / 키워드 추출 후 생성
+  <p>
+  <strong>모듈을 통한 키워드 추출</strong> -> 강의 및 강의 자료 중 중요 키워드 추출
+  <br> 
+  <strong>추출한 키워드 퀴즈 생성</strong> -> 퀴즈 생성을 통한 개별적 학습 가능
 </p>
 </div>
 
@@ -76,9 +88,9 @@ E class+는 코로나 19 이후 대학 교육 환경에서 급속히 증가하�
 ## ⌨주요 적용 기술 및 특이 사항
 * __개발 도구__ : Visual Studio Code, Intellij IDEA 23.2, Spring Boot, Mysql
 * __개발 언어__ : HTML5, CSS3, JavaScript, Node.js, Java
-* __주요 적용 기술__ : fullcalendar를 통해 일정 입력이 가능한 달력을 구현, Spring Data JPA, nodejs 의 pdf2pic라이브러리를 통한 pdf – jpg변환, 구글 클라우드 비전 OCR(광학문자인식), 구글 비디오 인텔리전스(텍스트 추출), openAI gpt API를 통한 키워드를 이용한 연습문제 출제
 
-## ✋개발 팀원
+
+## ✋개발자
 
 |Frontend|Frontend|Backend|Module|
 |------|---|---|---|
