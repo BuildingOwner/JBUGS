@@ -33,10 +33,21 @@ E class+는 코로나 19 이후 대학 교육 환경에서 급속히 증가하�
 </div>
 
 *  __강의 페이지__
-<img src="./image/course.png" width="800" height="500" />
+<div>
+<img src="./image/course2.png" width="400" height="250" />
+<img src="./image/course.png" width="400" height="250" />
+<p>
+ 아코디언바 추가 / 강의 진도율 시각화 / Sticky Bar를 통한 주차별 이동 간결화
+</p>
+</div>
 
 *  __퀴즈 페이지__
+<div>
 <img src="./image/quiz.png" width="800" height="500" />
+<p>
+ 모듈을 통한 퀴즈 생성 / 키워드 추출 후 생성
+</p>
+</div>
 
 
 ## 주요 적용 기술 및 특이 사항
