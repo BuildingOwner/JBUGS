@@ -35,6 +35,7 @@ public class TestApiController {
 
     }
 
+
     @Data
     @AllArgsConstructor
     static class Result<T>{

@@ -53,6 +53,8 @@ public class ClassContentsController {
 
         classContentsService.order(classes, videoFile, file, week, homeworkTitle, homeworkDescription, homeworkDeadline);
         System.out.println(classes+ week  +  homeworkTitle + homeworkDescription + homeworkDeadline);
+        System.out.println(videoFile);
+        System.out.println(file);
         return "redirect:/";
     }
 

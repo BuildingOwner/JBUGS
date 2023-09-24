@@ -168,7 +168,7 @@ async function executeVideoAndGptTasks() {
 
         const gptJson1 = await response1.json(); // JSON data extraction
         console.log('First Response:', gptJson1);
-
+        sendStringToJava(JSON.stringify(gptJson1));
 
       } catch (error) {
         console.error('An error occurred:', error);
@@ -185,6 +185,21 @@ async function executeVideoAndGptTasks() {
     document.getElementById('output').textContent = 'An error occurred during chat execution.';
   }
 }
+
+function sendStringToJava(stringValue) {
+  $.ajax({
+    type: "POST", // or "GET" depending on your server endpoint
+    url: "/your-java-endpoint",
+    data: { value: stringValue }, // Send the value as a parameter
+    success: function(response) {
+      // Handle the response from the Java server if needed
+    },
+    error: function(error) {
+      // Handle any errors if the request fails
+    }
+  });
+}
+
 
 document.getElementById('videoButton').addEventListener('click', executeVideoAndGptTasks);
 
