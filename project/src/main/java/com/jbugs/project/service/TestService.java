@@ -27,11 +27,13 @@ public class TestService {
         return test.getId();
     }
 
-    public Long quizOrder(Long classesId, Long classContentsId, String question){
-        Classes classes = classRepository.findOne(classesId);
-        ClassContents classContents = classContentsRepository.findOne(classContentsId);
+    public Long quizOrder(Long classesId, String classContentsId, String question){
 
-        Test test = Test.createQuiz(classes,classContents, question);
+        System.out.println("서비스 "+classesId+" "+classContentsId+" "+question);
+        
+        Classes classes = classRepository.findOne(classesId);
+
+        Test test = Test.createQuiz(classes,classContentsId, question);
 
         testRepository.save(test);
 

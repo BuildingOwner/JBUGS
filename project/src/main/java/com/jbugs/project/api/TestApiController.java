@@ -63,10 +63,12 @@ public class TestApiController {
 
     @PostMapping("/api/v2/quiz")
     public ResponseEntity<String> processString(@RequestParam("classesId")Long classesId,
-                                                @RequestParam("classContentsId")Long classContentsId,
+                                                @RequestParam("classContentsId")String classContentsId,
                                                 @RequestParam("value") String receivedString) {
         // Process the receivedString as needed
         // You can save it to the database or perform any other actions
+
+        System.out.println("컨트롤러 "+classesId+" "+classContentsId+" "+receivedString);
         testService.quizOrder(classesId,classContentsId, receivedString);
 
         // You can return a response if needed

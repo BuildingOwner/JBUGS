@@ -28,10 +28,11 @@ public class Test {
     @JoinColumn(name = "class_contents_id")
     private ClassContents classContents;
 
-    public static Test createQuiz(Classes classes, ClassContents classContents, String question){
+    public static Test createQuiz(Classes classes, String classContents, String question){
         Test test = new Test();
+        System.out.println("도메인 "+classes+" "+classContents+" "+question);
         test.setClasses(classes);
-        test.setWeek(classContents.getWeek());
+        test.setWeek(classContents);
         test.setQuestion(question);
 
         return test;
