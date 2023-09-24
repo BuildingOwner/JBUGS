@@ -24,10 +24,13 @@ fetch(apiUrl)
 
 const addHomework = () => {
   const homeworkBoard = document.querySelector(".get-homework");
-  // homeworkBoard.innerHTML = "";
+  let eleCount = homeworkBoard.childElementCount;
 
-
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < Homeworks.data.length; i++) {
+    eleCount = homeworkBoard.childElementCount;
+    if(eleCount > 2){
+      break;
+    }
     if (Homeworks.data[i].isSummit === "N") {
       const newHomework = document.createElement("div");
       newHomework.className = "homework-content";
