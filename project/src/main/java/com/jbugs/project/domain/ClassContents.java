@@ -51,6 +51,9 @@ public class ClassContents {
     @JoinColumn(name="class_id")
     private Classes classes;
 
+    @OneToMany(mappedBy = "classContents", cascade = CascadeType.ALL)
+    private List<Test> tests = new ArrayList<>();
+
     public void setClasses(Classes classes){
         this.classes=classes;
         classes.getClassContents().add(this);

@@ -17,13 +17,23 @@ public class Test {
     @Column(name="test_id")
     private Long id;
 
-
+    private String week;
     private String question;
-    private String answer;
-    private String selection;
-    private String hint;
 
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "class_id")
     private Classes classes;
+
+    @ManyToOne(fetch = LAZY)
+    @JoinColumn(name = "class_contents_id")
+    private ClassContents classContents;
+
+    public static Test createQuiz(Classes classes, ClassContents classContents, String question){
+        Test test = new Test();
+        test.setClasses(classes);
+        test.setWeek(classContents.getWeek());
+        test.setQuestion(question);
+
+        return test;
+    }
 }
