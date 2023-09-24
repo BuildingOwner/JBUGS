@@ -2,8 +2,6 @@ package com.jbugs.project.controller;
 
 import com.jbugs.project.domain.ClassContents;
 import com.jbugs.project.domain.Classes;
-import com.jbugs.project.domain.File;
-import com.jbugs.project.domain.Video;
 import com.jbugs.project.service.ClassContentsService;
 import com.jbugs.project.service.ClassService;
 import com.jbugs.project.service.FileService;
@@ -16,9 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.List;
 
 @Controller
@@ -46,7 +41,7 @@ public class ClassContentsController {
     public String order(@RequestParam("classes") Long classes,
                         @RequestParam("week")String week,
                         @RequestParam("video") MultipartFile videoFile,
-                        @RequestParam("file") MultipartFile file,
+                        @RequestParam("static/file") MultipartFile file,
                         @RequestParam("homeworkTitle")String homeworkTitle,
                         @RequestParam("homeworkDescription")String homeworkDescription,
                         @RequestParam("homeworkDeadline") String homeworkDeadline){
