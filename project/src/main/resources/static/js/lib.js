@@ -1,14 +1,8 @@
-let files = [
-  {
-    week: 1,
-    filePath: "/file/3/1/file/asd.pdf",
-    filename: "asd"
-  }
-];
+let files = [];
 
 let reloadLib;
 
-apiUrl = '/api/v2/homeworks'; // Replace with your API endpoint URL
+apiUrl = '/api/v2/course'; // Replace with your API endpoint URL
 
 // Fetch data from the API
 fetch(apiUrl)
@@ -22,25 +16,33 @@ fetch(apiUrl)
     // Handle the data received from the API
     files = data
     reloadLib = () => {
+      let fileClass = [];
 
       const select = document.querySelector("#classes");
 
-      let selectClass = select.options[select.selectedIndex].text;
+      let selectClass = select.options[select.selectedIndex].value;
 
-      for (let i = 0; i < files.length; i++) {
-        let libWeek = `.lib${files[i].week}`;
+      for(let i=0;i<files.data.length;i++){
+        if(selectClass === files.data[i].id.toString() && files.data[i].filePath !== null){
+         fileClass.push(files.data[i])
+        }
+      }
+
+
+      for (let i = 0; i < fileClass.length; i++) {
+        let libWeek = `.lib${fileClass[i].week}`;
         let lib = document.querySelector(libWeek);
         let libPanel = lib.querySelector(".panel");
 
         libPanel.innerHTML = "";
 
-        if(files[i] != null){
+        if(fileClass[i] != null){
           let libContent = document.createElement("div");
           libContent.innerHTML = `
-      <div class="class-content"><i class="bi bi-file-earmark-arrow-down-fill"></i> ${files[i].filename}</div>
+      <div class="class-content"><i class="bi bi-file-earmark-arrow-down-fill"></i> ${fileClass[i].fileName}</div>
     `;
           libContent.addEventListener("click", () => {
-            window.location.href = `${files[i].filePath}`;
+            window.location.href = `/file/${fileClass[i].filePath}`;
           });
           libPanel.appendChild(libContent);
         }
