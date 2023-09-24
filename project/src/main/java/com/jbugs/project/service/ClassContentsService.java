@@ -27,10 +27,10 @@ public class ClassContentsService {
     private final ClassRepository classRepository;
 
     @Transactional
-    public Long order(Long classesId, MultipartFile video, MultipartFile file, String weeks, String title, String description, String homeworkDeadline){
+    public Long order(Long classesId, MultipartFile video, MultipartFile file, String weeks, String title, String description, String homeworkDeadline, String fullFilePath, String fullVideoPath, String fileName, String videoName){
         Classes classes = classRepository.findOne(classesId);
 
-        ClassContents contents = ClassContents.createContents(classes, video, file, weeks, title, description, homeworkDeadline);
+        ClassContents contents = ClassContents.createContents(classes, video, file, weeks, title, description, homeworkDeadline, fullFilePath,fullVideoPath, fileName, videoName);
 
         classContentsRepository.save(contents);
 

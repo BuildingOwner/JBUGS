@@ -29,6 +29,10 @@ public class ClassContents {
     private String deadline;
     private String isSummit;
     private String description;
+    private String fullFilePath;
+    private String fullVideoPath;
+    private String fileName;
+    private String videoName;
     @Lob
     private byte[] videoData;
 
@@ -62,7 +66,7 @@ public class ClassContents {
         video.setClassContents(this);
     }
 
-    public static ClassContents createContents(Classes classes, MultipartFile video, MultipartFile file, String weeks, String title, String description, String deadline){
+    public static ClassContents createContents(Classes classes, MultipartFile video, MultipartFile file, String weeks, String title, String description, String deadline, String fullFilePath, String fullVideoPath, String fileName, String videoName){
         ClassContents classContents = new ClassContents();
         classContents.setClasses(classes);
         classContents.setWeeks(weeks);
@@ -71,6 +75,10 @@ public class ClassContents {
         classContents.setIsSummit("N");
         classContents.setDescription(description);
         classContents.setDeadline(deadline);
+        classContents.setFileName(fileName);
+        classContents.setVideoName(videoName);
+        classContents.setFullFilePath(fullFilePath);
+        classContents.setFullVideoPath(fullVideoPath);
 
         try {
             classContents.setVideoData(video.getBytes());
