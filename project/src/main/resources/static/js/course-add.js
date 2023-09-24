@@ -2,111 +2,39 @@ const MyContent = [
   {
     videos: [
       {
-        videosrc: "/video/video1.mp4",
+        videosrc: "/file/3/1/video/video1.mp4",
         videoname: "1주차 강의 1",
       },
-      {
-        videosrc: "/video/video2.mp4",
-        videoname: "1주차 강의 2",
-      },
-      {
-        videosrc: "비디오경로",
-        videoname: "1주차 강의 3",
-      },
     ],
     files: [
       {
-        filename: "강의파일1",
-        filesrc: "/img/sangsangbugi.png",
-      },
-      {
-        filename: "강의파일2",
-        filesrc: "/img/sangsangbugi.png",
-      },
-    ],
-  },
-  {
-    videos: [
-      {
-        videosrc: "비디오경로",
-        videoname: "2주차 강의 1",
-      },
-      {
-        videosrc: "비디오경로",
-        videoname: "2주차 강의 2",
-      },
-      {
-        videosrc: "비디오경로",
-        videoname: "2주차 강의 2",
-      },
-    ],
-    files: [
-      {
-        filename: "파일제목",
-        filesrc: "/img/sangsangbugi.png",
-      },
-      {
-        filename: "파일제목",
-        filesrc: "/img/sangsangbugi.png",
-      },
-    ],
-  },
-  {
-    videos: [
-      {
-        videosrc: "/video/video1.mp4",
-        videoname: "1주차 강의 1",
-      },
-      {
-        videosrc: "비디오경로",
-        videoname: "1주차 강의 2",
-      },
-      {
-        videosrc: "비디오경로",
-        videoname: "1주차 강의 3",
-      },
-    ],
-    files: [
-      {
-        filename: "강의파일1",
-        filesrc: "/img/sangsangbugi.png",
-      },
-      {
-        filename: "강의파일2",
-        filesrc: "/img/sangsangbugi.png",
-      },
-    ],
-  },
-  {
-    videos: [
-      {
-        videosrc: "/video/video1.mp4",
-        videoname: "1주차 강의 1",
-      },
-      {
-        videosrc: "비디오경로",
-        videoname: "1주차 강의 2",
-      },
-      {
-        videosrc: "비디오경로",
-        videoname: "1주차 강의 3",
-      },
-    ],
-    files: [
-      {
-        filename: "강의파일1",
-        filesrc: "/img/sangsangbugi.png",
-      },
-      {
-        filename: "강의파일2",
-        filesrc: "/img/sangsangbugi.png",
+        filename: "asd",
+        filesrc: "/file/3/1/file/asd.pdf",
       },
     ],
   },
 ];
 
+// let addContent;
+apiUrl = '/api/v2/homeworks';
+
+fetch(apiUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    // MyContent = data
+    addContent();
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
+
 const addContent = () => {
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < MyContent.length; i++) {
     const panel = document.querySelector(`.panel_${i + 1}`);
     for (let j = 0; j < MyContent[i].videos.length; j++) {
       const newVideo = document.createElement("div");
@@ -188,5 +116,3 @@ const addContent = () => {
     }
   }
 }
-
-addContent();
