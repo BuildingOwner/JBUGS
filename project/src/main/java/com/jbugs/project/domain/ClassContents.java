@@ -6,6 +6,7 @@ import lombok.Setter;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -28,8 +29,11 @@ public class ClassContents {
     private String deadline;
     private String isSummit;
     private String description;
-//    private String file;
-//    private MultipartFile video;
+    @Lob
+    private byte[] videoData;
+
+    @Lob
+    private byte[] fileData;
 
 
     @OneToMany(mappedBy = "classContents", cascade = CascadeType.ALL)
@@ -58,7 +62,7 @@ public class ClassContents {
         video.setClassContents(this);
     }
 
-    public static ClassContents createContents(Classes classes, String weeks, String title, String description, String deadline){
+    public static ClassContents createContents(Classes classes, MultipartFile video, MultipartFile file, String weeks, String title, String description, String deadline){
         ClassContents classContents = new ClassContents();
         classContents.setClasses(classes);
         classContents.setWeeks(weeks);
@@ -67,8 +71,15 @@ public class ClassContents {
         classContents.setIsSummit("N");
         classContents.setDescription(description);
         classContents.setDeadline(deadline);
-//        classContents.setVideo(video);
-//        classContents.setFile(file);
+
+        try {
+            classContents.setVideoData(video.getBytes());
+            classContents.setFileData(file.getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+            // Handle the exception as per your application's requirements
+        }
+
         return classContents;
     }
 }

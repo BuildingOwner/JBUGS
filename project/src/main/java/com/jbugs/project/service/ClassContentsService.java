@@ -27,16 +27,18 @@ public class ClassContentsService {
     private final ClassRepository classRepository;
 
     @Transactional
-    public Long order(Long classesId, String weeks,   String title, String description, String homeworkDeadline){
+    public Long order(Long classesId, MultipartFile video, MultipartFile file, String weeks, String title, String description, String homeworkDeadline){
         Classes classes = classRepository.findOne(classesId);
 
-        ClassContents contents = ClassContents.createContents(classes, weeks, title, description, homeworkDeadline);
+        ClassContents contents = ClassContents.createContents(classes, video, file, weeks, title, description, homeworkDeadline);
 
         classContentsRepository.save(contents);
 
         return contents.getId();
     }
 
+
+    @Transactional
     public void saveClassContents(ClassContents classContents){
         classContentsRepository.save(classContents);
     }

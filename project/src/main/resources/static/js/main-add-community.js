@@ -15,6 +15,7 @@ fetch(apiUrl)
     .then(data => {
       // Handle the data received from the API
       RecoContents = data
+      addCommunity();
     })
     .catch(error => {
       console.error('There was a problem with the fetch operation:', error);

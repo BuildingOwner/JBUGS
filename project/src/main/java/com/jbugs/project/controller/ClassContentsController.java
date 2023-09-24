@@ -45,13 +45,13 @@ public class ClassContentsController {
     @PostMapping("/developer")
     public String order(@RequestParam("classes") Long classes,
                         @RequestParam("week")String week,
-//                        @RequestParam("video") MultipartFile video,
-//                        @RequestParam("file")MultipartFile file,
+                        @RequestParam("video") MultipartFile videoFile,
+                        @RequestParam("file") MultipartFile file,
                         @RequestParam("homeworkTitle")String homeworkTitle,
                         @RequestParam("homeworkDescription")String homeworkDescription,
                         @RequestParam("homeworkDeadline") String homeworkDeadline){
 
-        classContentsService.order(classes, week, homeworkTitle, homeworkDescription, homeworkDeadline);
+        classContentsService.order(classes, videoFile, file, week, homeworkTitle, homeworkDescription, homeworkDeadline);
         System.out.println(classes+ week  +  homeworkTitle + homeworkDescription + homeworkDeadline);
         return "redirect:/";
     }
