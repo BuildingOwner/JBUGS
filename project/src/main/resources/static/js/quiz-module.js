@@ -168,7 +168,8 @@ async function executeVideoAndGptTasks() {
 
         const gptJson1 = await response1.json(); // JSON data extraction
         console.log('First Response:', gptJson1);
-        sendStringToJava(JSON.stringify(gptJson1));  //얘
+        let send = JSON.stringify(gptJson1);  //얘
+        sendStringToJava(send);
 
       } catch (error) {
         console.error('An error occurred:', error);
@@ -189,8 +190,9 @@ async function executeVideoAndGptTasks() {
 function sendStringToJava(stringValue) {
   $.ajax({
     type: "POST", // or "GET" depending on your server endpoint
-    url: "/your-java-endpoint",
-    data: { value: stringValue }, // Send the value as a parameter
+    url: "/api/v2/quiz",
+    data: { classesId : 3, classContentsId : 1,
+            value: stringValue }, // Send the value as a parameter
     success: function(response) {
       // Handle the response from the Java server if needed
     },
