@@ -3,9 +3,12 @@ package com.jbugs.project.domain;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,8 +27,10 @@ public class ClassContents {
     private String homeworkTitle;
     private String deadline;
     private String isSummit;
+    private String description;
+//    private String file;
+//    private MultipartFile video;
 
-    private LocalDateTime orderDate;
 
     @OneToMany(mappedBy = "classContents", cascade = CascadeType.ALL)
     private List<File> files = new ArrayList<>();
@@ -53,13 +58,17 @@ public class ClassContents {
         video.setClassContents(this);
     }
 
-    public static ClassContents createContents(Classes classes, Video videos, File... files){
+    public static ClassContents createContents(Classes classes, String weeks, String title, String description, String deadline){
         ClassContents classContents = new ClassContents();
         classContents.setClasses(classes);
-        classContents.setVideos((List<Video>) videos);
-        for(File file : files){
-            classContents.addFile(file);
-        }
+        classContents.setWeeks(weeks);
+        classContents.setClassTitle(classes.getClassName());
+        classContents.setHomeworkTitle(title);
+        classContents.setIsSummit("N");
+        classContents.setDescription(description);
+        classContents.setDeadline(deadline);
+//        classContents.setVideo(video);
+//        classContents.setFile(file);
         return classContents;
     }
 }

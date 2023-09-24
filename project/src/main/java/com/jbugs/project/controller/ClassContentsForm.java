@@ -11,5 +11,4 @@ public class ClassContentsForm {
     private String classTitle;
     private String homeworkTitle;
     private String deadline;
-    private String isSummit;
 }

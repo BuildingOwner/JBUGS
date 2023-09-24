@@ -47,18 +47,13 @@ public class ClassController {
         Classes one = (Classes) classService.findOne(classesId);
         one.getClassContents();
 
-        List<ClassContents> classContents = classContentsService.findClass();
+        ClassContents one1 = classContentsService.findOne(classesId);
         List<File> files = fileService.findFile();
         model.addAttribute("files", files);
         List<Video> videos = videoService.findVideo();
         model.addAttribute("videos", videos);
 
-        ClassContents classContents1 = new ClassContents();
 
-//        ClassForm form = new ClassForm();
-//        form.setId(one.getId());
-//        form.setClassName(one.getClassName());
-//        form.setProf(one.getProf());
 
         model.addAttribute("form", one);
 
