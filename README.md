@@ -1,7 +1,7 @@
 <div align="center"><h1>한성대 공학경진대회 팀 JBUGS</h1></div>
 <div align="center"><h3>E class 개선안</h3></div><br>
 
-
+<img src="./image/diagram.png" />
 
 ## 🔔 작품 소개
 E class+는 코로나 19 이후 대학 교육 환경에서 급속히 증가하는 블렌디드 수업과 온라인 학습의 필요성을 고려하여 개발된 혁신적인 교육 플랫폼입니다.
