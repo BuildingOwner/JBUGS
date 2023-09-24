@@ -58,17 +58,19 @@ public class ClassContentsController {
                         @RequestParam("homeworkDescription")String homeworkDescription,
                         @RequestParam("homeworkDeadline") String homeworkDeadline) throws IOException {
             String fullFilePath = fileDir + classes +"/"+ week +"/file/"+file.getOriginalFilename();
+            String filePath = classes +"/"+ week +"/file/"+file.getOriginalFilename();
             String fileName= file.getOriginalFilename();
             log.info("파일 저장 fullFilePath={}", fullFilePath);
             file.transferTo(new File(fullFilePath));
 
             String fullVideoPath = fileDir + classes +"/"+ week +"/video/"+videoFile.getOriginalFilename();
+            String videoPath =classes +"/"+ week +"/video/"+videoFile.getOriginalFilename();
             String videoName = videoFile.getOriginalFilename();
             log.info("파일 저장 fullVideoPath={}", fullVideoPath);
             videoFile.transferTo(new File(fullVideoPath));
 
 
-        classContentsService.order(classes, videoFile, file, week, homeworkTitle, homeworkDescription, homeworkDeadline,fullFilePath, fullVideoPath, fileName, videoName);
+        classContentsService.order(classes, week, homeworkTitle, homeworkDescription, homeworkDeadline,filePath, videoPath, fileName, videoName);
         System.out.println(classes+ week  +  homeworkTitle + homeworkDescription + homeworkDeadline);
         System.out.println(videoFile);
         System.out.println(file);

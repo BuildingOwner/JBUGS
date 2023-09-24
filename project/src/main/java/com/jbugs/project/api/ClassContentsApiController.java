@@ -28,6 +28,17 @@ public class ClassContentsApiController {
         return new Result(collect);
     }
 
+    @GetMapping("/api/v2/course")
+    public Result classFilesV2(){
+        List<ClassContents> findClassContents = classContentsService.findClass();
+        List<ClassFilesDto> collect = findClassContents.stream()
+                .map(c -> new ClassFilesDto(c.getWeek(), c.getFilePath(), c.getFileName(), c.getVideoPath(), c.getVideoName()))
+                .collect(Collectors.toList());
+
+        return new Result(collect);
+
+    }
+
 
     @Data
     @AllArgsConstructor
@@ -44,6 +55,16 @@ public class ClassContentsApiController {
         private String deadline;
         private String isSummit;
         //내부에 필요한 데이터 더 추가
+    }
+
+    @Data
+    @AllArgsConstructor
+    static class ClassFilesDto{
+        private String week;
+        private String filePath;
+        private String fileName;
+        private String videoPath;
+        private String videoName;
     }
 
 //    @PostMapping("/api/v2/homeworks")

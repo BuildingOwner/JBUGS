@@ -23,14 +23,14 @@ public class ClassContents {
     @Id @GeneratedValue
     @Column(name = "class_contents_id")
     private Long id;
-    private String weeks;
+    private String week;
     private String classTitle;
     private String homeworkTitle;
     private String deadline;
     private String isSummit;
     private String description;
-    private String fullFilePath;
-    private String fullVideoPath;
+    private String filePath;
+    private String videoPath;
     private String fileName;
     private String videoName;
     @Lob
@@ -66,10 +66,10 @@ public class ClassContents {
         video.setClassContents(this);
     }
 
-    public static ClassContents createContents(Classes classes, MultipartFile video, MultipartFile file, String weeks, String title, String description, String deadline, String fullFilePath, String fullVideoPath, String fileName, String videoName){
+    public static ClassContents createContents(Classes classes, String weeks, String title, String description, String deadline, String FilePath, String VideoPath, String fileName, String videoName){
         ClassContents classContents = new ClassContents();
         classContents.setClasses(classes);
-        classContents.setWeeks(weeks);
+        classContents.setWeek(weeks);
         classContents.setClassTitle(classes.getClassName());
         classContents.setHomeworkTitle(title);
         classContents.setIsSummit("N");
@@ -77,16 +77,8 @@ public class ClassContents {
         classContents.setDeadline(deadline);
         classContents.setFileName(fileName);
         classContents.setVideoName(videoName);
-        classContents.setFullFilePath(fullFilePath);
-        classContents.setFullVideoPath(fullVideoPath);
-
-        try {
-            classContents.setVideoData(video.getBytes());
-            classContents.setFileData(file.getBytes());
-        } catch (IOException e) {
-            e.printStackTrace();
-            // Handle the exception as per your application's requirements
-        }
+        classContents.setFilePath(FilePath);
+        classContents.setVideoPath(VideoPath);
 
         return classContents;
     }
