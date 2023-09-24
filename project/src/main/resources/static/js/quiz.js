@@ -1,6 +1,7 @@
 let quizzes = null; // Set the initial value to null.
 
 const apiUrl = '/api/v2/quizs';
+
 fetch(apiUrl)
   .then(response => {
     if (!response.ok) {

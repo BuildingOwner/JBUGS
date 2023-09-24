@@ -159,6 +159,9 @@ public class InitDb {
             classContents2.setHomeworkTitle("데이터 통신 2주차 과제");
             classContents2.setDeadline("2023-10-10T23:55:00");
             classContents2.setIsSummit("N");
+            classContents2.setFilePath("3/1/file/asd.pdf");
+            classContents2.setWeek("1");
+            classContents2.setFileName("asdf");
             em.persist(classContents2);
 
             ClassContents classContents3 = new ClassContents();
@@ -188,9 +191,12 @@ public class InitDb {
             ClassContents classContents6 = new ClassContents();
             classContents6.setClassTitle(class3.getClassName());
             classContents6.setClasses(class3);
-            classContents6.setHomeworkTitle("설계패턴 2주차 과제");
+            classContents6.setHomeworkTitle("설계패턴 1주차 과제");
             classContents6.setDeadline("2023-10-13T23:55:00");
             classContents6.setIsSummit("N");
+            classContents6.setVideoPath("5/1/video/hw1-최재완-1971233.mp4");
+            classContents6.setVideoName("qwerqwer");
+            classContents6.setWeek("1");
             em.persist(classContents3);
 
             ClassContents classContents7 = new ClassContents();
