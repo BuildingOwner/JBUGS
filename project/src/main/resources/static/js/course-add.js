@@ -1,19 +1,4 @@
-let MyContent = [
-  // {
-  //   videos: [
-  //     {
-  //       videosrc: "/file/3/1/video/video1.mp4",
-  //       videoname: "1주차 강의 1",
-  //     },
-  //   ],
-  //   files: [
-  //     {
-  //       filename: "asd",
-  //       filesrc: "/file/3/1/file/asd.pdf",
-  //     },
-  //   ],
-  // },
-];
+let MyContent = [];
 
 apiUrl = '/api/v2/course';
 
@@ -27,6 +12,33 @@ fetch(apiUrl)
   .then(data => {
     MyContent = data
     addContent();
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
+
+let quizzez = null;
+let quiz = [];
+
+apiUrl = '/api/v2/quizs';
+
+fetch(apiUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    quizzez = data
+    const currentUrl = window.location.href;
+    let selectClass = currentUrl[currentUrl.length-6];
+    for(let i=0; i<quizzez.data.length;i++){
+      if(selectClass === quizzez.data[i].id.toString()){
+        quiz.push(quizzez.data[i]);
+      }
+    }
+    addQuiz();
   })
   .catch(error => {
     console.error('There was a problem with the fetch operation:', error);
@@ -133,5 +145,19 @@ const addContent = () => {
     });
     //
     panel.appendChild(newFile);
+  }
+}
+
+const addQuiz = () => {
+  for(let j=0; j<quiz.length;j++){
+    let panel = document.querySelector(`.panel_${quiz[j].week}`);
+    const newQuiz = document.createElement("div");
+    newQuiz.innerHTML = `
+        <div class="content-file"><i class="bi bi-file-earmark-arrow-down-fill"></i> 퀴즈</div>
+      `;
+    newQuiz.addEventListener("click", () => {
+      window.location.href = `/quizHome?classesId=${quiz[j].id}&week=${quiz[j].week}`;
+    });
+    panel.appendChild(newQuiz);
   }
 }

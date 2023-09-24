@@ -54,14 +54,42 @@
         <textarea name="homeworkDescription" id="homework-description" cols="30" rows="10"></textarea>
         <label for="homework-deadline-date">과제 기한</label>
         <input type="datetime-local" name="homeworkDeadline" id="homework-deadline-date">
-<!--        <label for="homework-deadline-date">과제 기한(시간)</label>-->
-<!--        <input type="time" name="homeworkDeadlineTime" id="homework-deadline-time">-->
+        <!--        <label for="homework-deadline-date">과제 기한(시간)</label>-->
+        <!--        <input type="time" name="homeworkDeadlineTime" id="homework-deadline-time">-->
       </div>
 
       <button type="submit" onclick="executeVideoAndGptTasks()">제출</button>
     </form>
   </div>
+  <p>--------------</p>
   <div>
+    <form>
+      <select name="classes" id="classesQuiz">
+        <option value="">과목을 선택해 주세요</option>
+        <option th:each="classes : ${classes}" th:value="${classes.id}" th:text="${classes.className}"/>
+      </select>
+
+      <label for="week">주차</label>
+      <select name="week" id="weekQuiz">
+        <option value="0">주차를 선택해 주세요</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+      </select>
+    </form>
     <button id="videoButton">퀴즈 생성 버튼</button>
   </div>
 </div>

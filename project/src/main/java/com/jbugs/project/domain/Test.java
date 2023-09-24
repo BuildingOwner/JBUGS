@@ -18,6 +18,8 @@ public class Test {
     private Long id;
 
     private String week;
+
+    @Column(name = "question", length = 3000)
     private String question;
 
     @ManyToOne(fetch = LAZY)

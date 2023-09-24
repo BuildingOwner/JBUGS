@@ -11,6 +11,12 @@ fetch(apiUrl)
   })
   .then(data => {
     quizzes = data; // Assign the data to the quizzes variable
+    for(let i=0;i<quizzes.data.length;i++){
+      if(quizzes.data[i].id.toString() === searchParam('classesId') && quizzes.data[i].week === searchParam('week')){
+        quizzes = JSON.parse(quizzes.data[i].question);
+        break;
+      }
+    }
     loadQuestion(); // Call the function to load questions
   })
   .catch(error => {
@@ -21,15 +27,14 @@ const loadQuestion = () => {
   const quizContainer = document.querySelector(".quiz-container");
   const formTag = quizContainer.querySelector("form");
 
-  for (let i = 0; i < quizzes.data.length; i++) {
+  for (let i = 0; i < quizzes.questions.length; i++) {
     const newQuiz = document.createElement("div");
     let quizContent;
-    if (quizzes.data[i].hint !== null) quizContent = blankQuiz(i, quizzes.data[i]);
-    else if (quizzes.data[i].selection !== null) {
-      quizContent = selectionQuiz(i, quizzes.data[i]);
-    }
-  else
-    quizContent = shortQuiz(i, quizzes.data[i]);
+    if (quizzes.questions[i].Hint !== undefined) quizContent = blankQuiz(i, quizzes.questions[i]);
+    else if (quizzes.questions[i].Selection !== undefined) {
+      quizContent = selectionQuiz(i, quizzes.questions[i]);
+    } else
+      quizContent = shortQuiz(i, quizzes.questions[i]);
     newQuiz.innerHTML = quizContent;
     formTag.appendChild(newQuiz);
 
@@ -45,18 +50,18 @@ const loadQuestion = () => {
 };
 
 const selectionQuiz = (i, quiz) => {
-  let inputString = quiz.selection;
-  let extractedStrings = inputString.match(/'[^']+'/g);
-  extractedStrings = extractedStrings.map(str => str.slice(1, -1));
+  let inputString = quiz.Selection;
+  // let extractedStrings = inputString.match(/'[^']+'/g);
+  // extractedStrings = extractedStrings.map(str => str.slice(1, -1));
 
   return `
   <div class="quiz-box" id="quiz${i + 1}">
-    <h5 class="question">${i + 1}. ${quiz.question.trim()}</h5>
+    <h5 class="question">${i + 1}. ${quiz.Question.trim()}</h5>
     <ul class="option">
-      <li><input type="radio" name="answer${i}" class="option1" value="1"/> ${extractedStrings[0].trim()}</li>
-      <li><input type="radio" name="answer${i}" class="option2" value="2"/> ${extractedStrings[1].trim()}</li>
-      <li><input type="radio" name="answer${i}" class="option3" value="3"/> ${extractedStrings[2].trim()}</li>
-      <li><input type="radio" name="answer${i}" class="option4" value="4"/> ${extractedStrings[3].trim()}</li>
+      <li><input type="radio" name="answer${i}" class="option1" value="1"/> ${inputString[0].trim()}</li>
+      <li><input type="radio" name="answer${i}" class="option2" value="2"/> ${inputString[1].trim()}</li>
+      <li><input type="radio" name="answer${i}" class="option3" value="3"/> ${inputString[2].trim()}</li>
+      <li><input type="radio" name="answer${i}" class="option4" value="4"/> ${inputString[3].trim()}</li>
     </ul>
   </div>
   `;
@@ -65,14 +70,14 @@ const selectionQuiz = (i, quiz) => {
 const shortQuiz = (i, quiz) => {
   return `
   <div class="quiz-box" id="quiz${i + 1}">
-    <h5 class="question">${i + 1}. ${quiz.question.trim()}</h5>
+    <h5 class="question">${i + 1}. ${quiz.Question.trim()}</h5>
     답 : <input type="text" name="answer${i}">
   </div>
   `;
 };
 
 const blankQuiz = (i, quiz) => {
-  let editQuiz = quiz.question;
+  let editQuiz = quiz.Question;
   let input = `<input type="text" name="answer${i}">`
   return `
   <div class="quiz-box" id="quiz${i + 1}">
@@ -86,13 +91,17 @@ function submitForm() {
   const formData = new FormData(form);
   const answers = [];
 
-  for (let i = 0; i < quizzes.data.length; i++) {
+  for (let i = 0; i < quizzes.questions.length; i++) {
     const key = `answer${i}`;
     const value = formData.get(key);
     const answer = value !== null ? value.trim() : 'No answer';
-    answers.push({question: quizzes.data[i].question, answer});
+    answers.push({question: quizzes.questions[i].Question, answer});
   }
 
   const jsonAnswers = JSON.stringify(answers);
-  window.location.href = '/quizScore?answers=' + encodeURIComponent(jsonAnswers);
+  window.location.href = '/quizScore?answers=' + encodeURIComponent(jsonAnswers)+'&classesId='+searchParam('classesId')+'&week='+searchParam('week');
+}
+
+function searchParam(key) {
+  return new URLSearchParams(location.search).get(key);
 }

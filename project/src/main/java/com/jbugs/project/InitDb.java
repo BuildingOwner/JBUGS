@@ -147,12 +147,6 @@ public class InitDb {
             classContents2.setFileName("asdf");
             em.persist(classContents2);
 
-            Test test1 = new Test();
-            test1.setQuestion("LinkedList에 대한 traverse는?");
-            test1.setClasses(class1);
-            test1.setWeek(classContents2.getWeek());
-            em.persist(test1);
-
 
             ClassContents classContents3 = new ClassContents();
             classContents3.setClassTitle(class2.getClassName());

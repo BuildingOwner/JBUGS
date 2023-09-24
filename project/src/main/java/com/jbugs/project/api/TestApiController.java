@@ -3,6 +3,8 @@ package com.jbugs.project.api;
 import com.jbugs.project.domain.ClassContents;
 import com.jbugs.project.domain.Classes;
 import com.jbugs.project.domain.Test;
+import com.jbugs.project.service.ClassContentsService;
+import com.jbugs.project.service.ClassService;
 import com.jbugs.project.service.TestService;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,6 +20,8 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class TestApiController {
     private final TestService testService;
+    private final ClassService classService;
+    private final ClassContentsService classContentsService;
 
     @GetMapping("/api/v1/quizs")
     public List<Test> testsV1(){
@@ -67,13 +71,14 @@ public class TestApiController {
 //    }
 
     @PostMapping("/api/v2/quiz")
-    public ResponseEntity<String> processString(@RequestParam("classesId") Classes classesId,
-                                                @RequestParam("classContentsId") ClassContents classContents,
+    public ResponseEntity<String> processString(@RequestParam("classesId") Long classesId,
+                                                @RequestParam("classContentsId") String classContents,
                                                 @RequestParam("value") String receivedString) {
 //        testService.quizOrder(classesId,classContentsId, receivedString);
         Test test = new Test();
-        test.setClasses(classesId);
-        test.setWeek(classContents.getWeek());
+        Classes classes = classService.findOne(classesId);
+        test.setClasses(classes);
+        test.setWeek(classContents);
         test.setQuestion(receivedString);
 
         Long id = testService.join(test);
