@@ -8,7 +8,7 @@ E class+는 코로나 19 이후 대학 교육 환경에서 급속히 증가하�
 
 이 프로젝트는 한성대학교의 기존 eclass 플랫폼에서 발생한 불편함을 해소하고 학생들의 학습 경험을 향상시키기 위해 개발되었습니다.
 
-## 주요 기능 및 특징
+## 📄주요 기능 및 특징
 
 * 수업 진도율 표시:
   * E class+는 진행도를 시각적으로 표시하여 학생들이 수업 진행 상황을 한눈에 파악할 수 있도록 지원합니다. 이를 통해 개인의 학습 현황을 더욱 효과적으로 관리할 수 있습니다.
@@ -23,26 +23,31 @@ E class+는 코로나 19 이후 대학 교육 환경에서 급속히 증가하�
   * E class+는 구글 클라우드 비전 OCR 및 구글 비디오 인텔리전스와 같은 첨단 기술을 활용하여 강의 자료를 텍스트로 추출합니다. 그 후, OpenAI GPT API를 활용하여 추출된 텍스트를 기반으로 연습 문제를 자동으로 생성합니다. 이를 통해 학생들은 수업 이해도를 높일 수 있으며, 효율적인 학습을 지원합니다.
 
 
-## 개선된 페이지
+## ✔개선된 페이지
 *  __메인 페이지__
-<div>
+<div align="center">
  <img src="./image/main.png" width="800" height="500" />
  <p>
   캘린더 추가 / 과제 표시 / UI 간결화
  </p>
 </div>
+<br>
+<br>
+
 
 *  __강의 페이지__
-<div>
+<div align="center">
 <img src="./image/course2.png" width="400" height="250" />
 <img src="./image/course.png" width="400" height="250" />
 <p>
  아코디언바 추가 / 강의 진도율 시각화 / Sticky Bar를 통한 주차별 이동 간결화
 </p>
 </div>
+<br>
+<br>
 
 *  __퀴즈 페이지__
-<div>
+<div align="center">
 <img src="./image/quiz.png" width="800" height="500" />
 <p>
  모듈을 통한 퀴즈 생성 / 키워드 추출 후 생성
@@ -50,8 +55,19 @@ E class+는 코로나 19 이후 대학 교육 환경에서 급속히 증가하�
 </div>
 
 
+## 퀴즈 생성 모듈 구조
+<div align="center">
+<img src="./image/module.png" width="800" height="500" />
+</div>
+
 ## 주요 적용 기술 및 특이 사항
 * 개발 도구 : Visual Studio Code, Intellij IDEA 23.2, Spring Boot, Mysql
 * 개발 언어 : HTML5, CSS3, JavaScript, Node.js, Java
 * 주요 적용 기술 : fullcalendar를 통해 일정 입력이 가능한 달력을 구현, Spring Data JPA,
 * nodejs 의 pdf2pic라이브러리를 통한 pdf – jpg변환, 구글 클라우드 비전 OCR(광학문자인식), 구글 비디오 인텔리전스(텍스트 추출), openAI gpt API를 통한 키워드를 이용한 연습문제 출제
+
+## 개발 팀원
+
+|Frontend|Frontend|Backend|Module|
+|------|---|---|---|
+|최재완|이영재|장주찬|김정훈|
