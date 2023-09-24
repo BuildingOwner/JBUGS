@@ -1,5 +1,7 @@
 package com.jbugs.project.api;
 
+import com.jbugs.project.domain.ClassContents;
+import com.jbugs.project.domain.Classes;
 import com.jbugs.project.domain.Test;
 import com.jbugs.project.service.TestService;
 import lombok.AllArgsConstructor;
@@ -26,7 +28,7 @@ public class TestApiController {
     public Result testsV2(){
         List<Test> findTests = testService.findTest();
         List<TestDto> collect = findTests.stream()
-                .map(t -> new TestDto(t.getQuestion()))
+                .map(t -> new TestDto(t.getClasses().getId(), t.getWeek(), t.getQuestion()))
                 .collect(Collectors.toList());
 
         return new Result(collect);
@@ -42,9 +44,12 @@ public class TestApiController {
     @Data
     @AllArgsConstructor
     static class TestDto{
+        private Long id;
+        private String week;
         private String question;
         //내부에 필요한 데이터 더 추가
     }
+
 //    @PostMapping("/api/v1/quizs")
 //    public CreateTestResponse saveTestV1(@RequestBody @Valid Test test){
 //        Long id  = testService.join(test);
@@ -62,14 +67,17 @@ public class TestApiController {
 //    }
 
     @PostMapping("/api/v2/quiz")
-    public ResponseEntity<String> processString(@RequestParam("classesId")Long classesId,
-                                                @RequestParam("classContentsId")Long classContentsId,
+    public ResponseEntity<String> processString(@RequestParam("classesId") Classes classesId,
+                                                @RequestParam("classContentsId") ClassContents classContents,
                                                 @RequestParam("value") String receivedString) {
-        // Process the receivedString as needed
-        // You can save it to the database or perform any other actions
-        testService.quizOrder(classesId,classContentsId, receivedString);
+//        testService.quizOrder(classesId,classContentsId, receivedString);
+        Test test = new Test();
+        test.setClasses(classesId);
+        test.setWeek(classContents.getWeek());
+        test.setQuestion(receivedString);
 
-        // You can return a response if needed
+        Long id = testService.join(test);
+
         return ResponseEntity.ok("Received: " + receivedString);
     }
 

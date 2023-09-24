@@ -128,18 +128,6 @@ public class InitDb {
             professor6.setLaboratory("연구관 329호");
             em.persist(professor6);
 
-            Test test1 = new Test();
-            test1.setQuestion("LinkedList에 대한 traverse는?");
-            em.persist(test1);
-
-            Test test2 = new Test();
-            test2.setQuestion(" _는 데이터의 구조, 특성 또는 속성의 측면을 나타냅니다.");
-            em.persist(test2);
-
-            Test test3 = new Test();
-            test3.setQuestion("노드는 다음 중 어느것에 해당하는가?");
-            em.persist(test3);
-
             ClassContents classContents1 = new ClassContents();
             classContents1.setClassTitle(class1.getClassName());
             classContents1.setClasses(class1);
@@ -158,6 +146,13 @@ public class InitDb {
             classContents2.setWeek("1");
             classContents2.setFileName("asdf");
             em.persist(classContents2);
+
+            Test test1 = new Test();
+            test1.setQuestion("LinkedList에 대한 traverse는?");
+            test1.setClasses(class1);
+            test1.setWeek(classContents2.getWeek());
+            em.persist(test1);
+
 
             ClassContents classContents3 = new ClassContents();
             classContents3.setClassTitle(class2.getClassName());
