@@ -128,36 +128,110 @@ public class InitDb {
             professor6.setLaboratory("연구관 329호");
             em.persist(professor6);
 
-            Test test1 = new Test();
-            test1.setQuestion("LinkedList에 대한 traverse는?");
-            test1.setAnswer("순회");
-            em.persist(test1);
-
-            Test test2 = new Test();
-            test2.setQuestion(" _는 데이터의 구조, 특성 또는 속성의 측면을 나타냅니다.");
-            test2.setAnswer(" order");
-            em.persist(test2);
-
             ClassContents classContents1 = new ClassContents();
             classContents1.setClassTitle(class1.getClassName());
-            classContents1.setHomeworkTitle("라즈베리파이 연결 동영상 제출");
+            classContents1.setClasses(class1);
+            classContents1.setHomeworkTitle("데이터 통신 1주차 과제");
             classContents1.setDeadline("2023-10-13T23:55:00");
             classContents1.setIsSummit("Y");
             em.persist(classContents1);
 
             ClassContents classContents2 = new ClassContents();
-            classContents2.setClassTitle(class2.getClassName());
-            classContents2.setHomeworkTitle("해보기 문제 결과 제출");
+            classContents2.setClassTitle(class1.getClassName());
+            classContents2.setClasses(class1);
+            classContents2.setHomeworkTitle("데이터 통신 2주차 과제");
             classContents2.setDeadline("2023-10-10T23:55:00");
             classContents2.setIsSummit("N");
+            classContents2.setFilePath("3/1/file/asd.pdf");
+            classContents2.setWeek("1");
+            classContents2.setFileName("asdf");
             em.persist(classContents2);
 
+
             ClassContents classContents3 = new ClassContents();
-            classContents3.setClassTitle(class3.getClassName());
-            classContents3.setHomeworkTitle("라즈베리파이 연결 동영상 제출");
+            classContents3.setClassTitle(class2.getClassName());
+            classContents3.setClasses(class2);
+            classContents3.setHomeworkTitle("알고리즘 1주차 과제");
             classContents3.setDeadline("2023-10-13T23:55:00");
             classContents3.setIsSummit("Y");
             em.persist(classContents3);
+
+            ClassContents classContents4 = new ClassContents();
+            classContents4.setClassTitle(class2.getClassName());
+            classContents4.setClasses(class2);
+            classContents4.setHomeworkTitle("알고리즘 2주차 과제");
+            classContents4.setDeadline("2023-10-13T23:55:00");
+            classContents4.setIsSummit("Y");
+            em.persist(classContents4);
+
+            ClassContents classContents5 = new ClassContents();
+            classContents5.setClassTitle(class3.getClassName());
+            classContents5.setClasses(class3);
+            classContents5.setHomeworkTitle("설계패턴 1주차 과제");
+            classContents5.setDeadline("2023-10-10T23:55:00");
+            classContents5.setIsSummit("Y");
+            em.persist(classContents5);
+
+            ClassContents classContents6 = new ClassContents();
+            classContents6.setClassTitle(class3.getClassName());
+            classContents6.setClasses(class3);
+            classContents6.setHomeworkTitle("설계패턴 1주차 과제");
+            classContents6.setDeadline("2023-10-13T23:55:00");
+            classContents6.setIsSummit("N");
+            classContents6.setVideoPath("5/1/video/hw1-최재완-1971233.mp4");
+            classContents6.setVideoName("qwerqwer");
+            classContents6.setWeek("1");
+            em.persist(classContents3);
+
+            ClassContents classContents7 = new ClassContents();
+            classContents7.setClassTitle(class4.getClassName());
+            classContents7.setClasses(class4);
+            classContents7.setHomeworkTitle("모바일&스마트시스템 1주차 과제");
+            classContents7.setDeadline("2023-10-10T23:55:00");
+            classContents7.setIsSummit("Y");
+            em.persist(classContents7);
+
+            ClassContents classContents8 = new ClassContents();
+            classContents8.setClassTitle(class4.getClassName());
+            classContents8.setClasses(class4);
+            classContents8.setHomeworkTitle("모바일&스마트시스템 2주차 과제");
+            classContents8.setDeadline("2023-10-13T23:55:00");
+            classContents8.setIsSummit("N");
+            em.persist(classContents8);
+
+            ClassContents classContents9 = new ClassContents();
+            classContents9.setClassTitle(class5.getClassName());
+            classContents9.setClasses(class5);
+            classContents9.setHomeworkTitle("고모프 1주차 과제");
+            classContents9.setDeadline("2023-10-10T23:55:00");
+            classContents9.setIsSummit("Y");
+            em.persist(classContents9);
+
+            ClassContents classContents10 = new ClassContents();
+            classContents10.setClassTitle(class5.getClassName());
+            classContents10.setClasses(class5);
+            classContents10.setHomeworkTitle("고모프 2주차 과제");
+            classContents10.setDeadline("2023-10-13T23:55:00");
+            classContents10.setIsSummit("N");
+            em.persist(classContents10);
+
+            ClassContents classContents11 = new ClassContents();
+            classContents11.setClassTitle(class6.getClassName());
+            classContents11.setClasses(class6);
+            classContents11.setHomeworkTitle("웹프레임워크1 1주차 과제");
+            classContents11.setDeadline("2023-10-10T23:55:00");
+            classContents11.setIsSummit("Y");
+            em.persist(classContents11);
+
+            ClassContents classContents12 = new ClassContents();
+            classContents12.setClassTitle(class6.getClassName());
+            classContents12.setClasses(class6);
+            classContents12.setHomeworkTitle("웹프레임워크1 2주차 과제");
+            classContents12.setDeadline("2023-10-13T23:55:00");
+            classContents12.setIsSummit("N");
+            em.persist(classContents12);
+
+
 
             Community community1 = new Community();
             community1.setTitle("자소서 특강");

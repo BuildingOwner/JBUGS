@@ -1,114 +1,71 @@
-const MyContent = [
-  {
-    videos: [
-      {
-        videosrc: "/video/video1.mp4",
-        videoname: "1주차 강의 1",
-      },
-      {
-        videosrc: "/video/video2.mp4",
-        videoname: "1주차 강의 2",
-      },
-      {
-        videosrc: "비디오경로",
-        videoname: "1주차 강의 3",
-      },
-    ],
-    files: [
-      {
-        filename: "강의파일1",
-        filesrc: "/img/sangsangbugi.png",
-      },
-      {
-        filename: "강의파일2",
-        filesrc: "/img/sangsangbugi.png",
-      },
-    ],
-  },
-  {
-    videos: [
-      {
-        videosrc: "비디오경로",
-        videoname: "2주차 강의 1",
-      },
-      {
-        videosrc: "비디오경로",
-        videoname: "2주차 강의 2",
-      },
-      {
-        videosrc: "비디오경로",
-        videoname: "2주차 강의 2",
-      },
-    ],
-    files: [
-      {
-        filename: "파일제목",
-        filesrc: "/img/sangsangbugi.png",
-      },
-      {
-        filename: "파일제목",
-        filesrc: "/img/sangsangbugi.png",
-      },
-    ],
-  },
-  {
-    videos: [
-      {
-        videosrc: "/video/video1.mp4",
-        videoname: "1주차 강의 1",
-      },
-      {
-        videosrc: "비디오경로",
-        videoname: "1주차 강의 2",
-      },
-      {
-        videosrc: "비디오경로",
-        videoname: "1주차 강의 3",
-      },
-    ],
-    files: [
-      {
-        filename: "강의파일1",
-        filesrc: "/img/sangsangbugi.png",
-      },
-      {
-        filename: "강의파일2",
-        filesrc: "/img/sangsangbugi.png",
-      },
-    ],
-  },
-  {
-    videos: [
-      {
-        videosrc: "/video/video1.mp4",
-        videoname: "1주차 강의 1",
-      },
-      {
-        videosrc: "비디오경로",
-        videoname: "1주차 강의 2",
-      },
-      {
-        videosrc: "비디오경로",
-        videoname: "1주차 강의 3",
-      },
-    ],
-    files: [
-      {
-        filename: "강의파일1",
-        filesrc: "/img/sangsangbugi.png",
-      },
-      {
-        filename: "강의파일2",
-        filesrc: "/img/sangsangbugi.png",
-      },
-    ],
-  },
-];
+let MyContent = [];
+
+apiUrl = '/api/v2/course';
+
+fetch(apiUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    MyContent = data
+    addContent();
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
+
+let quizzez = null;
+let quiz = [];
+
+apiUrl = '/api/v2/quizs';
+
+fetch(apiUrl)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    quizzez = data
+    const currentUrl = window.location.href;
+    let selectClass = currentUrl[currentUrl.length-6];
+    for(let i=0; i<quizzez.data.length;i++){
+      if(selectClass === quizzez.data[i].id.toString()){
+        quiz.push(quizzez.data[i]);
+      }
+    }
+    addQuiz();
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+  });
 
 const addContent = () => {
-  for (let i = 0; i < 16; i++) {
-    const panel = document.querySelector(`.panel_${i + 1}`);
-    for (let j = 0; j < MyContent[i].videos.length; j++) {
+  let fileClass = [];
+  let videoClass = [];
+
+  const currentUrl = window.location.href;
+
+  let selectClass = currentUrl[currentUrl.length-6];
+
+  for(let i=0;i<MyContent.data.length;i++){
+    if(selectClass === MyContent.data[i].id.toString() && MyContent.data[i].filePath !== null){
+      fileClass.push(MyContent.data[i])
+    }
+  }
+  for(let i=0;i<MyContent.data.length;i++){
+    if(selectClass === MyContent.data[i].id.toString() && MyContent.data[i].videoPath !== null){
+      videoClass.push(MyContent.data[i])
+    }
+  }
+
+  for (let i = 0; i < videoClass.length; i++) {
+    let panel = document.querySelector(`.panel_${videoClass[i].week}`);
+    for (let j = 0; j < videoClass.length; j++) {
       const newVideo = document.createElement("div");
       newVideo.classList.add("content-progress");
 
@@ -120,7 +77,7 @@ const addContent = () => {
       videoElement.controls = true;
       videoElement.width = 600;
       videoElement.innerHTML = `
-        <source src="${MyContent[i].videos[j].videosrc}" />   
+        <source src="/file/${videoClass[j].videoPath}" />   
       `;
       // 이전에 저장된 재생 시간 가져오기
       const savedTime = localStorage.getItem(`videoTime-${i}-${j}`);
@@ -144,7 +101,7 @@ const addContent = () => {
 
       // Span 태그 추가 (videoInfo 내부)
       const spanElement = document.createElement("span");
-      spanElement.textContent = MyContent[i].videos[j].videoname;
+      spanElement.textContent = videoClass[j].videoName;
 
       // Progress Bar
       const progressBar = document.createElement("div");
@@ -175,18 +132,32 @@ const addContent = () => {
       });
     }
 
-    for (let k = 0; k < MyContent[i].files.length; k++) {
-      const newFile = document.createElement("div");
-      newFile.innerHTML = `
-        <div class="content-file"><i class="bi bi-file-earmark-arrow-down-fill"></i> ${MyContent[i].files[k].filename}</div>
+
+  }
+  for (let k = 0; k < fileClass.length; k++) {
+    let panel = document.querySelector(`.panel_${fileClass[k].week}`);
+    const newFile = document.createElement("div");
+    newFile.innerHTML = `
+        <div class="content-file"><i class="bi bi-file-earmark-arrow-down-fill"></i> ${fileClass[k].fileName}</div>
       `;
-      newFile.addEventListener("click", () => {
-        window.location.href = `${MyContent[i].files[k].filesrc}`;
-      });
-      //
-      panel.appendChild(newFile);
-    }
+    newFile.addEventListener("click", () => {
+      window.location.href = `/file/${fileClass[k].filePath}`;
+    });
+    //
+    panel.appendChild(newFile);
   }
 }
 
-addContent();
+const addQuiz = () => {
+  for(let j=0; j<quiz.length;j++){
+    let panel = document.querySelector(`.panel_${quiz[j].week}`);
+    const newQuiz = document.createElement("div");
+    newQuiz.innerHTML = `
+        <div class="content-file"><i class="bi bi-file-earmark-arrow-down-fill"></i> 퀴즈</div>
+      `;
+    newQuiz.addEventListener("click", () => {
+      window.location.href = `/quizHome?classesId=${quiz[j].id}&week=${quiz[j].week}`;
+    });
+    panel.appendChild(newQuiz);
+  }
+}

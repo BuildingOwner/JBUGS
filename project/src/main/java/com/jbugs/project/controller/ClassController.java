@@ -1,13 +1,7 @@
 package com.jbugs.project.controller;
 
-import com.jbugs.project.domain.Classes;
-import com.jbugs.project.domain.File;
-import com.jbugs.project.domain.Student;
-import com.jbugs.project.domain.Video;
-import com.jbugs.project.service.ClassService;
-import com.jbugs.project.service.FileService;
-import com.jbugs.project.service.StudentService;
-import com.jbugs.project.service.VideoService;
+import com.jbugs.project.domain.*;
+import com.jbugs.project.service.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,6 +20,7 @@ public class ClassController {
     private final StudentService studentService;
     private final FileService fileService;
     private final VideoService videoService;
+    private final ClassContentsService classContentsService;
 
     @GetMapping("/")
     public String list(Model model){
@@ -50,11 +45,15 @@ public class ClassController {
     @GetMapping(value = "/classes/{classesId}/edit")
     public String classesForm(@PathVariable("classesId") Long classesId, Model model){
         Classes one = (Classes) classService.findOne(classesId);
+        one.getClassContents();
 
-//        ClassForm form = new ClassForm();
-//        form.setId(one.getId());
-//        form.setClassName(one.getClassName());
-//        form.setProf(one.getProf());
+        ClassContents one1 = classContentsService.findOne(classesId);
+        List<File> files = fileService.findFile();
+        model.addAttribute("files", files);
+        List<Video> videos = videoService.findVideo();
+        model.addAttribute("videos", videos);
+
+
 
         model.addAttribute("form", one);
 

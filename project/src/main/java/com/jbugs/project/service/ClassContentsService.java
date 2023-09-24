@@ -11,7 +11,11 @@ import com.jbugs.project.repository.VideoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 @Service
@@ -21,22 +25,20 @@ public class ClassContentsService {
 
     private final ClassContentsRepository classContentsRepository;
     private final ClassRepository classRepository;
-    private final FileRepository fileRepository;
-    private final VideoRepository videoRepository;
 
     @Transactional
-    public Long order(Long classesId, Long fileId, Long videoId){
+    public Long order(Long classesId, String weeks, String title, String description, String homeworkDeadline, String fullFilePath, String fullVideoPath, String fileName, String videoName){
         Classes classes = classRepository.findOne(classesId);
-        File file = fileRepository.findOne(fileId);
-        Video video = videoRepository.findOne(videoId);
 
-        ClassContents contents = ClassContents.createContents(classes, video, file);
+        ClassContents contents = ClassContents.createContents(classes, weeks, title, description, homeworkDeadline, fullFilePath,fullVideoPath, fileName, videoName);
 
         classContentsRepository.save(contents);
 
         return contents.getId();
     }
 
+
+    @Transactional
     public void saveClassContents(ClassContents classContents){
         classContentsRepository.save(classContents);
     }

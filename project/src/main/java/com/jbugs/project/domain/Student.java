@@ -32,11 +32,5 @@ public class Student {
     @JoinColumn(name = "takes_id")
     private Takes takes;
 
-    @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
-    private List<Calendar>calendars = new ArrayList<>();
-
-
-
-
 
 }
