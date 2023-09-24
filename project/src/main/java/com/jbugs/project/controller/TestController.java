@@ -22,13 +22,13 @@ public class TestController {
         return "html/quizScore";
     }
 
-    @PostMapping("/your-java-endpoint")
-    public ResponseEntity<String> receiveStringFromJavaScript(@RequestParam String value) {
-        // Handle the received string value here
-        System.out.println("Received value from JavaScript: " + value);
-        // You can send a response back to the JavaScript side if needed
-        return testService.join();
-    }
-    
+//    @PostMapping("/your-java-endpoint")
+//    public ResponseEntity<String> receiveStringFromJavaScript(@RequestParam String value) {
+//        // Handle the received string value here
+//        System.out.println("Received value from JavaScript: " + value);
+//        // You can send a response back to the JavaScript side if needed
+//        return testService.join();
+//    }
+
 
 }
