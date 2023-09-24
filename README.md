@@ -70,7 +70,7 @@ E class+는 코로나 19 이후 대학 교육 환경에서 급속히 증가하�
 
 ## 📄Domain 다이어그램
 <div align="center">
-<img src="./image/diagram.png" width="800" height="500" />
+<img src="./image/diagram.png"/>
 </div>
 
 ## ⌨주요 적용 기술 및 특이 사항
