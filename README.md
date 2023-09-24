@@ -8,7 +8,7 @@ E class+는 코로나 19 이후 대학 교육 환경에서 급속히 증가하�
 
 이 프로젝트는 한성대학교의 기존 eclass 플랫폼에서 발생한 불편함을 해소하고 학생들의 학습 경험을 향상시키기 위해 개발되었습니다.
 
-## 기존 Eclass에 대한 학생들의 불편 사항
+## 🚨기존 Eclass에 대한 학생들의 불편 사항
 * __메인페이지__
 1. 과제 확인이 어렵다.
 2. UI가 깔끔하지만 불필요한 기능이 많아보인다.
@@ -68,7 +68,7 @@ E class+는 코로나 19 이후 대학 교육 환경에서 급속히 증가하�
 <img src="./image/module.png" width="800" height="500" />
 </div>
 
-## Domain 다이어그램
+## 📄Domain 다이어그램
 <div align="center">
 <img src="./image/diagram.png" width="800" height="500" />
 </div>
