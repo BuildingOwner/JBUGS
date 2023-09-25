@@ -4,14 +4,14 @@ async function executeVideoAndGptTasks() {
     const videoSubject = '/datastructure';
 
     // First task: get video information
-    const videoResponse = await fetch('http://localhost:5500' + videoSubject + videoPath);
+    const videoResponse = await fetch('http://localhost:3000' + videoSubject + videoPath);
     if (!videoResponse.ok) {
       throw new Error('An error occurred: ' + videoResponse.statusText);
     }
     const videoJson = await videoResponse.json(); // JSON data extraction
 
     // Second task: Get video keywords
-    const keywordResponse = await fetch('http://localhost:5500/getVideoKeyword');
+    const keywordResponse = await fetch('http://localhost:3000/getVideoKeyword');
     if (!keywordResponse.ok) {
       throw new Error('An error occurred: ' + keywordResponse.statusText);
     }
@@ -22,10 +22,10 @@ async function executeVideoAndGptTasks() {
 
     // PDF button functionality
     const pdfPath = '!/resources/input.pdf';
-    const pdfSubject = '/DataStructure';
+    const pdfSubject = '/Network';
 
     // Fetch request for PDF
-    const response = await fetch('http://localhost:5500' + pdfSubject + pdfPath);
+    const response = await fetch('http://localhost:3000' + pdfSubject + pdfPath);
 
     // If the response is successful
     if (response.ok) {
@@ -34,10 +34,10 @@ async function executeVideoAndGptTasks() {
 
       // Now, execute GPT tasks
       try {
-        const keywords = 'DataStructure$traverse$order$node$tree$left_node$head$structure$list$node$link';
+        const keywords = responseJson.keywordString;
 
         // First fetch request
-        const response1 = await fetch('http://localhost:5500/' + keywords);
+        const response1 = await fetch('http://localhost:3000' + pdfSubject+'$' + keywords);
 
         if (!response1.ok) {
           throw new Error('An error occurred in the first request: ' + response1.statusText);

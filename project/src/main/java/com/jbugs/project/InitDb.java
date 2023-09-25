@@ -142,9 +142,11 @@ public class InitDb {
             classContents2.setHomeworkTitle("데이터 통신 2주차 과제");
             classContents2.setDeadline("2023-10-10T23:55:00");
             classContents2.setIsSummit("N");
-            classContents2.setFilePath("3/1/file/asd.pdf");
+            classContents2.setFilePath("3/1/file/dataProtocol.pdf");
+            classContents2.setVideoPath("3/1/video/dataProtocol.mp4");
             classContents2.setWeek("1");
-            classContents2.setFileName("asdf");
+            classContents2.setFileName("dataProtocol.pdf");
+            classContents2.setVideoName("dataProtocol.mp4");
             em.persist(classContents2);
 
 
@@ -205,6 +207,11 @@ public class InitDb {
             classContents9.setHomeworkTitle("고모프 1주차 과제");
             classContents9.setDeadline("2023-10-10T23:55:00");
             classContents9.setIsSummit("Y");
+            classContents9.setFilePath("7/1/file/highMobile.pdf");
+            classContents9.setVideoPath("7/1/video/highMobile.mp4");
+            classContents9.setWeek("1");
+            classContents9.setFileName("고모프.pdf");
+            classContents9.setVideoName("고모프.mp4");
             em.persist(classContents9);
 
             ClassContents classContents10 = new ClassContents();
