@@ -1,5 +1,5 @@
 <div align="center"><h1>한성대 공학경진대회 팀 JBUGS</h1></div>
-<div align="center"><h3>E class 개선안</h3></div><br>
+<div align="center"><h3>E class 개선안 (대상 수상)</h3></div><br>
 
 
 
@@ -95,3 +95,8 @@ E class+는 코로나 19 이후 대학 교육 환경에서 급속히 증가하�
 |Frontend|Frontend|Backend|Module|
 |------|---|---|---|
 |최재완|이영재|장주찬|김정훈|
+
+## 🎉한성공학경진대회 대상 수상
+<div align="center">
+<img src="./image/prize.png"/>
+</div>
