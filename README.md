@@ -98,5 +98,5 @@ E class+는 코로나 19 이후 대학 교육 환경에서 급속히 증가하�
 
 ## 🎉한성공학경진대회 대상 수상
 <div align="center">
-<img src="./image/prize.png"/>
+<img src="./image/prize.jpg"/>
 </div>
